@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KBE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/KBE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="mtek &lt;mario.teklic77@googlemail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -38,9 +46,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mario\Desktop\KBE\src" />
       <recent name="C:\Users\Mario\Desktop\KBE" />
+      <recent name="C:\Users\Mario\Desktop\KBE\src" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+      <command value="mvn -pl songsservlet clean package " />
+      <command value="mvn -pl runmerunner clean package" />
+    </option>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -64,21 +79,62 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586174398717</updated>
-      <workItem from="1586174411033" duration="1321000" />
+      <workItem from="1586174411033" duration="2795000" />
+      <workItem from="1586435781153" duration="2197000" />
     </task>
+    <task id="LOCAL-00001" summary="- init project template">
+      <created>1586176653894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586176653895</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- init project template" />
+    <option name="LAST_COMMIT_MESSAGE" value="- init project template" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="338" y="178" key="CommitChangelistDialog2" timestamp="1586176653235">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586176653235" />
     <state x="544" y="328" key="FileChooserDialogImpl" timestamp="1586175444130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586175444130" />
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1586176550200">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1586440284053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586176550200" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284053" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1586440284053">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284053" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1586440284053">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284053" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1586440284053">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284053" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2" timestamp="1586176661528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586176661528" />
+    <state x="667" y="276" width="593" height="488" key="find.popup" timestamp="1586439898197">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="276" width="593" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586439898197" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1586440284090">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284090" />
   </component>
 </project>
