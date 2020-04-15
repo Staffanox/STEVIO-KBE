@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="songsWS:war" />
+      <artifact name="songsWS:war exploded" />
+      <artifact name="songsservlet:war" />
+      <artifact name="songsservlet:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="- buy-in task">
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/RunMe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/RunMe.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/RunMe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/htwb/ai/stevio/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/htwb/ai/stevio/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runmerunner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/RunMe.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,10 +59,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="kbe" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../oop2-KBE" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -61,18 +85,93 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="All in runmerunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ContainerTest">
+    <configuration name="ContainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="runmerunner" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.ContainerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContainerTest.ListWithAnnonShouldBeSortedInAlphabeticalOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="runmerunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.ContainerTest" />
+      <option name="METHOD_NAME" value="ListWithAnnonShouldBeSortedInAlphabeticalOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContainerTest.ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="runmerunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.ContainerTest" />
+      <option name="METHOD_NAME" value="ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContainerTest.listsShouldBeSortedInAlphabeticalOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="runmerunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.ContainerTest" />
+      <option name="METHOD_NAME" value="listsShouldBeSortedInAlphabeticalOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InspectorTest.analyseShouldThrowClassNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="runmerunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.InspectorTest" />
+      <option name="METHOD_NAME" value="analyseShouldThrowClassNotFound" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in runmerunner" />
+        <item itemvalue="JUnit.ContainerTest" />
+        <item itemvalue="JUnit.ContainerTest.ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" />
+        <item itemvalue="JUnit.ContainerTest.ListWithAnnonShouldBeSortedInAlphabeticalOrder" />
+        <item itemvalue="JUnit.ContainerTest.listsShouldBeSortedInAlphabeticalOrder" />
+        <item itemvalue="JUnit.InspectorTest.analyseShouldThrowClassNotFound" />
       </list>
     </recent_temporary>
   </component>
@@ -101,7 +200,7 @@
       <workItem from="1586174411033" duration="2795000" />
       <workItem from="1586435781153" duration="4243000" />
       <workItem from="1586597097117" duration="1226000" />
-      <workItem from="1586857795551" duration="3537000" />
+      <workItem from="1586857795551" duration="24144000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -117,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586440336954</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="RunMe Annotation (Aufg 1)">
+      <created>1586877690009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586877690009</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,44 +232,81 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- init project template" />
     <MESSAGE value="- buy-in task" />
-    <option name="LAST_COMMIT_MESSAGE" value="- buy-in task" />
+    <MESSAGE value="RunMe Annotation (Aufg 1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="RunMe Annotation (Aufg 1)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="338" y="178" key="CommitChangelistDialog2" timestamp="1586873005211">
+    <state x="684" y="365" key="#Project_Structure" timestamp="1586878385915">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586873005211" />
+    <state x="684" y="365" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1586878385915" />
+    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1586973089300">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586973089300" />
+    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586969557876">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586969557876" />
+    <state x="338" y="178" key="CommitChangelistDialog2" timestamp="1586983869027">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586983869027" />
     <state x="544" y="328" key="FileChooserDialogImpl" timestamp="1586598530250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586598530250" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1586443123019">
+    <state width="1550" height="186" key="GridCell.Tab.0.bottom" timestamp="1586983679511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586443123019" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1586443123019">
+    <state width="1550" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
+    <state width="1550" height="186" key="GridCell.Tab.0.center" timestamp="1586983679511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586443123019" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1586443123019">
+    <state width="1550" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
+    <state width="1550" height="186" key="GridCell.Tab.0.left" timestamp="1586983679511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586443123019" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1586443123019">
+    <state width="1550" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
+    <state width="1550" height="186" key="GridCell.Tab.0.right" timestamp="1586983679511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586443123019" />
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2" timestamp="1586441791244">
+    <state width="1550" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
+    <state width="1550" height="292" key="GridCell.Tab.1.bottom" timestamp="1586977414411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586441791244" />
-    <state x="667" y="276" width="593" height="488" key="find.popup" timestamp="1586439898197">
+    <state width="1550" height="292" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
+    <state width="1550" height="292" key="GridCell.Tab.1.center" timestamp="1586977414411">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="276" width="593" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586439898197" />
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1586440284090">
+    <state width="1550" height="292" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
+    <state width="1550" height="292" key="GridCell.Tab.1.left" timestamp="1586977414410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586440284090" />
+    <state width="1550" height="292" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414410" />
+    <state width="1550" height="292" key="GridCell.Tab.1.right" timestamp="1586977414411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1550" height="292" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
+    <state x="617" y="174" key="SettingsEditor" timestamp="1586977074343">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="617" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586977074343" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2" timestamp="1586877697320">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586877697320" />
+    <state x="667" y="276" width="593" height="488" key="find.popup" timestamp="1586981695372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="276" width="593" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586981695372" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1586977853082">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586977853082" />
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1586981090518">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586981090518" />
   </component>
 </project>
