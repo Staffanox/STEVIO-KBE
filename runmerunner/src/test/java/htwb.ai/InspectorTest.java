@@ -4,8 +4,10 @@ import htwb.ai.stevio.Container;
 import htwb.ai.stevio.Inspector;
 import htwb.ai.stevio.RunMe;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,12 +23,12 @@ import static org.junit.Assert.fail;
     private Container container;
 
     @BeforeEach
-    public void doBefore(){
-         inspector = new Inspector();
-         container = new Container(CLASSNAME);
+    public void doBefore() throws ClassNotFoundException {
+        inspector = new Inspector();
+        container = new Container(CLASSNAME);
 
-         inspector.analyse(container, CLASSNAME, RunMe.class);
-         container.sort();
+        inspector.analyse(container, CLASSNAME, RunMe.class);
+        container.sort();
     }
 
     @Test
@@ -43,21 +45,21 @@ import static org.junit.Assert.fail;
         }
     }
 
-     @Test
-     public void expectedMethodsWithoutAnnonList() {
+    @Test
+    public void expectedMethodsWithoutAnnonList() {
 
-          List<String> expected = new ArrayList<>();
-          expected.add("method5");
-          expected.add("method6");
-          expected.add("method7");
-          expected.add("method8");
+        List<String> expected = new ArrayList<>();
+        expected.add("method5");
+        expected.add("method6");
+        expected.add("method7");
+        expected.add("method8");
 
-          for (int i = 0; i < container.getMethodsWithoutAnnotation().size(); i++) {
-               Assert.assertEquals(expected.get(i), container.getMethodsWithoutAnnotation().get(i));
-          }
+        for (int i = 0; i < container.getMethodsWithoutAnnotation().size(); i++) {
+            Assert.assertEquals(expected.get(i), container.getMethodsWithoutAnnotation().get(i));
+        }
 
-          container.print();
-     }
+        container.print();
+    }
 
     @Test
     public void expectedMethodsWithAnnonAndErrorList() {
@@ -72,11 +74,27 @@ import static org.junit.Assert.fail;
 
     @Test
     public void analyseShouldThrowClassNotFound() {
-        try {
+        Assertions.assertThrows(ClassNotFoundException.class, () -> {
             inspector.analyse(container, "blub", RunMe.class);
-            fail();
-        } catch (Exception e){
-            // expection was thrown as expected.
-        }
+        });
+
     }
+
+    @Test
+    public void analysisShouldThrowIllegalArgument() {
+        Assertions.assertThrows(NullPointerException.class, () -> {
+            inspector.analyse(container, null, RunMe.class);
+        });
+
+    }
+
+    @Test
+    public void successfullAnalysis() throws ClassNotFoundException {
+        inspector.analyse(container, "htwb.ai.stevio.Inspector", RunMe.class);
+    }
+
+
+
+
+
 }
