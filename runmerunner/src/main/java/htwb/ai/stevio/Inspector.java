@@ -38,6 +38,7 @@ import java.lang.reflect.Method;
                             m.invoke(obj);
                             container.getMethodsWithAnnotation().add(m.getName());
                         } catch (Exception e) {
+                            container.getMethodsWithAnnotation().add(m.getName());
                             container.getMethodsWithAnnotationAndError().put(m.getName(), e.getClass().getSimpleName());
                         }
                     }

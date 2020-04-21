@@ -60,17 +60,17 @@ import java.util.stream.Collectors;
 
         pw.write("Analysed class '" + this.analysedClass + "':\n");
 
-        pw.write("   Methods with @RunMe:\n");
+        pw.write("   Methods with @RunMe:" + System.lineSeparator());
         for(String s : this.methodsWithAnnotation){
             pw.write("     " + s + "\n");
         }
 
-        pw.write("   Methods without @RunMe:\n");
+        pw.write("   Methods without @RunMe:" + System.lineSeparator());
         for(String s : this.methodsWithoutAnnotation){
             pw.write("     " + s + "\n");
         }
 
-        pw.write("   Not invoceable:\n");
+        pw.write("   Not invoceable:" + System.lineSeparator());
         for(Map.Entry<String, String> entry : this.methodsWithAnnotationAndError.entrySet()){
             pw.write("     " + entry.getKey() + ": " + entry.getValue() + "\n");
         }

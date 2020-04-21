@@ -45,4 +45,9 @@ package htwb.ai.stevio;
     public void method9(String string) {
         System.out.println("not invoceable method");
     }
+
+    @RunMe
+    private void method10(String string) {
+        System.out.println("not invoceable method");
+    }
 }
