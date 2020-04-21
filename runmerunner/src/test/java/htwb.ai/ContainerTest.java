@@ -6,6 +6,7 @@ import htwb.ai.stevio.RunMe;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ import java.util.List;
     private Container container;
 
     @BeforeEach
-    public void beforeEachTest(){
+    public void beforeEachTest() throws ClassNotFoundException {
         inspector = new Inspector();
         container = new Container(CLASSNAME);
 
@@ -26,31 +27,34 @@ import java.util.List;
 
     }
 
-     @Test
-    public void ListWithAnnonShouldBeSortedInAlphabeticalOrder(){
+    @Test
+    public void ListWithAnnonShouldBeSortedInAlphabeticalOrder() {
+        //todo dein Test Arno
 
-         List<String> tmp = new ArrayList<>(container.getMethodsWithAnnotation());
+        List<String> tmp = new ArrayList<>(container.getMethodsWithAnnotation());
 
-         container.sort();
-         Assert.assertNotEquals(tmp, container.getMethodsWithAnnotation());
+        container.sort();
+        Assert.assertNotEquals(tmp, container.getMethodsWithAnnotation());
 
-         List<String> expected = new ArrayList<>();
-         expected.add("method1");
-         expected.add("method2");
-         expected.add("method3");
-         expected.add("method4");
+        List<String> expected = new ArrayList<>();
+        expected.add("method1");
+        expected.add("method2");
+        expected.add("method3");
+        expected.add("method4");
 
-         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
-             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
-         }
-     }
+        for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
+            Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
+        }
+    }
 
     @Test
-    public void ListWithoutAnnonShouldBeSortedInAlphabeticalOrder(){
+    public void ListWithoutAnnonShouldBeSortedInAlphabeticalOrder() {
+        //todo dein Test Arno
 
         List<String> tmp = new ArrayList<>(container.getMethodsWithoutAnnotation());
 
         container.sort();
+        System.out.println(tmp);
         Assert.assertNotEquals(tmp, container.getMethodsWithoutAnnotation());
 
         List<String> expected = new ArrayList<>();

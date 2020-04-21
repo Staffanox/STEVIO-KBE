@@ -1,5 +1,6 @@
 package htwb.ai.stevio;
 
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
@@ -8,23 +9,20 @@ import java.lang.reflect.Method;
  * @author Mario Teklic
  */public class Inspector {
 
+
+     private final InputManager inputManager = new InputManager();
     /**
      * Analyzes all methods of the given class und searches for the given annotation
      * @param container all method names (and exception if any occur) will be stored in this object
      * @param classToAnalyse class which will be analysed
      * @param annotation annotation which will be analysed for
      */
-    public void analyse(Container container, String classToAnalyse, Class annotation){
+    public void analyse(Container container, String classToAnalyse, Class annotation) throws ClassNotFoundException {
 
-        Class<?> clazz = null;
+        Class<?> clazz;
 
-        try {
-            clazz = Class.forName(classToAnalyse);
-        } catch (ClassNotFoundException e) {
-            //Shouldnt appear.
-            //Should be checked in the InputManager
-            e.printStackTrace();
-        }
+        clazz = InputManager.checkClassName(classToAnalyse);
+
 
         for (Method m : clazz.getDeclaredMethods()) {
             m.setAccessible(true);
