@@ -45,11 +45,9 @@ import java.util.stream.Collectors;
                 .sorted()
                 .collect(Collectors.toList());
 
-        this.methodsWithAnnotationAndError = this.methodsWithAnnotationAndError
-                .entrySet()
-                .stream()
-                .sorted()
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldVal, newVal) -> oldVal, LinkedHashMap::new));
+        this.methodsWithAnnotationAndError.entrySet().stream()
+                .sorted(Map.Entry.comparingByKey());
+
     }
 
     /**

@@ -28,16 +28,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ClassWithAnnonsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +38,132 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2136123701">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="110" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="110" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-282">
+              <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+              <folding>
+                <element signature="e#129#130#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#810#811#0" expanded="true" />
+                <element signature="e#860#861#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ClassWithAnnonsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-63">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -63,12 +181,122 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java" />
+        <option value="$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
+    <option name="y" value="66" />
+    <option name="width" value="1377" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectId" id="1aANMzBwDA8Ur5beLOS0DcdUUeM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="stevio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="runmerunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="htwb.ai" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="STEVIO-KBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="STEVIO-KBE" type="462c0819:PsiDirectoryNode" />
+              <item name="songsservlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -82,6 +310,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587572307299" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -105,6 +334,125 @@
       <recent name="C:\Users\Mario\Desktop\KBE\src" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/App.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/AppTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ClassWithAnnonsTest.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InputTest.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn -pl runmerunner clean package" />
@@ -112,7 +460,19 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.htwb.ai in runmerunner">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.InspectorTest">
     <configuration name="ClassWithAnnonsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="runmerunner" />
       <extension name="coverage">
@@ -123,24 +483,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai" />
       <option name="MAIN_CLASS_NAME" value="htwb.ai.ClassWithAnnonsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClassWithAnnonsTest.method1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="runmerunner" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.ClassWithAnnonsTest" />
-      <option name="METHOD_NAME" value="method1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -163,7 +505,7 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContainerTest.ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="runmerunner" />
       <extension name="coverage">
         <pattern>
@@ -172,8 +514,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.ContainerTest" />
-      <option name="METHOD_NAME" value="ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.InspectorTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InspectorTest.expectedMethodsWithAnnonList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="runmerunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.InspectorTest" />
+      <option name="METHOD_NAME" value="expectedMethodsWithAnnonList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -181,7 +538,6 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -204,18 +560,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ClassWithAnnonsTest" />
-      <item itemvalue="JUnit.ContainerTest.ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" />
       <item itemvalue="JUnit.htwb.ai in runmerunner" />
-      <item itemvalue="JUnit.ClassWithAnnonsTest.method1" />
       <item itemvalue="JUnit.ClassWithAnnonsTest.method5" />
+      <item itemvalue="JUnit.InspectorTest" />
+      <item itemvalue="JUnit.InspectorTest.expectedMethodsWithAnnonList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InspectorTest" />
+        <item itemvalue="JUnit.InspectorTest.expectedMethodsWithAnnonList" />
         <item itemvalue="JUnit.htwb.ai in runmerunner" />
         <item itemvalue="JUnit.ClassWithAnnonsTest" />
         <item itemvalue="JUnit.ClassWithAnnonsTest.method5" />
-        <item itemvalue="JUnit.ClassWithAnnonsTest.method1" />
-        <item itemvalue="JUnit.ContainerTest.ListWithoutAnnonShouldBeSortedInAlphabeticalOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +620,69 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="InspectorTest - 2020.04.22 at 18h 00m 59s.xml">
+      <configuration name="InspectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest - 2020.04.22 at 18h 01m 44s.xml">
+      <configuration name="InspectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest - 2020.04.22 at 18h 02m 02s.xml">
+      <configuration name="InspectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest - 2020.04.22 at 18h 04m 23s.xml">
+      <configuration name="InspectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest - 2020.04.22 at 18h 13m 25s.xml">
+      <configuration name="InspectorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest_expectedMethodsWithAnnonList - 2020.04.22 at 18h 14m 17s.xml">
+      <configuration name="InspectorTest.expectedMethodsWithAnnonList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InspectorTest_expectedMethodsWithAnnonList - 2020.04.22 at 18h 17m 43s.xml">
+      <configuration name="InspectorTest.expectedMethodsWithAnnonList" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2643000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="66" width="1377" height="735" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28853455" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36787564" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31088084" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32953683" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
@@ -272,12 +691,18 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- init project template" />
@@ -286,111 +711,58 @@
     <option name="LAST_COMMIT_MESSAGE" value="RunMe Annotation (Aufg 1)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="684" y="365" key="#Project_Structure" timestamp="1586878385915">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="684" y="365" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1586878385915" />
-    <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587411525829">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587411525829" />
-    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1586973089300">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586973089300" />
-    <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587414372685">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414372685" />
-    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586969557876">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586969557876" />
-    <state x="338" y="178" key="CommitChangelistDialog2" timestamp="1586983869027">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586983869027" />
-    <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl" timestamp="1587414227766">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586598530250" />
-    <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414227766" />
-    <state width="1685" height="217" key="GridCell.Tab.0.bottom" timestamp="1587414842658">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
-    <state width="1685" height="217" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414842658" />
-    <state width="1685" height="217" key="GridCell.Tab.0.center" timestamp="1587414842658">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
-    <state width="1685" height="217" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414842658" />
-    <state width="1685" height="217" key="GridCell.Tab.0.left" timestamp="1587414842658">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
-    <state width="1685" height="217" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414842658" />
-    <state width="1685" height="217" key="GridCell.Tab.0.right" timestamp="1587414842658">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586983679511" />
-    <state width="1685" height="217" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414842658" />
-    <state width="2138" height="323" key="GridCell.Tab.1.bottom" timestamp="1587414097771">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="292" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
-    <state width="2138" height="323" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414097771" />
-    <state width="2138" height="323" key="GridCell.Tab.1.center" timestamp="1587414097771">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="292" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
-    <state width="2138" height="323" key="GridCell.Tab.1.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414097771" />
-    <state width="2138" height="323" key="GridCell.Tab.1.left" timestamp="1587414097771">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="292" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414410" />
-    <state width="2138" height="323" key="GridCell.Tab.1.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414097771" />
-    <state width="2138" height="323" key="GridCell.Tab.1.right" timestamp="1587414097771">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state width="1550" height="292" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586977414411" />
-    <state width="2138" height="323" key="GridCell.Tab.1.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414097771" />
-    <state x="617" y="174" key="SettingsEditor" timestamp="1586977074343">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="617" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586977074343" />
-    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2" timestamp="1587414795431">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586877697320" />
-    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587414795431" />
-    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587413195373">
-      <screen x="1920" y="0" width="2560" height="1080" />
-    </state>
-    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587413195373" />
-    <state x="667" y="276" width="593" height="488" key="find.popup" timestamp="1586981695372">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="276" width="593" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586981695372" />
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1586977853082">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586977853082" />
-    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1586981090518">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1586981090518" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="684" y="365" key="#Project_Structure" />
+    <state x="684" y="365" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" />
+    <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" />
+    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" />
+    <state x="338" y="178" key="CommitChangelistDialog2" />
+    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl" />
+    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="1685" height="217" key="GridCell.Tab.0.bottom" />
+    <state width="1550" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1685" height="217" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="1685" height="217" key="GridCell.Tab.0.center" />
+    <state width="1550" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1685" height="217" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="1685" height="217" key="GridCell.Tab.0.left" />
+    <state width="1550" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1685" height="217" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="1685" height="217" key="GridCell.Tab.0.right" />
+    <state width="1550" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" />
+    <state width="1685" height="217" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="2138" height="323" key="GridCell.Tab.1.bottom" />
+    <state width="1550" height="292" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" />
+    <state width="2138" height="323" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="2138" height="323" key="GridCell.Tab.1.center" />
+    <state width="1550" height="292" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" />
+    <state width="2138" height="323" key="GridCell.Tab.1.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="2138" height="323" key="GridCell.Tab.1.left" />
+    <state width="1550" height="292" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" />
+    <state width="2138" height="323" key="GridCell.Tab.1.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state width="2138" height="323" key="GridCell.Tab.1.right" />
+    <state width="1550" height="292" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" />
+    <state width="2138" height="323" key="GridCell.Tab.1.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state x="617" y="174" key="SettingsEditor" />
+    <state x="617" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" />
+    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" />
+    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" />
+    <state x="667" y="276" width="593" height="488" key="find.popup" />
+    <state x="667" y="276" width="593" height="488" key="find.popup/0.0.1920.1040@0.0.1920.1040" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" />
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" />
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -412,5 +784,107 @@
     <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/InputManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/RunMe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ClassWithAnnonsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/ClassWithAnnons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+          <folding>
+            <element signature="e#129#130#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.7/lib/src.zip!/java.base/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="183" column="26" selection-start-line="183" selection-start-column="26" selection-end-line="183" selection-end-column="26" />
+          <folding>
+            <element signature="e#7784#7785#0" expanded="true" />
+            <element signature="e#7837#7838#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.7/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="467" column="14" selection-start-line="467" selection-start-column="14" selection-end-line="467" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/ContainerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/test/java/htwb.ai/InspectorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Inspector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="38" column="74" selection-start-line="38" selection-start-column="74" selection-end-line="38" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runmerunner/src/main/java/htwb/ai/stevio/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
