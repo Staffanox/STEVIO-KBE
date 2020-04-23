@@ -25,12 +25,12 @@ package htwb.ai.stevio;
         return ("method-4 with annon");
     }
 
-    public String method5() {
-        return ("method-5 without annon");
-    }
-
     public String method6() {
         return ("method-6 without annon");
+    }
+
+    public String method5() {
+        return ("method-5 without annon");
     }
 
     public String method7() {

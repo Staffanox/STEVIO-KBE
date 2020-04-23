@@ -23,7 +23,7 @@ import static org.junit.Assert.fail;
     private Container container;
 
     @BeforeEach
-    public void doBefore() throws ClassNotFoundException {
+    public void doBefore() throws ClassNotFoundException, IllegalAccessException {
         inspector = new Inspector();
         container = new Container(CLASSNAME);
 
@@ -36,10 +36,14 @@ import static org.junit.Assert.fail;
 
         List<String> expected = new ArrayList<>();
         expected.add("method1");
+        expected.add("method10");
         expected.add("method2");
         expected.add("method3");
         expected.add("method4");
+        expected.add("method9");
 
+
+        container.print();
         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
         }
@@ -66,8 +70,8 @@ import static org.junit.Assert.fail;
 
         List<String> expected = new ArrayList<>();
         expected.add("method9");
-
-        Assert.assertEquals(1, container.getMethodsWithAnnotationAndError().size());
+        container.print();
+        Assert.assertEquals(2, container.getMethodsWithAnnotationAndError().size());
         Assert.assertEquals("IllegalArgumentException", container.getMethodsWithAnnotationAndError().get("method9"));
 
     }
@@ -89,12 +93,9 @@ import static org.junit.Assert.fail;
     }
 
     @Test
-    public void successfullAnalysis() throws ClassNotFoundException {
+    public void successfullAnalysis() throws ClassNotFoundException, IllegalAccessException {
         inspector.analyse(container, "htwb.ai.stevio.Inspector", RunMe.class);
     }
-
-
-
 
 
 }

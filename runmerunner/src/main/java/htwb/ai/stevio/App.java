@@ -5,7 +5,7 @@ package htwb.ai.stevio;
  * @author Mario Teklic
  */public class App {
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException {
 
         InputManager inputManager = new InputManager();
 
@@ -23,7 +23,6 @@ package htwb.ai.stevio;
         Container container = new Container(classToInspect);
 
         inspector.analyse(container, classToInspect, runMeClass);
-        System.out.println(container.getMethodsWithAnnotation());
         container.sort();
         container.print();
         //Check userinput. Exit program if input was wrong.

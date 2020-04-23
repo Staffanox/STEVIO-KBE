@@ -19,17 +19,16 @@ import java.util.List;
     private Container container;
 
     @BeforeEach
-    public void beforeEachTest() throws ClassNotFoundException {
+    public void beforeEachTest() throws ClassNotFoundException, IllegalAccessException {
         inspector = new Inspector();
         container = new Container(CLASSNAME);
-
         inspector.analyse(container, CLASSNAME, RunMe.class);
 
     }
 
     @Test
     public void ListWithAnnonShouldBeSortedInAlphabeticalOrder() {
-        //todo dein Test Arno
+        //todo Tests sind hardcoded, eine Methode mehr oder weniger macht sie kaputt
 
         List<String> tmp = new ArrayList<>(container.getMethodsWithAnnotation());
 
@@ -38,10 +37,11 @@ import java.util.List;
 
         List<String> expected = new ArrayList<>();
         expected.add("method1");
+        expected.add("method10");
         expected.add("method2");
         expected.add("method3");
         expected.add("method4");
-
+        expected.add("method9");
         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
         }
@@ -49,13 +49,13 @@ import java.util.List;
 
     @Test
     public void ListWithoutAnnonShouldBeSortedInAlphabeticalOrder() {
-        //todo dein Test Arno
+        //todo Tests sind hardcoded, eine Methode mehr oder weniger macht sie kaputt
 
         List<String> tmp = new ArrayList<>(container.getMethodsWithoutAnnotation());
-
         container.sort();
-        System.out.println(tmp);
-        Assert.assertNotEquals(tmp, container.getMethodsWithoutAnnotation());
+
+        //Methoden sind in diesem Fall schon sortiert
+        //Assert.assertNotEquals(tmp, container.getMethodsWithoutAnnotation());
 
         List<String> expected = new ArrayList<>();
         expected.add("method5");
@@ -67,5 +67,20 @@ import java.util.List;
             Assert.assertEquals(expected.get(i), container.getMethodsWithoutAnnotation().get(i));
         }
     }
+
+    @Test
+    public void notInvocableMethods() {
+        //todo Tests sind hardcoded, eine Methode mehr oder weniger macht sie kaputt
+
+        List<String> expected = new ArrayList<>();
+        expected.add("method10");
+        expected.add("method9");
+
+        for(String key : container.getMethodsWithAnnotationAndError().keySet()){
+            Assert.assertTrue(expected.contains(key));
+        }
+        Assert.assertEquals(expected.size(), container.getMethodsWithAnnotationAndError().keySet().size());
+    }
+
 
 }

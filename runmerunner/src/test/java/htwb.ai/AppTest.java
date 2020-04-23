@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class AppTest {
 
     @Test
-    public void success() throws ClassNotFoundException {
+    public void success() throws ClassNotFoundException, IllegalAccessException {
         String testArgument[] = {"htwb.ai.stevio.Inspector"};
         App.main(testArgument);
 

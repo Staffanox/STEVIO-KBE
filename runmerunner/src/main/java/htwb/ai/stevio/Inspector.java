@@ -1,6 +1,7 @@
 package htwb.ai.stevio;
 
 
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
@@ -17,7 +18,7 @@ import java.lang.reflect.Method;
      * @param classToAnalyse class which will be analysed
      * @param annotation annotation which will be analysed for
      */
-    public void analyse(Container container, String classToAnalyse, Class annotation) throws ClassNotFoundException {
+    public void analyse(Container container, String classToAnalyse, Class annotation) throws ClassNotFoundException, IllegalAccessException {
 
         Class<?> clazz;
 
@@ -35,7 +36,14 @@ import java.lang.reflect.Method;
                             Object obj = clazz.getDeclaredConstructor().newInstance();
                             m.invoke(obj);
                             container.getMethodsWithAnnotation().add(m.getName());
-                        } catch (Exception e) {
+
+                        }
+                        catch(IllegalAccessException e){
+                            container.getMethodsWithAnnotation().add(m.getName());
+                            container.getMethodsWithAnnotationAndError().put(m.getName(), e.getClass().getSimpleName());
+                            throw new IllegalAccessException("Error : Can't access this class");
+                        }
+                        catch (Exception e) {
                             container.getMethodsWithAnnotation().add(m.getName());
                             container.getMethodsWithAnnotationAndError().put(m.getName(), e.getClass().getSimpleName());
                         }
