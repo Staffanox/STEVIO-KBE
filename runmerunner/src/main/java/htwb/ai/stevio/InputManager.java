@@ -2,7 +2,7 @@ package htwb.ai.stevio;
 
 /*
  *
- * @author Mario Teklic
+ * @author Steven Schuette
  */public class InputManager {
 
 

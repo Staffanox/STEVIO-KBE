@@ -45,6 +45,8 @@ import java.util.List;
         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
         }
+
+        container.print();
     }
 
     @Test

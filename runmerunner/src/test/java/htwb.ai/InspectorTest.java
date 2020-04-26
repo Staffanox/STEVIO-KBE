@@ -42,8 +42,6 @@ import static org.junit.Assert.fail;
         expected.add("method4");
         expected.add("method9");
 
-
-        container.print();
         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
         }
@@ -61,8 +59,6 @@ import static org.junit.Assert.fail;
         for (int i = 0; i < container.getMethodsWithoutAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithoutAnnotation().get(i));
         }
-
-        container.print();
     }
 
     @Test
@@ -70,10 +66,8 @@ import static org.junit.Assert.fail;
 
         List<String> expected = new ArrayList<>();
         expected.add("method9");
-        container.print();
         Assert.assertEquals(2, container.getMethodsWithAnnotationAndError().size());
         Assert.assertEquals("IllegalArgumentException", container.getMethodsWithAnnotationAndError().get("method9"));
-
     }
 
     @Test
@@ -81,7 +75,6 @@ import static org.junit.Assert.fail;
         Assertions.assertThrows(ClassNotFoundException.class, () -> {
             inspector.analyse(container, "blub", RunMe.class);
         });
-
     }
 
     @Test
@@ -96,6 +89,4 @@ import static org.junit.Assert.fail;
     public void successfullAnalysis() throws ClassNotFoundException, IllegalAccessException {
         inspector.analyse(container, "htwb.ai.stevio.Inspector", RunMe.class);
     }
-
-
 }
