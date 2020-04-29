@@ -2,7 +2,6 @@ package htwb.ai;
 
 import htwb.ai.stevio.Container;
 import htwb.ai.stevio.Inspector;
-import htwb.ai.stevio.RunMe;
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
