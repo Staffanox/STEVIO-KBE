@@ -2,7 +2,6 @@ package htwb.ai;
 
 import htwb.ai.stevio.Container;
 import htwb.ai.stevio.Inspector;
-import htwb.ai.stevio.RunMe;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,12 +22,10 @@ import java.util.List;
         inspector = new Inspector();
         container = new Container(CLASSNAME);
         inspector.analyse(container, CLASSNAME, RunMe.class);
-
     }
 
     @Test
     public void ListWithAnnonShouldBeSortedInAlphabeticalOrder() {
-        //todo Tests sind hardcoded, eine Methode mehr oder weniger macht sie kaputt
 
         List<String> tmp = new ArrayList<>(container.getMethodsWithAnnotation());
 
@@ -45,8 +42,6 @@ import java.util.List;
         for (int i = 0; i < container.getMethodsWithAnnotation().size(); i++) {
             Assert.assertEquals(expected.get(i), container.getMethodsWithAnnotation().get(i));
         }
-
-        container.print();
     }
 
     @Test

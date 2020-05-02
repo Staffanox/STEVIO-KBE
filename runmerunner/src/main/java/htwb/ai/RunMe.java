@@ -1,4 +1,4 @@
-package htwb.ai.stevio;
+package htwb.ai;
 
 import java.lang.annotation.*;
 
