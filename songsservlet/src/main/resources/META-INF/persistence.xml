@@ -26,7 +26,7 @@ mapped to database tables. Database driver, location, userid and pw
             <!-- Username -->
             <property name="javax.persistence.jdbc.user" value="_s0565913__songsservlet_generic"/>
             <!-- Password -->
-            <property name="javax.persistence.jdbc.password" value="12345678"/>
+            <property name="javax.persistence.jdbc.password" value=""/>
 
         </properties>
     </persistence-unit>
