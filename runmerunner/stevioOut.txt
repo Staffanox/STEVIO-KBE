@@ -1,0 +1,143 @@
+cd STEVIO-KBE and git log | head -15
+commit a3de3eab9991248bc1e5dea1df0e77eeede06b77
+Author: mtek <mario.teklic77@googlemail.com>
+Date:   Sun Apr 26 12:46:08 2020 +0200
+
+    bugfixes
+    - "mvn clean package" always wants to run a method called "$jacocoInit". This class is not included in our AnnotationsTestClass. Made a workaround, which tests if a methods name is "$jacocoInit". If so, the loop continues with the next method.
+    
+    - changed what happens when method is not invoceable
+
+commit 5f3e0ba1f08ccb5cdd1daa0fc3b42750d3815634
+Author: staffano <s0565913@htw-berlin.de>
+Date:   Thu Apr 23 23:45:09 2020 +0200
+
+    Tests and input
+
+------------------------------------
+Running RmR with no arguments
+------------------------------------
+Error: Unable to access jarfile STEVIO-KBE/runmerunner/target/runmerunner-STEVIO.jar
+
+------------------------------------
+Running RmR with non-existing class
+------------------------------------
+Error: Unable to access jarfile STEVIO-KBE/runmerunner/target/runmerunner-STEVIO.jar
+
+------------------------------------
+Running RmR with non-instantiable class
+------------------------------------
+Error: Unable to access jarfile STEVIO-KBE/runmerunner/target/runmerunner-STEVIO.jar
+
+------------------------------------
+Running RmR with interface
+------------------------------------
+Error: Unable to access jarfile STEVIO-KBE/runmerunner/target/runmerunner-STEVIO.jar
+
+------------------------------------
+Running RmR with htwb.ClassWithRunMes
+------------------------------------
+Error: Unable to access jarfile STEVIO-KBE/runmerunner/target/runmerunner-STEVIO.jar
+
+------------------------------------
+DONE
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< htwb.ai.stevio:runmerunner >---------------------
+[INFO] Building runmerunner 1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ runmerunner ---
+[INFO] Deleting /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:2.2.4:revision (get-the-git-infos) @ runmerunner ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.4:prepare-agent (default-prepare-agent) @ runmerunner ---
+[INFO] argLine set to -javaagent:/Users/eschuler/.m2/repository/org/jacoco/org.jacoco.agent/0.8.4/org.jacoco.agent-0.8.4-runtime.jar=destfile=/Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ runmerunner ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ runmerunner ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/target/classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassNoDefConstr.java:[3,15] cannot find symbol
+  symbol:   class RunMe
+  location: package htwb.ai
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[3,15] cannot find symbol
+  symbol:   class RunMe
+  location: package htwb.ai
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassNoDefConstr.java:[13,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassNoDefConstr
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[7,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[13,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[19,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[25,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[30,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[36,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[42,6] cannot find symbol
+  symbol:   class RunMe
+  location: class htwb.ClassWithRunMes
+[INFO] 10 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.532 s
+[INFO] Finished at: 2020-05-02T21:41:41+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.0:compile (default-compile) on project runmerunner: Compilation failure: Compilation failure: 
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassNoDefConstr.java:[3,15] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: package htwb.ai
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[3,15] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: package htwb.ai
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassNoDefConstr.java:[13,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassNoDefConstr
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[7,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[13,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[19,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[25,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[30,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[36,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] /Users/eschuler/gitREPOS-SoSe2020/STEVIO-KBE/runmerunner/src/main/java/htwb/ClassWithRunMes.java:[42,6] cannot find symbol
+[ERROR]   symbol:   class RunMe
+[ERROR]   location: class htwb.ClassWithRunMes
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
