@@ -15,29 +15,17 @@ public class InsertSystem {
     private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence
             .createEntityManagerFactory("STEVIO-KBE");
 
-    public static void main(String[] args) {
-        addSong("Sog","Son1","lel",20);
-        ENTITY_MANAGER_FACTORY.close();
-    }
 
-    public static void addSong(String title, String artist, String label, int released) {
+    public static void addSong(Song song) {
 
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
         EntityTransaction et = null;
 
         try {
-            // Get transaction and start
+
             et = em.getTransaction();
             et.begin();
-
-            // Create and set values for new customer
-            Song song = new Song();
-            song.setTitle(title);
-            song.setArtist(artist);
-            song.setLabel(label);
-            song.setReleased(released);
-
             em.persist(song);
             et.commit();
         } catch (Exception ex) {
@@ -50,7 +38,7 @@ public class InsertSystem {
         }
     }
 
-    public static void getSong(int id) {
+    public static Song getSong(int id) {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
         // the lowercase c refers to the object
@@ -65,29 +53,33 @@ public class InsertSystem {
         try {
             // Get matching customer object and output
             song = tq.getSingleResult();
-            System.out.println(song.getTitle() + " " + song.getArtist() + " " + song.getLabel() + " " + song.getReleased());
+
         } catch (NoResultException ex) {
             ex.printStackTrace();
         } finally {
             em.close();
         }
+        return song;
     }
 
-    public static void getSongs() {
+    public static List<Song> getSongs() {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
 
         String strQuery = "SELECT c FROM Song c WHERE c.id IS NOT NULL";
 
         TypedQuery<Song> tq = em.createQuery(strQuery, Song.class);
-        List<Song> songs;
+        List<Song> songs = null;
         try {
             songs = tq.getResultList();
-            songs.forEach(song -> System.out.println(song.getTitle() + " " + song.getArtist() + " " + song.getLabel() + " " + song.getReleased()));
         } catch (NoResultException ex) {
             ex.printStackTrace();
         } finally {
             em.close();
         }
+        return songs;
     }
+
+
+
 }

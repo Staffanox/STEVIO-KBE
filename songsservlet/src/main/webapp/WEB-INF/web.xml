@@ -12,16 +12,9 @@
         </init-param>
     </servlet>
 
-<!--  DIE URL AN DAS SERVLET, WELCHES IN EINEM TOMCAT_SERVER LAEUFT IST:
-      http://localhost:8080/echoServlet/echo
-      echoServlet ist die Bezeichnung der App,
-      echoServlet/echo -> Pfad welcher auf htwb.ai.teames.EchoServlet abgebildet wird
-      echoServlet.war wird von uns gebaut, ins webapp-Verzeichnis von Tomcat kopiert
-      von Tomcat depoyed
 
- -->
     <servlet-mapping>
         <servlet-name>Song Servlet</servlet-name>
-        <url-pattern>/echo</url-pattern>
+        <url-pattern>/songs</url-pattern>
     </servlet-mapping>
 </web-app>
