@@ -8,7 +8,7 @@
         <servlet-class>htwb.ai.stevio.controller.EchoServlet</servlet-class>
         <init-param>
             <param-name>uriToDB</param-name>
-            <param-value>db-uri:mysql.server.de:3306/dbId</param-value>
+            <param-value>postgres://xsyzgpzowmhhng:e5bf36f98de18db7286fdcfbbf889c1edf221d1d13243bdf2950ae3046a3aa7d@ec2-46-137-156-205.eu-west-1.compute.amazonaws.com:5432/d18npte90olan9</param-value>
         </init-param>
     </servlet>
 
