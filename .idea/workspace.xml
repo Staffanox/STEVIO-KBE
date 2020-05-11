@@ -27,11 +27,7 @@
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="hibernate implementation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsservlet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/InsertSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/InsertSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsservlet/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,6 +406,7 @@
       <workItem from="1588703225325" duration="1212000" />
       <workItem from="1588768080732" duration="10791000" />
       <workItem from="1588779443331" duration="3743000" />
+      <workItem from="1589199365482" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
