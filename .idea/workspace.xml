@@ -24,10 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="Connections fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" afterDir="false" />
-    </list>
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="Connections fixed" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -408,6 +405,7 @@
       <workItem from="1589199365482" duration="947000" />
       <workItem from="1589200660714" duration="238000" />
       <workItem from="1589720984349" duration="3767000" />
+      <workItem from="1589725514933" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -458,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589200743285</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Connections fixed">
+      <created>1589725531401</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589725531401</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,9 +487,9 @@
     <MESSAGE value="RunMe Annotation (Aufg 1)" />
     <MESSAGE value="bugfixes&#10;- &quot;mvn clean package&quot; always wants to run a method called &quot;$jacocoInit&quot;. This class is not included in our AnnotationsTestClass. Made a workaround, which tests if a methods name is &quot;$jacocoInit&quot;. If so, the loop continues with the next method.&#10;&#10;- changed what happens when method is not invoceable" />
     <MESSAGE value="hibernate implementation" />
-    <MESSAGE value="Connections fixed" />
     <MESSAGE value="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f" />
+    <MESSAGE value="Connections fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connections fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -614,11 +619,11 @@
     </state>
     <state x="617" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1589200772606">
+    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1589725537555">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
-    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
+    <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200772606" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587572628217" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
