@@ -24,10 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="hibernate implementation">
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="Connections fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,6 +406,8 @@
       <workItem from="1588768080732" duration="10791000" />
       <workItem from="1588779443331" duration="3743000" />
       <workItem from="1589199365482" duration="947000" />
+      <workItem from="1589200660714" duration="238000" />
+      <workItem from="1589720984349" duration="3767000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -443,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1588700166934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Connections fixed">
+      <created>1589200705942</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589200705942</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f">
+      <created>1589200743285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589200743285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +482,9 @@
     <MESSAGE value="RunMe Annotation (Aufg 1)" />
     <MESSAGE value="bugfixes&#10;- &quot;mvn clean package&quot; always wants to run a method called &quot;$jacocoInit&quot;. This class is not included in our AnnotationsTestClass. Made a workaround, which tests if a methods name is &quot;$jacocoInit&quot;. If so, the loop continues with the next method.&#10;&#10;- changed what happens when method is not invoceable" />
     <MESSAGE value="hibernate implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="hibernate implementation" />
+    <MESSAGE value="Connections fixed" />
+    <MESSAGE value="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -509,8 +526,11 @@
     <state x="2951" y="409" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588690088633" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587572628217" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
-    <state x="338" y="178" key="CommitChangelistDialog2" timestamp="1587572628217" />
+    <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1589200743208">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
     <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
+    <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl" timestamp="1588769470586">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -585,17 +605,21 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1739" height="508" key="GridCell.Tab.2.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
+    <state x="3083" y="420" width="465" height="285" key="MultipleFileMergeDialog" timestamp="1589200736142">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3083" y="420" width="465" height="285" key="MultipleFileMergeDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200736142" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor" timestamp="1588691512051">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="617" y="174" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1588700205379">
+    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1589200772606">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
-    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588700205379" />
+    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200772606" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587572628217" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state x="667" y="276" width="593" height="488" key="find.popup" timestamp="1587572628217" />

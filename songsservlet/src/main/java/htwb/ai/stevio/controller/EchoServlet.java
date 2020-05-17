@@ -3,6 +3,7 @@ package htwb.ai.stevio.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.List;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -55,7 +56,8 @@ public class EchoServlet extends HttpServlet {
                     response.setStatus(400);
                 }
             } else if (param.equals("all")) {
-                out.println(mapper.writeValueAsString(InsertSystem.getSongs()));
+                List<Song> songList = InsertSystem.getSongs();
+                out.println(mapper.writerWithDefaultPrettyPrinter().writeValueAsString(songList));
                 response.setStatus(200);
             } else
                 response.setStatus(400);
@@ -69,23 +71,28 @@ public class EchoServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         ObjectMapper mapper = new ObjectMapper();
         String jsonInString = body;
-        if (body != null) {
-            if (body.contains("title")) {
-                Song song = mapper.readValue(jsonInString, Song.class);
-                if (song.getTitle().isEmpty()) {
-                    out.println("Wrong body");
-                    response.setStatus(400);
+        try {
+            if (body != null) {
+                if (body.contains("title")) {
+                    Song song = mapper.readValue(jsonInString, Song.class);
+                    if (song.getTitle().isEmpty()) {
+                        out.println("Wrong body");
+                        response.setStatus(400);
+                    } else {
+                        InsertSystem.addSong(song);
+                        response.setStatus(201);
+                        response.setHeader("Location", "/songsservlet-stevio/songs?songId=" + song.getId());
+                    }
                 } else {
-                    InsertSystem.addSong(song);
-                    response.setStatus(201);
-                    response.setHeader("Location", "/songsservlet-stevio/songs?songId=" + song.getId());
+                    out.println("Body does not contain necessary information");
+                    response.setStatus(400);
                 }
             } else {
                 out.println("Body does not contain necessary information");
                 response.setStatus(400);
             }
-        } else {
-            out.println("Body does not contain necessary information");
+        } catch (Exception e) {
+            out.println("Wrong Body");
             response.setStatus(400);
         }
     }
@@ -93,4 +100,18 @@ public class EchoServlet extends HttpServlet {
     protected String getUriToDB() {
         return this.uriToDB;
     }
+
+
+    @Override
+    public void doDelete(HttpServletRequest request, HttpServletResponse response) {
+
+        response.setStatus(405);
+    }
+
+    @Override
+    public void doPut(HttpServletRequest request, HttpServletResponse response) {
+
+        response.setStatus(405);
+    }
+
 }
