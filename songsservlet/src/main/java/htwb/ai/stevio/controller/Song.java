@@ -1,16 +1,13 @@
 package htwb.ai.stevio.controller;
 
 import com.sun.istack.NotNull;
-
 import java.io.Serializable;
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "song")
 public class Song implements Serializable {
     private static final long serialVersionUID = 1L;
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +28,7 @@ public class Song implements Serializable {
     @Column(name = "released")
     private int released;
 
+    public Song(){}
 
     public int getId() {
         return id;
