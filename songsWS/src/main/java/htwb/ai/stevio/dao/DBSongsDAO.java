@@ -31,13 +31,13 @@ import java.util.List;
     @Override
     public Integer addSong(Song song) {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-        Song s = em.find(Song.class, song);
+        //Song s = em.find(Song.class, song);
 
         em.getTransaction().begin();
-        em.persist(s);
+        em.persist(song);
         em.getTransaction().commit();
         em.close();
-        return s.getId();
+        return song.getId();
     }
 
     @Override
@@ -55,7 +55,7 @@ import java.util.List;
     public void deleteSong(Song song) {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
-        Song s = em.find(Song.class, song);
+        Song s = em.find(Song.class, song.getId());
         em.getTransaction().begin();
         em.remove(s);
         em.getTransaction().commit();

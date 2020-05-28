@@ -2,12 +2,18 @@ package htwb.ai.stevio.controller;
 
 import htwb.ai.stevio.dao.ISongsDAO;
 import htwb.ai.stevio.model.Song;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.lang.reflect.Member;
 import java.util.List;
 
 /*
@@ -27,7 +33,7 @@ public class SongsController {
     }
 
     //GET all   ../rest/songs
-    @GetMapping()
+    @GetMapping(produces = "application/json", consumes = "application/json")
     public ResponseEntity<List<Song>> getAll() throws IOException {
         List<Song> songs = songsDAO.getAllSongs();
 
@@ -38,9 +44,13 @@ public class SongsController {
         return new ResponseEntity<>(songs, HttpStatus.OK);
     }
 
-    //GET id
-    @GetMapping(value="/{id}")
+    //GET by id   ../rest/songs/1
+    @GetMapping(value="/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Song> getSong(@PathVariable(value="id") Integer id) throws IOException {
+        if(id < 0){
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        }
+
         Song song = songsDAO.getSongById(id);
 
         if(song != null){
@@ -50,21 +60,35 @@ public class SongsController {
         return new ResponseEntity<>(song, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping(value="")
-    public ResponseEntity<Integer> postSong(){
-        Song s = new Song(1,"", "", "", 1);
-        songsDAO.addSong(s);
+    @PostMapping(produces = "application/json", consumes = "application/json")
+    public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request){
 
-        return new ResponseEntity<>(-1, HttpStatus.OK);
+        if(song.getTitle() == null || song.getTitle() == ""){
+            return new ResponseEntity<>("Wrong body: no title", HttpStatus.BAD_REQUEST);
+        }
+        songsDAO.addSong(song);
+
+        return new ResponseEntity<>(request.getRequestURL() + "/" + song.getId(), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value="/{id}")
-    public ResponseEntity<Song> deleteSong(){
-        Song s = new Song(1, "","","",2);
-        return new ResponseEntity<Song>(s, HttpStatus.NOT_FOUND);
+    @DeleteMapping(value="/{id}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<String> deleteSong(@PathVariable(value="id") Integer id){
+
+        if(id < 0){
+            return new ResponseEntity<>("ID cant be less than 0. Your ID: " + id, HttpStatus.BAD_REQUEST);
+        }
+
+        Song s = songsDAO.getSongById(id);
+
+        if(s == null){
+            return new ResponseEntity<>("No song with ID '" + id + "' exists.", HttpStatus.NOT_FOUND);
+        }
+
+        songsDAO.deleteSong(s);
+        return new ResponseEntity<>("Song with ID '" + id + "' was deleted.", HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(value="/{id}")
+    @PutMapping(value="/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<Song> putSong(@PathVariable(value="id") Integer id){
         //songsDAO.updateSong();
         return null;
