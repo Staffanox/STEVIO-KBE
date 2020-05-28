@@ -24,18 +24,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="Connections fixed">
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/EchoServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongsDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -428,7 +419,7 @@
       <workItem from="1590008337842" duration="58000" />
       <workItem from="1590069631072" duration="857000" />
       <workItem from="1590504355330" duration="29916000" />
-      <workItem from="1590654443812" duration="3312000" />
+      <workItem from="1590654443812" duration="3783000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -486,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589725531401</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Spring MVC configs&#10;../rest/songs endpoint">
+      <created>1590657816543</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590657816543</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +510,8 @@
     <MESSAGE value="hibernate implementation" />
     <MESSAGE value="Revert &quot;added database credentials&quot;&#10;&#10;This reverts commit 2c4cfd7f" />
     <MESSAGE value="Connections fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Connections fixed" />
+    <MESSAGE value="Spring MVC configs&#10;../rest/songs endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring MVC configs&#10;../rest/songs endpoint" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -573,10 +572,10 @@
     <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1590585304416" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587572628217" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
-    <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1589200743208">
-      <screen x="0" y="28" width="1920" height="1052" />
+    <state x="338" y="176" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1590657815460">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="338" y="178" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
+    <state x="338" y="176" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590657815460" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
     <state x="544" y="328" width="424" height="512" key="FileChooserDialogImpl" timestamp="1590612916996">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -665,10 +664,10 @@
     </state>
     <state x="312" y="113" width="1223" height="852" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655509522" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1589725537555">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="292" y="315" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1590657828703">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590657828703" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200772606" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590565982062">

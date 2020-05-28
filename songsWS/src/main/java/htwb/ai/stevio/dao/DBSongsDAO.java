@@ -18,7 +18,7 @@ import java.util.List;
     public List<Song> getAllSongs() {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
-        Query q = em.createQuery("SELECT s FROM Song s");
+        Query q = em.createQuery("SELECT s FROM Song s ORDER BY s.id ASC");
         return q.getResultList();
     }
 
