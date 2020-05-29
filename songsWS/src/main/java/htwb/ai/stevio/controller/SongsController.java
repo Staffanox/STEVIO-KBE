@@ -33,7 +33,7 @@ public class SongsController {
     }
 
     //GET all   ../rest/songs
-    @GetMapping(produces = "application/json", consumes = "application/json")
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Song>> getAll() throws IOException {
         List<Song> songs = songsDAO.getAllSongs();
 
@@ -41,11 +41,11 @@ public class SongsController {
             return new ResponseEntity<>(songs, HttpStatus.OK);
         }
 
-        return new ResponseEntity<>(songs, HttpStatus.OK);
+        return new ResponseEntity<>(songs, HttpStatus.BAD_REQUEST);
     }
 
     //GET by id   ../rest/songs/1
-    @GetMapping(value="/{id}", produces = "application/json", consumes = "application/json")
+    @GetMapping(value="/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Song> getSong(@PathVariable(value="id") Integer id) throws IOException {
         if(id < 0){
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
@@ -60,7 +60,7 @@ public class SongsController {
         return new ResponseEntity<>(song, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping(produces = "application/json", consumes = "application/json")
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request){
 
         if(song.getTitle() == null || song.getTitle() == ""){
@@ -71,7 +71,7 @@ public class SongsController {
         return new ResponseEntity<>(request.getRequestURL() + "/" + song.getId(), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value="/{id}", produces = "application/json", consumes = "application/json")
+    @DeleteMapping(value="/{id}")
     public ResponseEntity<String> deleteSong(@PathVariable(value="id") Integer id){
 
         if(id < 0){
@@ -89,9 +89,19 @@ public class SongsController {
     }
 
     @PutMapping(value="/{id}", produces = "application/json", consumes = "application/json")
-    public ResponseEntity<Song> putSong(@PathVariable(value="id") Integer id){
-        //songsDAO.updateSong();
-        return null;
+    public ResponseEntity<String> putSong(@PathVariable(value="id") Integer id, @RequestBody Song song){
+
+        if(id != song.getId()){
+            return new ResponseEntity<>("URL ID doesnt match payload ID.", HttpStatus.BAD_REQUEST);
+        }
+
+        if(song.getTitle() == "" || song.getTitle() == null){
+            return new ResponseEntity<>("Wrong body: title is null or has no declaration.", HttpStatus.BAD_REQUEST);
+        }
+
+        songsDAO.updateSong(song);
+
+        return new ResponseEntity<>("Song with ID '" + song.getId() + "' was updated.", HttpStatus.NO_CONTENT);
     }
 
 

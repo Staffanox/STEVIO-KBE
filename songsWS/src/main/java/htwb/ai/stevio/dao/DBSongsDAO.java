@@ -44,9 +44,8 @@ import java.util.List;
     public void updateSong(Song song) {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
-        Song s = em.find(Song.class, song);
         em.getTransaction().begin();
-        em.merge(s);
+        em.merge(song);
         em.getTransaction().commit();
         em.close();
     }
