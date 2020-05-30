@@ -2,18 +2,15 @@ package htwb.ai.stevio.controller;
 
 import htwb.ai.stevio.dao.ISongsDAO;
 import htwb.ai.stevio.model.Song;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.print.attribute.standard.Media;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.lang.reflect.Member;
 import java.util.List;
 
 /*
@@ -45,7 +42,7 @@ public class SongsController {
     }
 
     //GET by id   ../rest/songs/1
-    @GetMapping(value="/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Song> getSong(@PathVariable(value="id") Integer id) throws IOException {
         if(id < 0){
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
