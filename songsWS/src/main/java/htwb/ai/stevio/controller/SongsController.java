@@ -8,9 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.Media;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.net.URI;
 import java.util.List;
 
 /*
@@ -19,13 +19,13 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping(value="songs")
+@RequestMapping(value = "songs")
 public class SongsController {
 
     @Autowired
     private ISongsDAO songsDAO;
 
-    public SongsController(ISongsDAO sDAO){
+    public SongsController(ISongsDAO sDAO) {
         this.songsDAO = sDAO;
     }
 
@@ -34,7 +34,7 @@ public class SongsController {
     public ResponseEntity<List<Song>> getAll() throws IOException {
         List<Song> songs = songsDAO.getAllSongs();
 
-        if(songs != null && songs.size() > 0){
+        if (songs != null && songs.size() > 0) {
             return new ResponseEntity<>(songs, HttpStatus.OK);
         }
 
@@ -42,15 +42,15 @@ public class SongsController {
     }
 
     //GET by id   ../rest/songs/1
-    @GetMapping(value="/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Song> getSong(@PathVariable(value="id") Integer id) throws IOException {
-        if(id < 0){
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) throws IOException {
+        if (id < 0) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
 
         Song song = songsDAO.getSongById(id);
 
-        if(song != null){
+        if (song != null) {
             return new ResponseEntity<>(song, HttpStatus.OK);
         }
 
@@ -58,26 +58,28 @@ public class SongsController {
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request){
+    public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request) {
 
-        if(song.getTitle() == null || song.getTitle() == ""){
+        if (song.getTitle() == null || song.getTitle().equals("")) {
             return new ResponseEntity<>("Wrong body: no title", HttpStatus.BAD_REQUEST);
         }
-        songsDAO.addSong(song);
 
-        return new ResponseEntity<>(request.getRequestURL() + "/" + song.getId(), HttpStatus.CREATED);
+        songsDAO.addSong(song);
+        URI location = URI.create(request.getRequestURI() + "/" + song.getId());
+        return ResponseEntity.created(location).body(null);
+        // return new ResponseEntity<>(request.getRequestURL() + "/" + song.getId(), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value="/{id}")
-    public ResponseEntity<String> deleteSong(@PathVariable(value="id") Integer id){
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer id) {
 
-        if(id < 0){
+        if (id < 0) {
             return new ResponseEntity<>("ID cant be less than 0. Your ID: " + id, HttpStatus.BAD_REQUEST);
         }
 
         Song s = songsDAO.getSongById(id);
 
-        if(s == null){
+        if (s == null) {
             return new ResponseEntity<>("No song with ID '" + id + "' exists.", HttpStatus.NOT_FOUND);
         }
 
@@ -85,14 +87,14 @@ public class SongsController {
         return new ResponseEntity<>("Song with ID '" + id + "' was deleted.", HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(value="/{id}", produces = "application/json", consumes = "application/json")
-    public ResponseEntity<String> putSong(@PathVariable(value="id") Integer id, @RequestBody Song song){
+    @PutMapping(value = "/{id}", produces = "application/json", consumes = "application/json")
+    public ResponseEntity<String> putSong(@PathVariable(value = "id") Integer id, @RequestBody Song song) {
 
-        if(id != song.getId()){
+        if (id != song.getId()) {
             return new ResponseEntity<>("URL ID doesnt match payload ID.", HttpStatus.BAD_REQUEST);
         }
 
-        if(song.getTitle() == "" || song.getTitle() == null){
+        if (song.getTitle().equals("") || song.getTitle() == null) {
             return new ResponseEntity<>("Wrong body: title is null or has no declaration.", HttpStatus.BAD_REQUEST);
         }
 
