@@ -32,8 +32,8 @@ public class UsersController {
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> signIn(@RequestBody User user){
 
-        if(user.getUserId() == null || user.getUserId() == "" ||
-                user.getPassword() == null || user.getPassword() == ""){
+        if(user.getUserId() == null || user.getUserId().equals("") ||
+                user.getPassword() == null || user.getPassword().equals("")){
             return new ResponseEntity<>("Username AND password is needed.", HttpStatus.UNAUTHORIZED);
         }
 

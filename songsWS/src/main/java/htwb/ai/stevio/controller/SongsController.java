@@ -31,7 +31,7 @@ public class SongsController {
 
     //GET all   ../rest/songs
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Song>> getAll() throws IOException {
+    public ResponseEntity<List<Song>> getAll() {
         List<Song> songs = songsDAO.getAllSongs();
 
         if (songs != null && songs.size() > 0) {
@@ -43,7 +43,7 @@ public class SongsController {
 
     //GET by id   ../rest/songs/1
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) throws IOException {
+    public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) {
         if (id < 0) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
@@ -65,7 +65,7 @@ public class SongsController {
         }
 
         songsDAO.addSong(song);
-        URI location = URI.create(request.getRequestURI() + "/" + song.getId());
+        URI location = URI.create(request.getRequestURL() + "/" + song.getId());
         return ResponseEntity.created(location).body(null);
         // return new ResponseEntity<>(request.getRequestURL() + "/" + song.getId(), HttpStatus.CREATED);
     }
