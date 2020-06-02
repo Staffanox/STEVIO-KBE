@@ -27,9 +27,6 @@
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -426,7 +423,7 @@
       <workItem from="1590654443812" duration="14896000" />
       <workItem from="1590677615184" duration="10447000" />
       <workItem from="1591097375841" duration="3138000" />
-      <workItem from="1591110030219" duration="4863000" />
+      <workItem from="1591110030219" duration="5514000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -519,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590834647745</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed &quot;user0_.&quot;-hibernate bug">
+      <created>1591115533020</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1591115533020</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +554,8 @@
     <MESSAGE value="added several REST functions:&#10;- get&#10;- post&#10;- delete&#10;&#10;todo: put" />
     <MESSAGE value="added rest-func:&#10;- put&#10;&#10;fixed rest-func:&#10;- delete" />
     <MESSAGE value="added auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="added auth" />
+    <MESSAGE value="fixed &quot;user0_.&quot;-hibernate bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed &quot;user0_.&quot;-hibernate bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -615,10 +620,10 @@
     <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1590585304416" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587572628217" />
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
-    <state x="386" y="71" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1590834646971">
+    <state x="386" y="71" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1591115532168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834646971" />
+    <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591115532168" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
     <state x="544" y="328" width="424" height="512" key="FileChooserDialogImpl" timestamp="1590612916996">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -707,16 +712,16 @@
     </state>
     <state x="312" y="113" width="1223" height="852" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655509522" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="292" y="315" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1590834655561">
+    <state x="292" y="315" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1591115540216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834655561" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591115540216" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200772606" />
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590565982062">
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591115501007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590565982062" />
+    <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591115501007" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587572628217" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1591112286389">
