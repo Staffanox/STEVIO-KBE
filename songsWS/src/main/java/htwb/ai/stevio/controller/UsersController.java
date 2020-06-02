@@ -42,16 +42,18 @@ public class UsersController {
         if(u == null){
             return new ResponseEntity<>("No user found", HttpStatus.UNAUTHORIZED);
         }
-
-        String token = this.generateToken();
-
-        return new ResponseEntity<>(token, HttpStatus.OK);
+        
+        return new ResponseEntity<>(this.generateToken(), HttpStatus.OK);
     }
 
     public String generateToken(){
 
         String token = UUID.randomUUID().toString();
         token.replace("-", "");
+
+        if(token.length() > 18){
+            token = token.substring(0, 17);
+        }
 
         return token;
     }
