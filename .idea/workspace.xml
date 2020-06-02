@@ -126,7 +126,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.34">
+  <component name="RunManager" selected="JUnit.SongsControllerTest">
     <configuration name="InsertSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.InsertSystem" />
       <module name="songsservlet" />
@@ -172,18 +172,33 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectorTest.no" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="runmerunner" />
+    <configuration name="SongsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.*" />
+          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.InspectorTest" />
-      <option name="METHOD_NAME" value="no" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongsControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.UsersControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -191,21 +206,6 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="htwb.ai in runmerunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="runmerunner" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -360,20 +360,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.InsertSystem" />
-      <item itemvalue="JUnit.htwb.ai in runmerunner" />
-      <item itemvalue="JUnit.InspectorTest.no" />
       <item itemvalue="JUnit.ContainerTest" />
       <item itemvalue="JUnit.InspectorTest" />
       <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
+      <item itemvalue="JUnit.SongsControllerTest" />
+      <item itemvalue="JUnit.UsersControllerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongsControllerTest" />
+        <item itemvalue="JUnit.UsersControllerTest" />
         <item itemvalue="Application.InsertSystem" />
         <item itemvalue="JUnit.ContainerTest" />
         <item itemvalue="JUnit.InspectorTest" />
-        <item itemvalue="JUnit.htwb.ai in runmerunner" />
-        <item itemvalue="JUnit.InspectorTest.no" />
       </list>
     </recent_temporary>
   </component>
