@@ -26,7 +26,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,6 +426,7 @@
       <workItem from="1590654443812" duration="14896000" />
       <workItem from="1590677615184" duration="10447000" />
       <workItem from="1591097375841" duration="3138000" />
+      <workItem from="1591110030219" duration="4863000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -715,10 +719,10 @@
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590565982062" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587572628217" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
-    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1590593480297">
+    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1591112286389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590593480297" />
+    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591112286389" />
     <state x="695" y="308" key="git4idea.merge.GitPullDialog" timestamp="1590566012981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -729,10 +733,10 @@
     <state x="2950" y="290" width="489" height="526" key="refactoring.ChangeSignatureDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588695871128" />
     <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1587572628218" />
     <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628218" />
-    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1590831531087">
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1591114743885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590831531087" />
+    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591114743885" />
     <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588690061065" />
     <state x="854" y="346" key="spring file set editor" timestamp="1590655507210">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -740,23 +744,23 @@
     <state x="854" y="346" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655507210" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.stevio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$InputTest.ic" NAME="InputTest Coverage Results" MODIFIED="1587412433220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_in_runmerunner.ic" NAME="htwb.ai in runmerunner Coverage Results" MODIFIED="1587678257298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.stevio.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
   </component>

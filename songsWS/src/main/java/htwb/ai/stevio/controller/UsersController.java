@@ -42,7 +42,7 @@ public class UsersController {
         if(u == null){
             return new ResponseEntity<>("No user found", HttpStatus.UNAUTHORIZED);
         }
-        
+
         return new ResponseEntity<>(this.generateToken(), HttpStatus.OK);
     }
 
