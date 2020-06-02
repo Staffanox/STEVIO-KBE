@@ -6,28 +6,30 @@ package htwb.ai.stevio.model;
  */
 
 import com.sun.istack.NotNull;
-
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @Basic(optional = false)
     @NotNull
-    @Column(name = "userId", nullable = false)
+    @Column(name = "\"userId\"", nullable = false)
     private String userId;
 
+    @NotNull
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "firstName", nullable = false)
+    @NotNull
+    @Column(name = "\"firstName\"", nullable = false)
     private String firstName;
 
-    @Column(name = "lastName", nullable = false)
+    @NotNull
+    @Column(name = "\"lastName\"", nullable = false)
     private String lastName;
 
 

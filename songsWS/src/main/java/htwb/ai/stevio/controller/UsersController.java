@@ -39,17 +39,28 @@ public class UsersController {
 
         User u = usersDAO.getUser(user);
 
+        //Kein User zu der userId gefunden
         if(u == null){
             return new ResponseEntity<>("No user found", HttpStatus.UNAUTHORIZED);
         }
-        
+
+        //UserId stimmt nicht mit der userId des Postbefehls überein (trivial..)
+        if(!u.getUserId().equals(user.getUserId())){
+            return new ResponseEntity<>("Username or password wrong", HttpStatus.UNAUTHORIZED);
+        }
+
+        //PW stimmt nicht mit dem PW des Postbefehls überein
+        if( !u.getPassword().equals(user.getPassword())){
+            return new ResponseEntity<>("Username or password wrong", HttpStatus.UNAUTHORIZED);
+        }
+
         return new ResponseEntity<>(this.generateToken(), HttpStatus.OK);
     }
 
     public String generateToken(){
 
         String token = UUID.randomUUID().toString();
-        token.replace("-", "");
+        token.replaceAll("-", "");
 
         if(token.length() > 18){
             token = token.substring(0, 17);
