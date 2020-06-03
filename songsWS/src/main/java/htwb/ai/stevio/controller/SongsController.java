@@ -29,7 +29,7 @@ public class SongsController {
     }
 
     //GET all   ../rest/songs
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Song>> getAll() {
         List<Song> songs = songsDAO.getAllSongs();
 
@@ -41,7 +41,7 @@ public class SongsController {
     }
 
     //GET by id   ../rest/songs/1
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE )
+    @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) {
         if (id < 0) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);

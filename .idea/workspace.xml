@@ -27,13 +27,6 @@
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IUsersDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestSongDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestSongDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,13 +364,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Unnamed" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
       <item itemvalue="JUnit.UsersControllerTest" />
       <item itemvalue="JUnit.SongsControllerTest.postASongAsXML" />
       <item itemvalue="JUnit.SongsControllerTest.putSongAsXML" />
       <item itemvalue="JUnit.SongsControllerTest" />
       <item itemvalue="JUnit.htwb.ai.stevio in songsWS" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
     </list>
     <recent_temporary>
       <list>
@@ -437,6 +430,7 @@
       <workItem from="1591097375841" duration="3138000" />
       <workItem from="1591118033014" duration="164000" />
       <workItem from="1591185576446" duration="2945000" />
+      <workItem from="1591194947364" duration="407000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -766,23 +760,23 @@
     <state x="854" y="346" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655507210" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.stevio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$InputTest.ic" NAME="InputTest Coverage Results" MODIFIED="1587412433220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_in_runmerunner.ic" NAME="htwb.ai in runmerunner Coverage Results" MODIFIED="1587678257298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.stevio.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
   </component>
