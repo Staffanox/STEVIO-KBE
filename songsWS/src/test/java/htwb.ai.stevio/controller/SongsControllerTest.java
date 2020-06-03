@@ -16,7 +16,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 
-
 class SongsControllerTest {
     private MockMvc mockMvc;
 
@@ -45,6 +44,7 @@ class SongsControllerTest {
 
     @Test
         // GET /songs
+        // DEL /songs/10
     void getAllSongsWithoutAnySongs() throws Exception {
         mockMvc.perform(delete("/songs/10"))
                 .andExpect(status().is(204));
@@ -68,7 +68,7 @@ class SongsControllerTest {
     }
 
     @Test
-        // GET /songs/1
+        // GET /songs/10
     void getFirstSongShouldReturn200AndSong() throws Exception {
         mockMvc.perform(get("/songs/10"))
                 .andExpect(status().isOk())
@@ -90,27 +90,41 @@ class SongsControllerTest {
 
 
     @Test
+        //POST /songs
     void postASongShouldReturn201() throws Exception {
 
         Song changedSong = Song.builder().withId(1).withTitle("Changed").build();
         mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
         ))
                 .andExpect(status().is(201))
-                .andExpect(header().string("Location", "http://localhost/songs/1"));
+                .andExpect(header().string("Location", "/songs/1"));
     }
 
-      @Test
+    @Test
+        //POST /songs
+    void postASongAsXML() throws Exception {
+
+        Song changedSong = Song.builder().withId(1).withTitle("Changed").build();
+        mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_XML).content(asJsonString(changedSong)
+        ))
+                .andExpect(status().is(415));
+    }
+
+
+    @Test
+        //POST /songs
     void postSongWithExistingId() throws Exception {
 
         Song changedSong = Song.builder().withId(10).withTitle("Changed").build();
         mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
         ))
                 .andExpect(status().is(201))
-                .andExpect(header().string("Location", "http://localhost/songs/10"));
+                .andExpect(header().string("Location", "/songs/10"));
     }
 
 
     @Test
+        //POST songs
     void postSongWithoutTitleShouldReturn400() throws Exception {
 
         Song changedSong = Song.builder().build();
@@ -119,15 +133,18 @@ class SongsControllerTest {
                 .andExpect(status().is(400));
     }
 
-     @Test
+    @Test
+        //POST song
     void postWrongURLShouldReturn404() throws Exception {
         Song changedSong = Song.builder().withTitle("Test").withId(1).build();
-         mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
+        mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
         ))
                 .andExpect(status().is(404));
     }
 
     @Test
+        //PUT /songs/10
+        //GET /songs/10
     void putSongShouldReturn201() throws Exception {
 
         Song changedSong = Song.builder().withId(10).withTitle("Changed").build();
@@ -149,6 +166,19 @@ class SongsControllerTest {
     }
 
     @Test
+        //PUT /songs/10
+    void putSongAsXML() throws Exception {
+
+        Song changedSong = Song.builder().withId(1).withTitle("Changed").build();
+        mockMvc.perform(put("/songs/10").contentType(MediaType.APPLICATION_XML).content(asJsonString(changedSong)
+        ))
+                .andExpect(status().is(415));
+
+    }
+
+
+    @Test
+        //PUT /songs/10
     void putDifferentIdInURLAndPayloadShouldReturn404() throws Exception {
 
         Song changedSong = Song.builder().withId(1).withTitle("Changed").build();
@@ -157,15 +187,20 @@ class SongsControllerTest {
                 .andExpect(status().is(400));
 
     }
-     @Test
-    void putWrongURLShouldReturn400() throws Exception {
-         Song changedSong = Song.builder().withId(10).withTitle("Changed").build();
-         mockMvc.perform(put("/song/10").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
-         ))
-                 .andExpect(status().is(404));
 
-     }
     @Test
+        //PUT /song/10
+    void putWrongURLShouldReturn400() throws Exception {
+        Song changedSong = Song.builder().withId(10).withTitle("Changed").build();
+        mockMvc.perform(put("/song/10").contentType(MediaType.APPLICATION_JSON).content(asJsonString(changedSong)
+        ))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+        //DEL /songs/10
+        //GET /songs/10
     void deleteShouldRemoveSongAndReturn204() throws Exception {
         mockMvc.perform(delete("/songs/10"))
                 .andExpect(status().is(204));
@@ -175,18 +210,18 @@ class SongsControllerTest {
     }
 
     @Test
+        //DEL /songs/1
     void deleteWithMissingSongShouldReturn404() throws Exception {
         mockMvc.perform(delete("/songs/1"))
                 .andExpect(status().is(404));
     }
 
     @Test
+        //DEL /song/1
     void deleteWrongURLShouldReturn404() throws Exception {
         mockMvc.perform(delete("/song/1"))
                 .andExpect(status().is(404));
     }
-
-
 
 
     public static String asJsonString(final Object obj) {

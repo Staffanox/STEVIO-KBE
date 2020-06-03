@@ -8,5 +8,5 @@ import htwb.ai.stevio.model.User;
  */
 public interface IUsersDAO {
 
-     public User getUser(User user);
+     User getUser(User user);
 }

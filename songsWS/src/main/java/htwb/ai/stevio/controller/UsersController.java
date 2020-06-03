@@ -23,7 +23,7 @@ import java.util.UUID;
 public class UsersController {
 
     @Autowired
-    private IUsersDAO usersDAO;
+    private final IUsersDAO usersDAO;
 
     public UsersController(IUsersDAO usersDAO){
         this.usersDAO = usersDAO;
@@ -60,6 +60,8 @@ public class UsersController {
     public String generateToken(){
 
         String token = UUID.randomUUID().toString();
+
+        // todo replaceAll wird ignoriert?
         token.replaceAll("-", "");
 
         if(token.length() > 18){

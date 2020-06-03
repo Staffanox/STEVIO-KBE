@@ -9,10 +9,10 @@ import java.util.List;
  * @author Mario Teklic
  */public interface ISongsDAO {
 
-     public List<Song> getAllSongs();
-     public Song getSongById(int id);
-     public Integer addSong(Song song);
-     public void updateSong(Song song);
-     public void deleteSong(Song song);
+     List<Song> getAllSongs();
+     Song getSongById(int id);
+     Integer addSong(Song song);
+     void updateSong(Song song);
+     void deleteSong(Song song);
 
  }

@@ -11,7 +11,7 @@ import htwb.ai.stevio.model.Song;
 
 public class TestSongDAO implements ISongsDAO {
 
-    private Map<Integer, Song> mySongs;
+    private final Map<Integer, Song> mySongs;
 
     public TestSongDAO() {
 

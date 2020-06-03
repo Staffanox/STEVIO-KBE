@@ -9,7 +9,7 @@ import htwb.ai.stevio.model.User;
 
 public class TestUserDAO implements IUsersDAO {
 
-    private Map<String, User> myUsers;
+    private final Map<String, User> myUsers;
 
     public TestUserDAO() {
 
