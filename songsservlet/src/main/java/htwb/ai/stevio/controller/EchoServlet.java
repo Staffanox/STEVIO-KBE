@@ -21,7 +21,6 @@ public class EchoServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
         this.uriToDB = servletConfig.getInitParameter("uriToDB");
     }
 
