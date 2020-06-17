@@ -16,6 +16,7 @@
 
     <bean id="songsDAO" class="htwb.ai.stevio.dao.DBSongsDAO"/>
     <bean id="usersDAO" class="htwb.ai.stevio.dao.DBUsersDAO"/>
+    <bean id="IAuthenticator" class="htwb.ai.stevio.dao.AuthenticatorDAO"/>
 
     <!-- Wir nutzen Jackson: -->
     <bean id="jsonMessageConverter"

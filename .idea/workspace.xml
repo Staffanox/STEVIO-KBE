@@ -25,8 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,8 +111,9 @@
       <recent name="htwb.ai.stevio" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="htwb.ai.stevio" />
+      <recent name="htwb.ai.stevio.dao" />
       <recent name="htwb.ai.stevio.controller" />
+      <recent name="htwb.ai.stevio" />
       <recent name="htwb.ai" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -127,12 +134,21 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.htwb.ai.stevio in songsWS">
+  <component name="RunManager" selected="JUnit.htwb.ai.stevio.controller in songsWS">
+    <configuration name="All in songsWS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SongsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
+          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,45 +160,11 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsControllerTest.postASongAsXML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongsControllerTest" />
-      <option name="METHOD_NAME" value="postASongAsXML" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SongsControllerTest.putSongAsXML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongsControllerTest" />
-      <option name="METHOD_NAME" value="putSongAsXML" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
+          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -210,6 +192,21 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai.stevio" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="htwb.ai.stevio.controller in songsWS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -364,21 +361,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.UsersControllerTest" />
-      <item itemvalue="JUnit.SongsControllerTest.postASongAsXML" />
-      <item itemvalue="JUnit.SongsControllerTest.putSongAsXML" />
       <item itemvalue="JUnit.SongsControllerTest" />
       <item itemvalue="JUnit.htwb.ai.stevio in songsWS" />
+      <item itemvalue="JUnit.htwb.ai.stevio.controller in songsWS" />
+      <item itemvalue="JUnit.All in songsWS" />
+      <item itemvalue="JUnit.UsersControllerTest" />
       <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.htwb.ai.stevio.controller in songsWS" />
+        <item itemvalue="JUnit.All in songsWS" />
         <item itemvalue="JUnit.htwb.ai.stevio in songsWS" />
         <item itemvalue="JUnit.UsersControllerTest" />
         <item itemvalue="JUnit.SongsControllerTest" />
-        <item itemvalue="JUnit.SongsControllerTest.putSongAsXML" />
-        <item itemvalue="JUnit.SongsControllerTest.postASongAsXML" />
       </list>
     </recent_temporary>
   </component>
@@ -431,6 +428,9 @@
       <workItem from="1591118033014" duration="164000" />
       <workItem from="1591185576446" duration="2945000" />
       <workItem from="1591194947364" duration="407000" />
+      <workItem from="1592402138586" duration="5880000" />
+      <workItem from="1592408166254" duration="3221000" />
+      <workItem from="1592412304839" duration="3000000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -603,11 +603,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1210" y="414" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590832011365" />
-    <state x="1131" y="203" width="374" height="640" key="#com.intellij.ide.util.MemberChooser" timestamp="1590831491126">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1592408496815">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590831491126" />
     <state x="1131" y="203" width="374" height="640" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774620810" />
+    <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592408496815" />
     <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1588774327851">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -616,17 +617,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="782" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590585302711" />
-    <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588690088633">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="2951" y="518" width="497" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592409760520">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state x="2951" y="409" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588690088633" />
+    <state x="2951" y="518" width="497" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592409760520" />
     <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1590585304416">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="401" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1590585304416" />
-    <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1587572628217" />
+    <state x="627" y="109" width="1203" height="1078" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1592409430082">
+      <screen x="0" y="137" width="1920" height="1052" />
+    </state>
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
+    <state x="627" y="109" width="1203" height="1078" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592409430082" />
     <state x="2850" y="363" width="690" height="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591190416873">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -636,40 +641,45 @@
     </state>
     <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834646971" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
-    <state x="544" y="328" width="424" height="512" key="FileChooserDialogImpl" timestamp="1590612916996">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2645" y="450" width="424" height="512" key="FileChooserDialogImpl" timestamp="1592406772095">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590612916996" />
     <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588514730022" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588769470586" />
-    <state width="2514" height="291" key="GridCell.Tab.0.bottom" timestamp="1591190380315">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592406772095" />
+    <state width="1940" height="291" key="GridCell.Tab.0.bottom" timestamp="1592405587416">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state width="1281" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
     <state width="2034" height="233" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
-    <state width="2514" height="291" key="GridCell.Tab.0.center" timestamp="1591190380315">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state width="1940" height="291" key="GridCell.Tab.0.bottom/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
+    <state width="1940" height="291" key="GridCell.Tab.0.center" timestamp="1592405587416">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state width="1281" height="144" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
     <state width="2034" height="233" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
-    <state width="2514" height="291" key="GridCell.Tab.0.left" timestamp="1591190380314">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state width="1940" height="291" key="GridCell.Tab.0.center/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
+    <state width="1940" height="291" key="GridCell.Tab.0.left" timestamp="1592405587415">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state width="1281" height="144" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
     <state width="2034" height="233" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380314" />
-    <state width="2514" height="291" key="GridCell.Tab.0.right" timestamp="1591190380315">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state width="1940" height="291" key="GridCell.Tab.0.left/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587415" />
+    <state width="1940" height="291" key="GridCell.Tab.0.right" timestamp="1592405587416">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state width="1281" height="144" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
     <state width="2034" height="233" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
+    <state width="1940" height="291" key="GridCell.Tab.0.right/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
     <state width="1281" height="144" key="GridCell.Tab.1.bottom" timestamp="1590613771365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -714,6 +724,10 @@
     </state>
     <state width="1281" height="144" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
     <state width="1739" height="508" key="GridCell.Tab.2.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
+    <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1592409173767">
+      <screen x="1920" y="109" width="2560" height="1080" />
+    </state>
+    <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592409173767" />
     <state x="3083" y="420" width="465" height="285" key="MultipleFileMergeDialog" timestamp="1589200736142">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -743,40 +757,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="695" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590566012981" />
-    <state x="2950" y="290" width="489" height="526" key="refactoring.ChangeSignatureDialog" timestamp="1588695871128">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="2950" y="399" width="489" height="526" key="refactoring.ChangeSignatureDialog" timestamp="1592407294885">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="2950" y="290" width="489" height="526" key="refactoring.ChangeSignatureDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588695871128" />
+    <state x="2950" y="399" width="489" height="526" key="refactoring.ChangeSignatureDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592407294885" />
     <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1587572628218" />
     <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628218" />
-    <state x="608" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1590831531087">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2731" y="484" width="896" height="705" key="search.everywhere.popup" timestamp="1592407370830">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590831531087" />
     <state x="608" y="361" width="672" height="678" key="search.everywhere.popup/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588690061065" />
+    <state x="2731" y="484" width="896" height="705" key="search.everywhere.popup/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592407370830" />
     <state x="854" y="346" key="spring file set editor" timestamp="1590655507210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="854" y="346" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655507210" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.stevio.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$InputTest.ic" NAME="InputTest Coverage Results" MODIFIED="1587412433220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_in_runmerunner.ic" NAME="htwb.ai in runmerunner Coverage Results" MODIFIED="1587678257298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.stevio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
   </component>

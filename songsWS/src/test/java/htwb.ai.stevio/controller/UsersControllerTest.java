@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import htwb.ai.stevio.dao.AuthenticatorDAO;
 import htwb.ai.stevio.dao.TestUserDAO;
 import htwb.ai.stevio.model.User;
 import org.junit.Assert;
@@ -21,7 +22,7 @@ class UsersControllerTest {
     @BeforeEach
     public void setup() {
         mockMvc = MockMvcBuilders.standaloneSetup(
-                new UsersController(new TestUserDAO())).build();
+                new UsersController(new TestUserDAO(),new AuthenticatorDAO())).build();
     }
 
     @Test

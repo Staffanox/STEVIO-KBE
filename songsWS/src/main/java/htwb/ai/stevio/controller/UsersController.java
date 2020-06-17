@@ -5,6 +5,7 @@ package htwb.ai.stevio.controller;
  * @author Mario Teklic
  */
 
+import htwb.ai.stevio.dao.IAuthenticator;
 import htwb.ai.stevio.dao.IUsersDAO;
 import htwb.ai.stevio.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +25,12 @@ public class UsersController {
 
     @Autowired
     private final IUsersDAO usersDAO;
+    private final IAuthenticator authenticator;
 
-    public UsersController(IUsersDAO usersDAO){
+    public UsersController(IUsersDAO usersDAO, IAuthenticator authenticator){
         this.usersDAO = usersDAO;
+        this.authenticator = authenticator;
+
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
@@ -54,21 +58,9 @@ public class UsersController {
             return new ResponseEntity<>("Username or password wrong", HttpStatus.UNAUTHORIZED);
         }
 
-        return new ResponseEntity<>(this.generateToken(), HttpStatus.OK);
+        return new ResponseEntity<>(authenticator.createToken(u), HttpStatus.OK);
     }
 
-    public String generateToken(){
 
-        String token = UUID.randomUUID().toString();
-
-        // todo replaceAll wird ignoriert?
-        token.replaceAll("-", "");
-
-        if(token.length() > 18){
-            token = token.substring(0, 17);
-        }
-
-        return token;
-    }
 
 }
