@@ -24,19 +24,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="part 1">
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" afterDir="false" />
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="post impl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -449,6 +442,8 @@
       <workItem from="1593113402593" duration="2650000" />
       <workItem from="1593116196469" duration="4026000" />
       <workItem from="1593176731548" duration="9584000" />
+      <workItem from="1593187768592" duration="44000" />
+      <workItem from="1593190452810" duration="7378000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -555,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592415337556</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="post impl">
+      <created>1593187801163</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1593187801163</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +590,8 @@
     <MESSAGE value="added auth" />
     <MESSAGE value="added tests for songs" />
     <MESSAGE value="part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="part 1" />
+    <MESSAGE value="post impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="post impl" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -630,11 +633,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1210" y="414" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590832011365" />
-    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1593031706331">
+    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1593196127836">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590831491126" />
-    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593031706331" />
+    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593196127836" />
     <state x="1131" y="203" width="374" height="640" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774620810" />
     <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592408496815" />
     <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1593018291489">
@@ -771,10 +774,11 @@
     </state>
     <state x="312" y="113" width="1223" height="852" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655509522" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="2309" y="436" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1592415358902">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1593187805497">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834655561" />
+    <state x="2309" y="327" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593187805497" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591118107431" />
     <state x="2309" y="436" key="Vcs.Push.Dialog.v2/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592415358902" />
@@ -784,6 +788,10 @@
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590565982062" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1587572628217" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
+    <state x="2933" y="261" width="524" height="583" key="extract.method.dialog" timestamp="1593194829797">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2933" y="261" width="524" height="583" key="extract.method.dialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593194829797" />
     <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1590593480297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

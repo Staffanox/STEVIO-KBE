@@ -7,10 +7,12 @@ package htwb.ai.stevio.dao;
 
 import htwb.ai.stevio.model.SongList;
 
+import java.util.List;
+
 
 public interface ISongListDAO {
 
-    SongList getSongList(String ownerId);
+    List<SongList> getSongList(String ownerId);
 
     SongList getSongList(int id);
 

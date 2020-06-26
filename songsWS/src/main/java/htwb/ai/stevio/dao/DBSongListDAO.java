@@ -1,27 +1,29 @@
 package htwb.ai.stevio.dao;
 
+import htwb.ai.stevio.model.Song;
 import htwb.ai.stevio.model.SongList;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
+import java.util.List;
 
 public class DBSongListDAO implements ISongListDAO {
-         private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("STEVIO-KBE");
+    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("STEVIO-KBE");
 
 
     @Override
-    public SongList getSongList(String ownerId) {
-        return null;
+    public List<SongList> getSongList(String ownerId) {
+        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        Query q = em.createQuery("SELECT s FROM SongList s WHERE s.user.id = ownerId");
+        return q.getResultList();
     }
 
     @Override
     public SongList getSongList(int id) {
-        return null;
+        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        return em.find(SongList.class, id);
     }
 
-   @Override
+    @Override
     public void addSongList(SongList songList) {
         EntityManager entityManager = ENTITY_MANAGER_FACTORY.createEntityManager();
         EntityTransaction entityTransaction = null;
@@ -44,6 +46,12 @@ public class DBSongListDAO implements ISongListDAO {
 
     @Override
     public void deleteSong(SongList songList) {
+        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
 
+        SongList s = em.find(SongList.class, songList.getId());
+        em.getTransaction().begin();
+        em.remove(s);
+        em.getTransaction().commit();
+        em.close();
     }
 }

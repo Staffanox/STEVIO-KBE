@@ -24,7 +24,7 @@ public class SongList implements Serializable {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ownerid")
-    private User user;
+    private User ownerId;
 
     @Column(name = "name")
     @JsonProperty("name")
@@ -33,7 +33,7 @@ public class SongList implements Serializable {
 
     @Column(name = "private")
     @JsonProperty("isPrivate")
-    private Boolean isPrivate;
+    private Boolean visibility;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "song_songlist", schema = "public",
@@ -52,17 +52,17 @@ public class SongList implements Serializable {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public String getOwnerId() {
+        return ownerId.getUserId();
     }
 
     public void setUser(User user) {
-        this.user = user;
+        this.ownerId = user;
     }
 
 
-    public Boolean getIsPrivate() {
-        return isPrivate;
+    public Boolean getVisibility() {
+        return visibility;
     }
 
 
@@ -70,9 +70,5 @@ public class SongList implements Serializable {
         return songList;
     }
 
-    @Override
-    public String toString() {
-        return "[id=" + this.getId() + ", user=" + user.getUserId() + ", name=" + name + ", state=" + isPrivate + ", songs:"
-                + songList.toString() + "]";
-    }
+
 }
