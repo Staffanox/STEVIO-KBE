@@ -2,12 +2,17 @@ package htwb.ai.stevio.dao;
 
 import htwb.ai.stevio.model.User;
 
-import java.util.HashMap;
+import java.util.Map;
+
+/*
+ *
+ * @author Steven Schuette
+ */
 
 public interface IAuthenticator {
 
     boolean authenticate(String token);
     String createToken(User user);
-    HashMap<User,String> getMap();
+    Map<User,String> getMap();
 
 }

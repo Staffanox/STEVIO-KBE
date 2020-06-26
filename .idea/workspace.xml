@@ -24,15 +24,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" afterDir="false" />
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="part 1">
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/AuthenticatorDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/IAuthenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/UsersControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/TestUserDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +55,7 @@
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -99,7 +104,8 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587974102992" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/contactsJPA" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -109,6 +115,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="htwb.ai.stevio" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="htwb.ai.stevio.controller" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="htwb.ai.stevio.dao" />
@@ -286,8 +295,8 @@
         </option>
       </method>
     </configuration>
-    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+    <configuration name="Tomcat 9.0.34" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.34" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/songsWS-stevio/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="songsservlet:war">
@@ -297,8 +306,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_STEVIO-KBE" />
-        <option name="HTTP_PORT" value="8080" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_(1)_STEVIO-KBE" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -306,7 +314,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="45579" />
+        <option name="DEBUG_PORT" value="46759" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -366,7 +374,6 @@
       <item itemvalue="JUnit.htwb.ai.stevio.controller in songsWS" />
       <item itemvalue="JUnit.All in songsWS" />
       <item itemvalue="JUnit.UsersControllerTest" />
-      <item itemvalue="Tomcat Server.Unnamed" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
     </list>
     <recent_temporary>
@@ -430,7 +437,18 @@
       <workItem from="1591194947364" duration="407000" />
       <workItem from="1592402138586" duration="5880000" />
       <workItem from="1592408166254" duration="3221000" />
-      <workItem from="1592412304839" duration="3000000" />
+      <workItem from="1592412304839" duration="3214000" />
+      <workItem from="1593006353328" duration="3702000" />
+      <workItem from="1593011665525" duration="3436000" />
+      <workItem from="1593018180072" duration="930000" />
+      <workItem from="1593025235713" duration="837000" />
+      <workItem from="1593026729399" duration="6542000" />
+      <workItem from="1593110756874" duration="674000" />
+      <workItem from="1593111523377" duration="186000" />
+      <workItem from="1593112259636" duration="842000" />
+      <workItem from="1593113402593" duration="2650000" />
+      <workItem from="1593116196469" duration="4026000" />
+      <workItem from="1593176731548" duration="9584000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -530,7 +548,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591118101011</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="part 1">
+      <created>1592415337556</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1592415337556</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +587,8 @@
     <MESSAGE value="added rest-func:&#10;- put&#10;&#10;fixed rest-func:&#10;- delete" />
     <MESSAGE value="added auth" />
     <MESSAGE value="added tests for songs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests for songs" />
+    <MESSAGE value="part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="part 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -593,25 +619,28 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2786" y="109" width="698" height="875" key="#Unnamed/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588611034420" />
-    <state x="202" y="279" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590831534236">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593111557321">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="202" y="279" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590831534236" />
+    <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593111557321" />
     <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573553463" />
     <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774379133" />
     <state x="1210" y="414" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1590832011365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1210" y="414" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590832011365" />
-    <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser" timestamp="1592408496815">
-      <screen x="1920" y="109" width="2560" height="1080" />
-    </state>
-    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590831491126" />
-    <state x="1131" y="203" width="374" height="640" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774620810" />
-    <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592408496815" />
-    <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1588774327851">
+    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1593031706331">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
+    <state x="1131" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590831491126" />
+    <state x="3428" y="211" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593031706331" />
+    <state x="1131" y="203" width="374" height="640" key="#com.intellij.ide.util.MemberChooser/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774620810" />
+    <state x="3428" y="320" width="374" height="560" key="#com.intellij.ide.util.MemberChooser/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592408496815" />
+    <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1593018291489">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593018291489" />
     <state x="3273" y="154" width="568" height="924" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774327851" />
     <state x="782" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1590585302711">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -632,6 +661,10 @@
     </state>
     <state x="627" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628217" />
     <state x="627" y="109" width="1203" height="1078" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592409430082" />
+    <state x="1920" y="27" width="573" height="1053" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog" timestamp="1593008210218">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="1920" y="27" width="573" height="1053" key="#org.jetbrains.kotlin.idea.refactoring.safeDelete.KotlinOverridingDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593008210218" />
     <state x="2850" y="363" width="690" height="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1591190416873">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -641,10 +674,11 @@
     </state>
     <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834646971" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
-    <state x="2645" y="450" width="424" height="512" key="FileChooserDialogImpl" timestamp="1592406772095">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state x="2645" y="341" width="725" height="510" key="FileChooserDialogImpl" timestamp="1593114260109">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590612916996" />
+    <state x="2645" y="341" width="725" height="510" key="FileChooserDialogImpl/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593114260109" />
     <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588514730022" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588769470586" />
     <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592406772095" />
@@ -737,12 +771,13 @@
     </state>
     <state x="312" y="113" width="1223" height="852" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655509522" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1591118107431">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="2309" y="436" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1592415358902">
+      <screen x="1920" y="109" width="2560" height="1080" />
     </state>
     <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834655561" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591118107431" />
+    <state x="2309" y="436" key="Vcs.Push.Dialog.v2/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592415358902" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590565982062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -762,8 +797,11 @@
     </state>
     <state x="2950" y="290" width="489" height="526" key="refactoring.ChangeSignatureDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588695871128" />
     <state x="2950" y="399" width="489" height="526" key="refactoring.ChangeSignatureDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592407294885" />
-    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1587572628218" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup" timestamp="1593115582087">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
     <state x="356" y="272" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587572628218" />
+    <state x="356" y="272" width="672" height="677" key="run.anything.popup/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593115582087" />
     <state x="2731" y="484" width="896" height="705" key="search.everywhere.popup" timestamp="1592407370830">
       <screen x="1920" y="109" width="2560" height="1080" />
     </state>

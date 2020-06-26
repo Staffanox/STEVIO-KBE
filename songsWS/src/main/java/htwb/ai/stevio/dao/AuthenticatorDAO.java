@@ -1,8 +1,8 @@
 package htwb.ai.stevio.dao;
 
-import htwb.ai.stevio.dao.IAuthenticator;
 import htwb.ai.stevio.model.User;
 
+import java.util.Map;
 import java.util.UUID;
 
 import java.util.HashMap;
@@ -36,11 +36,11 @@ public class AuthenticatorDAO implements IAuthenticator {
         return token;
     }
 
-
     @Override
-    public HashMap<User, String> getMap() {
+    public Map<User, String> getMap() {
         return tokenMap;
     }
+
 
     private void putTokenInSession(User user, String token) {
         this.tokenMap.put(user, token);
