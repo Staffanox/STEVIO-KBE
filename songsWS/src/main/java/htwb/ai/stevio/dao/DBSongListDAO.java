@@ -13,7 +13,8 @@ public class DBSongListDAO implements ISongListDAO {
     @Override
     public List<SongList> getSongList(String ownerId) {
         EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-        Query q = em.createQuery("SELECT s FROM SongList s WHERE s.user.id = ownerId");
+        Query q = em.createQuery("SELECT s FROM SongList s WHERE s.ownerId= :ownerId")
+                .setParameter("ownerId", ownerId);
         return q.getResultList();
     }
 

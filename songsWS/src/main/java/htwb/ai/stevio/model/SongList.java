@@ -22,9 +22,8 @@ public class SongList implements Serializable {
     @Column(name = "id", nullable = false)
     private Integer id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "ownerid")
-    private User ownerId;
+    @Column(name = "ownerid")
+    private String ownerId;
 
     @Column(name = "name")
     @JsonProperty("name")
@@ -53,10 +52,10 @@ public class SongList implements Serializable {
     }
 
     public String getOwnerId() {
-        return ownerId.getUserId();
+        return ownerId;
     }
 
-    public void setUser(User user) {
+    public void setUser(String user) {
         this.ownerId = user;
     }
 

@@ -15,10 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping(value = "songList")
@@ -41,7 +38,6 @@ public class SongListController {
     }
 
 
-    // todo right path
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<SongList> getId(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
         if (id < 0) {
@@ -76,26 +72,34 @@ public class SongListController {
 
         User user = getUserByToken(authorization);
         if (user != null) {
+            List<SongList> songs = songListDAO.getSongList(userId);
 
             if (user.getUserId().equals(userId)) {
-
-                List<SongList> songs = songListDAO.getSongList(userId);
-
 
                 return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
 
 
-            } else
-                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            } else {
+                List<SongList> returnList = new LinkedList<>();
+                for (SongList songList : songs) {
+                    if (!songList.getVisibility())
+                        returnList.add(songList);
+                }
+                return new ResponseEntity<>(returnList, HttpStatus.ACCEPTED);
+
+            }
+
+
 
         }
-        return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
 
     //POST ../rest/songList
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> postSong(@RequestBody SongList songList, HttpServletRequest request, @RequestHeader("Authorization") String authorization) {
+    public ResponseEntity<String> postSong(@RequestBody SongList songList, HttpServletRequest
+            request, @RequestHeader("Authorization") String authorization) {
         User user = getUserByToken(authorization);
 
         if (user == null) {
@@ -125,7 +129,7 @@ public class SongListController {
 
         }
 
-        songList.setUser(user);
+        songList.setUser(user.getUserId());
         songListDAO.addSongList(songList);
 
         URI location = URI.create(request.getRequestURI() + "/" + songList.getId());
@@ -134,7 +138,8 @@ public class SongListController {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer id, @RequestHeader("Authorization") String authorization) {
+    public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer
+                                                     id, @RequestHeader("Authorization") String authorization) {
 
         if (id < 0) {
             return new ResponseEntity<>("ID cant be less than 0. Your ID: " + id, HttpStatus.BAD_REQUEST);
