@@ -22,10 +22,10 @@ import java.util.*;
 public class SongListController {
 
     @Autowired
-    ISongListDAO songListDAO;
+    private ISongListDAO songListDAO;
 
     @Autowired
-    ISongsDAO songsDao;
+    private ISongsDAO songsDao;
 
     @Autowired
     IAuthenticator authenticator;
@@ -47,8 +47,9 @@ public class SongListController {
 
         if (user != null) {
 
-
             SongList songs = songListDAO.getSongList(id);
+
+            //TODO if & else falschrum
             if (songs != null) {
                 if (songs.getOwnerId().equals(user.getUserId()))
                     return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);

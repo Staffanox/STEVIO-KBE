@@ -26,8 +26,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongListControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongListControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/AuthenticatorDAOTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/DBSongListDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/DBSongListDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,8 +111,12 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="htwb.ai.stevio" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="htwb.ai.stevio.controller" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main\java" />
+      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main" />
+      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main\model" />
+      <recent name="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller" />
+      <recent name="C:\Users\Mario\Desktop\KBE" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="htwb.ai.stevio.dao" />
@@ -120,12 +127,8 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main\java" />
-      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main" />
-      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main\model" />
-      <recent name="$PROJECT_DIR$/songsservlet/src/main/java/htwb/ai/stevio/controller" />
-      <recent name="C:\Users\Mario\Desktop\KBE" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="htwb.ai.stevio.controller" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -135,7 +138,7 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DBSongListDAOTest.deleteSonglist">
+  <component name="RunManager" selected="JUnit.SongListControllerTest.GETById">
     <configuration name="DBSongListDAOTest.addSonglistShouldReturnId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
@@ -147,40 +150,6 @@
       <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
       <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
       <option name="METHOD_NAME" value="addSonglistShouldReturnId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBSongListDAOTest.addSonglistsGetSonglistById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
-      <option name="METHOD_NAME" value="addSonglistsGetSonglistById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
-      <option name="METHOD_NAME" value="addSonglistsGetSonglistById_idsShouldStartWith1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,17 +173,54 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DBSongListDAOTest.idsShouldStartWith1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SongListControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
+          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
-      <option name="METHOD_NAME" value="idsShouldStartWith1" />
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongListControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongListControllerTest.GETById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="true">
+      <output_file path="$PROJECT_DIR$/../logoutput" is_save="true" />
+      <log_file alias="log" path="$PROJECT_DIR$/../logoutput" />
+      <module name="songsWS" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongListControllerTest" />
+      <option name="METHOD_NAME" value="GETById" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongListControllerTest.testGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongListControllerTest" />
+      <option name="METHOD_NAME" value="testGet" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -375,20 +381,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
-      <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" />
-      <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById" />
-      <item itemvalue="JUnit.DBSongListDAOTest.idsShouldStartWith1" />
       <item itemvalue="JUnit.DBSongListDAOTest.addSonglistShouldReturnId" />
       <item itemvalue="JUnit.DBSongListDAOTest.deleteSonglist" />
+      <item itemvalue="JUnit.SongListControllerTest.testGet" />
+      <item itemvalue="JUnit.SongListControllerTest" />
+      <item itemvalue="JUnit.SongListControllerTest.GETById" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongListControllerTest.GETById" />
+        <item itemvalue="JUnit.SongListControllerTest.testGet" />
+        <item itemvalue="JUnit.SongListControllerTest" />
         <item itemvalue="JUnit.DBSongListDAOTest.deleteSonglist" />
         <item itemvalue="JUnit.DBSongListDAOTest.addSonglistShouldReturnId" />
-        <item itemvalue="JUnit.DBSongListDAOTest.idsShouldStartWith1" />
-        <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById" />
-        <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" />
       </list>
     </recent_temporary>
   </component>
@@ -461,7 +467,7 @@
       <workItem from="1593211384965" duration="167000" />
       <workItem from="1593212065098" duration="3777000" />
       <workItem from="1593415207541" duration="19927000" />
-      <workItem from="1593500362180" duration="15800000" />
+      <workItem from="1593500362180" duration="31899000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -589,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593518862557</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="- added xml converter&#10;- try to fix connectionpool issue">
+      <created>1593520330879</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1593520330879</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,7 +638,8 @@
     <MESSAGE value="post impl" />
     <MESSAGE value="get,del impl" />
     <MESSAGE value="- fixed web.xml, servlet.xml, beans-bug&#10;- added persistence.xml for testing with hsqldb setup&#10;- added DBSongListDAOTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="- fixed web.xml, servlet.xml, beans-bug&#10;- added persistence.xml for testing with hsqldb setup&#10;- added DBSongListDAOTest" />
+    <MESSAGE value="- added xml converter&#10;- try to fix connectionpool issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="- added xml converter&#10;- try to fix connectionpool issue" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1588691058718">
@@ -660,10 +674,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2786" y="109" width="698" height="875" key="#Unnamed/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588611034420" />
-    <state x="6" y="262" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593503500220">
+    <state x="739" y="349" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593540973528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="6" y="262" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593503500220" />
+    <state x="739" y="349" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593540973528" />
     <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593111557321" />
     <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573553463" />
     <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774379133" />
@@ -687,9 +701,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="782" y="444" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590585302711" />
-    <state x="2951" y="518" width="497" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1592409760520">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state x="773" y="394" width="433" height="280" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593520864228">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="773" y="394" width="433" height="280" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1593520864228" />
     <state x="2951" y="409" width="497" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state x="2951" y="409" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588690088633" />
     <state x="2951" y="518" width="497" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592409760520" />
@@ -710,94 +725,94 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2850" y="363" width="690" height="380" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190416873" />
-    <state x="386" y="71" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1593518861117">
+    <state x="386" y="71" width="974" height="1044" key="CommitChangelistDialog2" timestamp="1593520329876">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593518861117" />
+    <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593520329876" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
-    <state x="544" y="328" width="725" height="510" key="FileChooserDialogImpl" timestamp="1593453981704">
+    <state x="544" y="328" width="725" height="510" key="FileChooserDialogImpl" timestamp="1593540740123">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593453981704" />
+    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593540740123" />
     <state x="2645" y="341" width="725" height="510" key="FileChooserDialogImpl/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593114260109" />
     <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588514730022" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588769470586" />
     <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592406772095" />
-    <state width="1860" height="285" key="GridCell.Tab.0.bottom" timestamp="1593518755634">
+    <state width="1860" height="309" key="GridCell.Tab.0.bottom" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593518755634" />
+    <state width="1860" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2034" height="233" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
     <state width="1940" height="291" key="GridCell.Tab.0.bottom/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
-    <state width="1860" height="285" key="GridCell.Tab.0.center" timestamp="1593518755634">
+    <state width="1860" height="309" key="GridCell.Tab.0.center" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="285" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593518755634" />
+    <state width="1860" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2034" height="233" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
     <state width="1940" height="291" key="GridCell.Tab.0.center/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
-    <state width="1860" height="285" key="GridCell.Tab.0.left" timestamp="1593518755634">
+    <state width="1860" height="309" key="GridCell.Tab.0.left" timestamp="1593541057195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="285" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593518755634" />
+    <state width="1860" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057195" />
     <state width="2034" height="233" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380314" />
     <state width="1940" height="291" key="GridCell.Tab.0.left/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587415" />
-    <state width="1860" height="285" key="GridCell.Tab.0.right" timestamp="1593518755634">
+    <state width="1860" height="309" key="GridCell.Tab.0.right" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="285" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593518755634" />
+    <state width="1860" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2034" height="233" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
     <state width="1940" height="291" key="GridCell.Tab.0.right/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
-    <state width="1281" height="144" key="GridCell.Tab.1.bottom" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.1.bottom" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2138" height="323" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state width="1739" height="508" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.1.center" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.1.center" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2138" height="323" key="GridCell.Tab.1.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state width="1739" height="508" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.1.left" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.1.left" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2138" height="323" key="GridCell.Tab.1.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state width="1739" height="508" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.1.right" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.1.right" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="2138" height="323" key="GridCell.Tab.1.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587572628217" />
     <state width="1739" height="508" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.2.bottom" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.2.bottom" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="1739" height="508" key="GridCell.Tab.2.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.2.center" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.2.center" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="1739" height="508" key="GridCell.Tab.2.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.2.left" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.2.left" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="1739" height="508" key="GridCell.Tab.2.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
-    <state width="1281" height="144" key="GridCell.Tab.2.right" timestamp="1590613771365">
+    <state width="1860" height="309" key="GridCell.Tab.2.right" timestamp="1593541057196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
+    <state width="1860" height="309" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593541057196" />
     <state width="1739" height="508" key="GridCell.Tab.2.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1593454144087">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -816,10 +831,10 @@
     </state>
     <state x="312" y="113" width="1223" height="852" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655509522" />
     <state x="2452" y="205" width="1024" height="843" key="SettingsEditor/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588691512051" />
-    <state x="292" y="315" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1593518868933">
+    <state x="292" y="315" width="800" height="563" key="Vcs.Push.Dialog.v2" timestamp="1593520337186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593518868933" />
+    <state x="292" y="315" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593520337186" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593197898616" />
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591118107431" />
@@ -838,10 +853,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2933" y="261" width="524" height="583" key="extract.method.dialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593194829797" />
-    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1593455031947">
+    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1593539208132">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593455031947" />
+    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593539208132" />
     <state x="695" y="308" key="git4idea.merge.GitPullDialog" timestamp="1590566012981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
