@@ -38,30 +38,4 @@ mapped to database tables. Database driver, location, userid and pw
             <property name="hbm2ddl.auto" value="update"/>
         </properties>
     </persistence-unit>
-
-    <persistence-unit name="STEVIO-KBE-USER" transaction-type="RESOURCE_LOCAL">
-
-        <!-- Define the class for Hibernate which implements JPA -->
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <!-- Define the object that should be persisted in the database -->
-        <class>htwb.ai.stevio.model.User</class>
-        <properties>
-            <property name="hibernate.default_schema" value="users"/>
-            <!-- Driver for DB database -->
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <!-- URL for DB -->
-            <property name="javax.persistence.jdbc.url"
-                      value="jdbc:postgresql://stevio-db-kbe.cl82td00dadq.eu-central-1.rds.amazonaws.com/stevio_db_kbe_1"/>
-            <!-- Username -->
-            <property name="javax.persistence.jdbc.user" value="postgres"/>
-            <!-- Password -->
-            <property name="javax.persistence.jdbc.password" value="stma566426"/>
-
-            <property name="hibernate.c3p0.min_size" value="1"/>
-            <property name="hibernate.c3p0.max_size" value="8"/>
-            <property name="hibernate.c3p0.timeout" value="1800"/>
-            <property name="hibernate.c3p0.max_statements" value="50"/>
-            <property name="hbm2ddl.auto" value="update"/>
-        </properties>
-    </persistence-unit>
 </persistence>
