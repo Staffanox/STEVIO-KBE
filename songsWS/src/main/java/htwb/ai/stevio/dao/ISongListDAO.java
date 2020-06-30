@@ -16,9 +16,8 @@ public interface ISongListDAO {
 
     SongList getSongList(int id);
 
-    void addSongList(SongList songList);
+    int addSongList(SongList songList);
 
     void deleteSong(SongList songList);
-
 
 }

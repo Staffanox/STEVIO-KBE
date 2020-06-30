@@ -13,11 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.List;
 
-/*
- *
- * @author Steven Schuette
- */
-
 @RestController
 @RequestMapping(value = "songs")
 public class SongsController {

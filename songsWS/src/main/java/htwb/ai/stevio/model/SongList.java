@@ -64,10 +64,16 @@ public class SongList implements Serializable {
         return visibility;
     }
 
+    public void setVisibility(boolean visibility){
+        this.visibility = visibility;
+    }
 
     public Set<Song> getSongList() {
         return songList;
     }
 
+    public void addSong(Song song){
+        this.songList.add(song);
+    }
 
 }

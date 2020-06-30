@@ -17,8 +17,17 @@ mapped to database tables. Database driver, location, userid and pw
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <!-- Define the object that should be persisted in the database -->
         <class>htwb.ai.stevio.model.Song</class>
+        <class>htwb.ai.stevio.model.SongList</class>
+        <class>htwb.ai.stevio.model.User</class>
+
+        <!-- TODO <class>SongList, User ..</class>?
+
+        -->
+
         <properties>
-            <property name="hibernate.default_schema" value="songs"/>
+            <!--OLD:
+            <property name="hibernate.default_schema" value="songs"/>-->
+            <property name="hibernate.default_schema" value="public"/>
             <!-- Driver for DB database -->
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <!-- URL for DB -->

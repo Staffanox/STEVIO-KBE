@@ -16,13 +16,15 @@
 
     <bean id="songsDAO" class="htwb.ai.stevio.dao.DBSongsDAO"/>
     <bean id="usersDAO" class="htwb.ai.stevio.dao.DBUsersDAO"/>
-    <bean id="IAuthenticator" class="htwb.ai.stevio.dao.AuthenticatorDAO"/>
-    <bean id="ISongListDAO" class="htwb.ai.stevio.dao.DBSongListDAO"/>
+    <bean id="authenticator" class="htwb.ai.stevio.dao.AuthenticatorDAO"/>
+    <bean id="songListDAO" class="htwb.ai.stevio.dao.DBSongListDAO"/>
 
 
     <!-- Wir nutzen Jackson: -->
     <bean id="jsonMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+
+    <!-- TODO: insert: XML Message converter bean-->
 
 </beans>
 

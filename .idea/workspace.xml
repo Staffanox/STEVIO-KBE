@@ -25,10 +25,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="get,del impl">
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/controller/SongListControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/AuthenticatorDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/java/htwb.ai.stevio/dao/DBSongListDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/resources/META-INF/sql/createDBHSQL.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songsWS/src/test/resources/META-INF/sql/data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/controller/SongsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBSongsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/DBUsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/dao/ISongListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/java/htwb/ai/stevio/model/SongList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songsWS/src/main/webapp/WEB-INF/songsWS-stevio-servlet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +59,8 @@
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,6 +99,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
@@ -96,7 +110,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587974102992" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/contactsJPA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/songsWS/src/test/resources/META-INF/sql/data.sql" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.15" />
@@ -135,43 +149,87 @@
       <command value="mvn clean package" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.htwb.ai.stevio.controller in songsWS">
-    <configuration name="All in songsWS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DBSongListDAOTest.deleteSonglist">
+    <configuration name="DBSongListDAOTest.addSonglistShouldReturnId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
+      <option name="METHOD_NAME" value="addSonglistShouldReturnId" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DBSongListDAOTest.addSonglistsGetSonglistById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
+          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.SongsControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
+      <option name="METHOD_NAME" value="addSonglistsGetSonglistById" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="songsWS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
+          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.controller.UsersControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
+      <option name="METHOD_NAME" value="addSonglistsGetSonglistById_idsShouldStartWith1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBSongListDAOTest.deleteSonglist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
+      <option name="METHOD_NAME" value="deleteSonglist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBSongListDAOTest.idsShouldStartWith1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="songsWS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.stevio.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="htwb.ai.stevio.dao" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.stevio.dao.DBSongListDAOTest" />
+      <option name="METHOD_NAME" value="idsShouldStartWith1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -179,36 +237,6 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="htwb.ai.stevio in songsWS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="htwb.ai.stevio.controller in songsWS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="songsWS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="htwb.ai.stevio.dao.AuthenticatorDAO" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="htwb.ai.stevio.controller" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BSP.BeforeRunTask" enabled="true" />
@@ -361,20 +389,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SongsControllerTest" />
-      <item itemvalue="JUnit.htwb.ai.stevio in songsWS" />
-      <item itemvalue="JUnit.htwb.ai.stevio.controller in songsWS" />
-      <item itemvalue="JUnit.All in songsWS" />
-      <item itemvalue="JUnit.UsersControllerTest" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
+      <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" />
+      <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById" />
+      <item itemvalue="JUnit.DBSongListDAOTest.idsShouldStartWith1" />
+      <item itemvalue="JUnit.DBSongListDAOTest.addSonglistShouldReturnId" />
+      <item itemvalue="JUnit.DBSongListDAOTest.deleteSonglist" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.htwb.ai.stevio.controller in songsWS" />
-        <item itemvalue="JUnit.All in songsWS" />
-        <item itemvalue="JUnit.htwb.ai.stevio in songsWS" />
-        <item itemvalue="JUnit.UsersControllerTest" />
-        <item itemvalue="JUnit.SongsControllerTest" />
+        <item itemvalue="JUnit.DBSongListDAOTest.deleteSonglist" />
+        <item itemvalue="JUnit.DBSongListDAOTest.addSonglistShouldReturnId" />
+        <item itemvalue="JUnit.DBSongListDAOTest.idsShouldStartWith1" />
+        <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById" />
+        <item itemvalue="JUnit.DBSongListDAOTest.addSonglistsGetSonglistById_idsShouldStartWith1" />
       </list>
     </recent_temporary>
   </component>
@@ -446,6 +474,8 @@
       <workItem from="1593210722849" duration="23000" />
       <workItem from="1593211384965" duration="167000" />
       <workItem from="1593212065098" duration="3777000" />
+      <workItem from="1593415207541" duration="19927000" />
+      <workItem from="1593500362180" duration="14557000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -624,6 +654,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="684" y="188" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1590584856131" />
+    <state x="276" y="635" key="#SQL_Dialects" timestamp="1593424127807">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="276" y="635" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1593424127807" />
     <state x="2964" y="430" width="451" height="242" key="#Tomcat_Server" timestamp="1588610857788">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
@@ -632,10 +666,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2786" y="109" width="698" height="875" key="#Unnamed/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588611034420" />
-    <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593111557321">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="6" y="262" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593503500220">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="202" y="279" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590831534236" />
+    <state x="6" y="262" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593503500220" />
     <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593111557321" />
     <state x="2658" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573553463" />
     <state x="2189" y="290" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588774379133" />
@@ -687,42 +721,42 @@
     </state>
     <state x="386" y="71" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590834646971" />
     <state x="338" y="34" width="974" height="1044" key="CommitChangelistDialog2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589200743208" />
-    <state x="2645" y="341" width="725" height="510" key="FileChooserDialogImpl" timestamp="1593114260109">
-      <screen x="1920" y="0" width="2560" height="1080" />
+    <state x="544" y="328" width="725" height="510" key="FileChooserDialogImpl" timestamp="1593453981704">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590612916996" />
+    <state x="544" y="328" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593453981704" />
     <state x="2645" y="341" width="725" height="510" key="FileChooserDialogImpl/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593114260109" />
     <state x="2645" y="341" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588514730022" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588769470586" />
     <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592406772095" />
-    <state width="1940" height="291" key="GridCell.Tab.0.bottom" timestamp="1592405587416">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state width="1860" height="285" key="GridCell.Tab.0.bottom" timestamp="1593518738471">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
+    <state width="1860" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593518738471" />
     <state width="2034" height="233" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
     <state width="1940" height="291" key="GridCell.Tab.0.bottom/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
-    <state width="1940" height="291" key="GridCell.Tab.0.center" timestamp="1592405587416">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state width="1860" height="285" key="GridCell.Tab.0.center" timestamp="1593518738470">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
+    <state width="1860" height="285" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593518738470" />
     <state width="2034" height="233" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
     <state width="1940" height="291" key="GridCell.Tab.0.center/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587416" />
-    <state width="1940" height="291" key="GridCell.Tab.0.left" timestamp="1592405587415">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state width="1860" height="285" key="GridCell.Tab.0.left" timestamp="1593518738470">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
+    <state width="1860" height="285" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593518738470" />
     <state width="2034" height="233" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762108" />
     <state width="1874" height="652" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380314" />
     <state width="1940" height="291" key="GridCell.Tab.0.left/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592405587415" />
-    <state width="1940" height="291" key="GridCell.Tab.0.right" timestamp="1592405587416">
-      <screen x="1920" y="109" width="2560" height="1080" />
+    <state width="1860" height="285" key="GridCell.Tab.0.right" timestamp="1593518738471">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1281" height="144" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771364" />
+    <state width="1860" height="285" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593518738471" />
     <state width="2034" height="233" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1587573762109" />
     <state width="1874" height="652" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1588699837898" />
     <state width="2514" height="291" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591190380315" />
@@ -771,6 +805,10 @@
     </state>
     <state width="1281" height="144" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590613771365" />
     <state width="1739" height="508" key="GridCell.Tab.2.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1588778949913" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1593454144087">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1593454144087" />
     <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1592409173767">
       <screen x="1920" y="109" width="2560" height="1080" />
     </state>
@@ -792,6 +830,10 @@
     <state x="2309" y="327" width="800" height="534" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1589725537555" />
     <state x="2309" y="327" width="800" height="563" key="Vcs.Push.Dialog.v2/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1591118107431" />
     <state x="2309" y="436" key="Vcs.Push.Dialog.v2/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1592415358902" />
+    <state x="687" y="258" key="com.intellij.database.dbimport.ImportDialog" timestamp="1593454005425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="687" y="258" key="com.intellij.database.dbimport.ImportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593454005425" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590565982062">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -802,10 +844,10 @@
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="2933" y="261" width="524" height="583" key="extract.method.dialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1593194829797" />
-    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1590593480297">
+    <state x="667" y="276" width="593" height="534" key="find.popup" timestamp="1593455031947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590593480297" />
+    <state x="667" y="276" width="593" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593455031947" />
     <state x="695" y="308" key="git4idea.merge.GitPullDialog" timestamp="1590566012981">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -832,23 +874,23 @@
     <state x="854" y="346" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1590655507210" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.stevio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$InputTest.ic" NAME="InputTest Coverage Results" MODIFIED="1587412433220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_in_runmerunner.ic" NAME="htwb.ai in runmerunner Coverage Results" MODIFIED="1587678257298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.stevio.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
   </component>

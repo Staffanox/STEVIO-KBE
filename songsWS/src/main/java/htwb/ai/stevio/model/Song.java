@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @author Mario Teklic
  */
 @Entity
-@Table(name = "song")
+@Table(name = "song", schema = "public")
 public class Song implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -84,6 +84,18 @@ public class Song implements Serializable {
 
     public void setReleased(int released) {
         this.released = released;
+    }
+
+    @Override
+    public boolean equals(Object song){
+        Song s = (Song) song;
+        if(this.getTitle() == s.getTitle()
+                && this.getArtist() == s.getArtist()
+                && this.getLabel() == s.getLabel()
+                && this.getReleased() == s.getReleased()){
+            return true;
+        }
+        return false;
     }
 
     public static Builder builder(){
