@@ -19,12 +19,11 @@
     <bean id="authenticator" class="htwb.ai.stevio.dao.AuthenticatorDAO"/>
     <bean id="songListDAO" class="htwb.ai.stevio.dao.DBSongListDAO"/>
 
-
-    <!-- Wir nutzen Jackson: -->
     <bean id="jsonMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 
-    <!-- TODO: insert: XML Message converter bean-->
+    <bean id="xmlConverter"
+          class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter" />
 
 </beans>
 
