@@ -18,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-
 import static htwb.ai.stevio.controller.UsersControllerTest.asJsonString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -38,7 +37,7 @@ public class SongListControllerTest {
 
     public void init(){
         //Modify authenticator: send always true for any String as token
-        AuthenticatorDAO authenticator = Mockito.mock(AuthenticatorDAO.class);
+        authenticator = Mockito.mock(AuthenticatorDAO.class);
         Mockito.when(authenticator.authenticate(ArgumentMatchers.anyString())).thenReturn(true);
         Mockito.when(authenticator.createToken(ArgumentMatchers.any())).thenReturn("mockitoUserToken");
 
@@ -176,6 +175,8 @@ public class SongListControllerTest {
         this.init();
         SongList songList = this.createSongList("eschuler");
 
+        //TODO Beim LocationHeader soll die ID der erstellten Songliste zurueckgegeben werden
+
         mockMvc.perform(post("/songList")
                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(asJsonString(songList))
@@ -233,6 +234,4 @@ public class SongListControllerTest {
 
         Assert.assertEquals(0, songListDAO.getSongList("eschuler").size());
     }
-
-    
 }

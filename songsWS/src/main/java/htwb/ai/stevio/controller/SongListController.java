@@ -1,6 +1,5 @@
 package htwb.ai.stevio.controller;
 
-import htwb.ai.stevio.dao.DBSongListDAO;
 import htwb.ai.stevio.dao.IAuthenticator;
 import htwb.ai.stevio.dao.ISongListDAO;
 import htwb.ai.stevio.dao.ISongsDAO;
@@ -12,13 +11,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.*;
 
 @RestController
-@RequestMapping(value = "songList")
+@RequestMapping(value = "songLists")
 public class SongListController {
 
     @Autowired
@@ -30,13 +28,11 @@ public class SongListController {
     @Autowired
     IAuthenticator authenticator;
 
-
     public SongListController(ISongsDAO sDAO, IAuthenticator authenticator, ISongListDAO slDAO) {
         this.songsDao = sDAO;
         this.authenticator = authenticator;
         this.songListDAO = slDAO;
     }
-
 
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<SongList> getId(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
@@ -49,7 +45,6 @@ public class SongListController {
 
             SongList songs = songListDAO.getSongList(id);
 
-            //TODO if & else falschrum
             if (songs != null) {
                 if (songs.getOwnerId().equals(user.getUserId()))
                     return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
@@ -58,14 +53,11 @@ public class SongListController {
                         return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
                     else
                         return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
-
                 }
-
             }
         }
         return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
     }
-
 
     // todo right path
     @GetMapping(value = "/s/{userId}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
@@ -76,10 +68,7 @@ public class SongListController {
             List<SongList> songs = songListDAO.getSongList(userId);
 
             if (user.getUserId().equals(userId)) {
-
                 return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
-
-
             } else {
                 List<SongList> returnList = new LinkedList<>();
                 for (SongList songList : songs) {
@@ -87,15 +76,10 @@ public class SongListController {
                         returnList.add(songList);
                 }
                 return new ResponseEntity<>(returnList, HttpStatus.ACCEPTED);
-
             }
-
-
-
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-
 
     //POST ../rest/songList
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -117,7 +101,6 @@ public class SongListController {
             return new ResponseEntity<>("No visibility provided", HttpStatus.BAD_REQUEST);
         }
 
-
         Set<Song> songsFromPayload = songList.getSongList();
         for (Song song : songsFromPayload) {
             Song temp = songsDao.getSongById(song.getId());
@@ -127,7 +110,6 @@ public class SongListController {
             if (!song.getTitle().equals(temp.getTitle()) || !song.getArtist().equals(temp.getArtist()) || !song.getLabel().equals(temp.getLabel()) || song.getId() != temp.getId() || song.getReleased() != temp.getReleased()) {
                 return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);
             }
-
         }
 
         songList.setUser(user.getUserId());
@@ -135,13 +117,11 @@ public class SongListController {
 
         URI location = URI.create(request.getRequestURI() + "/" + songList.getId());
         return ResponseEntity.created(location).body(null);
-
     }
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer
                                                      id, @RequestHeader("Authorization") String authorization) {
-
         if (id < 0) {
             return new ResponseEntity<>("ID cant be less than 0. Your ID: " + id, HttpStatus.BAD_REQUEST);
         }
@@ -159,16 +139,10 @@ public class SongListController {
             }
         }
         return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
-
     }
-
 
     private User getUserByToken(String token) {
         Map<User, String> map = authenticator.getMap();
         return map.keySet().stream().filter(user -> token.equals(authenticator.getMap().get(user))).findFirst().orElse(null);
-
-
     }
-
-
 }

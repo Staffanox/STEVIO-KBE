@@ -19,7 +19,7 @@ public class DBUsersDAO implements IUsersDAO {
     }
 
     public DBUsersDAO(){
-        emf = Persistence.createEntityManagerFactory("STEVIO-KBE-USER");
+        emf = Persistence.createEntityManagerFactory("STEVIO-KBE");
     }
 
     @Override
