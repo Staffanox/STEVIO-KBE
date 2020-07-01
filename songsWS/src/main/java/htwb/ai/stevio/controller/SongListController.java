@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.*;
@@ -60,8 +61,8 @@ public class SongListController {
     }
 
     // todo right path
-    @GetMapping(value = "/s/{userId}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<List<SongList>> getAll(@PathVariable(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    public ResponseEntity<List<SongList>> getAll(@RequestParam(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
 
         User user = getUserByToken(authorization);
         if (user != null) {
