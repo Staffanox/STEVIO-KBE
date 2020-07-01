@@ -16,7 +16,7 @@ import java.util.Set;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SongList implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @NotNull
     @Column(name = "id", nullable = false)
@@ -32,7 +32,7 @@ public class SongList implements Serializable {
 
     @Column(name = "private")
     @JsonProperty("isPrivate")
-    private Boolean visibility;
+    private Boolean isPrivate;
 
     @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "song_songlist", schema = "public",
@@ -40,7 +40,6 @@ public class SongList implements Serializable {
             inverseJoinColumns = {@JoinColumn(name = "song_id", referencedColumnName = "id")})
     @JsonProperty("songList")
     private Set<Song> songList = new HashSet<Song>();
-
 
 
     public Integer getId() {
@@ -59,20 +58,20 @@ public class SongList implements Serializable {
         this.ownerId = user;
     }
 
-
-    public Boolean getVisibility() {
-        return visibility;
+    // muss so wegen JSON Ausgabe, kenne die Camel Case convention
+    public Boolean getisPrivate() {
+        return isPrivate;
     }
 
-    public void setVisibility(boolean visibility){
-        this.visibility = visibility;
+    public void setIsPrivate(boolean isPrivate) {
+        this.isPrivate = isPrivate;
     }
 
     public Set<Song> getSongList() {
         return songList;
     }
 
-    public void addSong(Song song){
+    public void addSong(Song song) {
         this.songList.add(song);
     }
 

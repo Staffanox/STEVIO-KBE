@@ -27,7 +27,7 @@ public class SongListController {
     private ISongsDAO songsDao;
 
     @Autowired
-    IAuthenticator authenticator;
+    private IAuthenticator authenticator;
 
     public SongListController(ISongsDAO sDAO, IAuthenticator authenticator, ISongListDAO slDAO) {
         this.songsDao = sDAO;
@@ -50,7 +50,7 @@ public class SongListController {
                 if (songs.getOwnerId().equals(user.getUserId()))
                     return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
                 else {
-                    if (songs.getVisibility())
+                    if (songs.getisPrivate())
                         return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
                     else
                         return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
@@ -73,7 +73,7 @@ public class SongListController {
             } else {
                 List<SongList> returnList = new LinkedList<>();
                 for (SongList songList : songs) {
-                    if (!songList.getVisibility())
+                    if (!songList.getisPrivate())
                         returnList.add(songList);
                 }
                 return new ResponseEntity<>(returnList, HttpStatus.ACCEPTED);
@@ -98,7 +98,7 @@ public class SongListController {
         if (songList.getSongList() == null || songList.getSongList().isEmpty()) {
             return new ResponseEntity<>("Songlist is empty", HttpStatus.BAD_REQUEST);
         }
-        if (songList.getVisibility() == null) {
+        if (songList.getisPrivate() == null) {
             return new ResponseEntity<>("No visibility provided", HttpStatus.BAD_REQUEST);
         }
 
@@ -106,7 +106,7 @@ public class SongListController {
         for (Song song : songsFromPayload) {
             Song temp = songsDao.getSongById(song.getId());
             if (temp == null) {
-                return new ResponseEntity<>("No Song provided", HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);
             }
             if (!song.getTitle().equals(temp.getTitle()) || !song.getArtist().equals(temp.getArtist()) || !song.getLabel().equals(temp.getLabel()) || song.getId() != temp.getId() || song.getReleased() != temp.getReleased()) {
                 return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);

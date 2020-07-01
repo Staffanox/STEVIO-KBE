@@ -42,7 +42,7 @@ public class DBSongListDAOTest {
         setSongList.addSong(c);
 
         setSongList.setUser(owner);
-        setSongList.setVisibility(true);
+        setSongList.setIsPrivate(true);
 
         songlistDAO.addSongList(setSongList);
 
@@ -79,7 +79,7 @@ public class DBSongListDAOTest {
         setSongList1.addSong(c1);
 
         setSongList1.setUser(owner);
-        setSongList1.setVisibility(true);
+        setSongList1.setIsPrivate(true);
 
         songlistDAO.addSongList(setSongList1);
 
@@ -105,7 +105,7 @@ public class DBSongListDAOTest {
         setSongList2.addSong(c2);
 
         setSongList2.setUser(owner);
-        setSongList2.setVisibility(true); //trivial
+        setSongList2.setIsPrivate(true); //trivial
 
         songlistDAO.addSongList(setSongList2);
 
@@ -242,7 +242,7 @@ public class DBSongListDAOTest {
         setSongList.addSong(c);
 
         setSongList.setUser("owner");
-        setSongList.setVisibility(true);
+        setSongList.setIsPrivate(true);
 
         this.set1Songlist(songlistDAO, songsDAO, "ownerOne"); //id 1
         this.set1Songlist(songlistDAO, songsDAO, "ownerTwo"); //id 2

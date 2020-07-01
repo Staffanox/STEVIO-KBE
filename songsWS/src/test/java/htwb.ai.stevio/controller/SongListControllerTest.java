@@ -65,7 +65,7 @@ public class SongListControllerTest {
         setSongList.addSong(b);
 
         setSongList.setUser(owner);
-        setSongList.setVisibility(true);
+        setSongList.setIsPrivate(true);
 
         songListDAO.addSongList(setSongList);
 
@@ -88,7 +88,7 @@ public class SongListControllerTest {
         setSongList.addSong(b);
 
         setSongList.setUser(owner);
-        setSongList.setVisibility(true);
+        setSongList.setIsPrivate(true);
 
         return setSongList;
     }
