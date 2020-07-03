@@ -29,14 +29,17 @@ class UsersControllerTest {
         //POST auth
     void postUserShouldReturnOkForExistingUser() throws Exception {
 
-        MvcResult result = mockMvc.perform(post("/auth").contentType(MediaType.APPLICATION_JSON).content(asJsonString(new User("1", "Z", "Alphonso", "kek"))
-        ))
+        MvcResult result = mockMvc.perform(post("/auth")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(asJsonString(new User("1", "Z", "Alphonso", "kek"))))
                 .andExpect(status().isOk())
                 .andReturn();
 
         //Tests if token is valid
         String content = result.getResponse().getContentAsString();
         Assert.assertTrue(content.length() <= 17);
+
+        System.out.println(content + " <--");
     }
 
 

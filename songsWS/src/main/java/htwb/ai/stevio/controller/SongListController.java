@@ -40,6 +40,7 @@ public class SongListController {
         if (id < 0) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
+
         User user = getUserByToken(authorization);
 
         if (user != null) {
