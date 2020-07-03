@@ -3,6 +3,7 @@ package htwb.ai.stevio.controller;
 import htwb.ai.stevio.dao.IAuthenticator;
 import htwb.ai.stevio.dao.ISongListDAO;
 import htwb.ai.stevio.dao.ISongsDAO;
+import htwb.ai.stevio.dao.IUsersDAO;
 import htwb.ai.stevio.model.Song;
 import htwb.ai.stevio.model.SongList;
 import htwb.ai.stevio.model.User;
@@ -62,12 +63,18 @@ public class SongListController {
     }
 
     // todo right path
+    //songLists?userId=xyz
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<SongList>> getAll(@RequestParam(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
 
         User user = getUserByToken(authorization);
         if (user != null) {
+
             List<SongList> songs = songListDAO.getSongList(userId);
+
+            if(songs.size() == 0){
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+            }
 
             if (user.getUserId().equals(userId)) {
                 return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
