@@ -11,11 +11,11 @@ public class DBSongListDAO implements ISongListDAO {
 
     private EntityManagerFactory emf;
 
-    public DBSongListDAO(){
+    public DBSongListDAO() {
         this.emf = Persistence.createEntityManagerFactory("STEVIO-KBE");
     }
 
-    public DBSongListDAO(String persistenceUnit){
+    public DBSongListDAO(String persistenceUnit) {
         this.emf = Persistence.createEntityManagerFactory(persistenceUnit);
     }
 
@@ -33,19 +33,22 @@ public class DBSongListDAO implements ISongListDAO {
     public SongList getSongList(int id) {
         EntityManager em = emf.createEntityManager();
 
-        SongList songList = em.find(SongList.class, id);
+        if (em.find(SongList.class, id) != null) {
+            SongList songList = em.find(SongList.class, id);
 
-        if(songList != null){
-            songList.getSongList().stream().sorted().map(o -> o.getId()).collect(Collectors.toSet());
+            if (songList != null) {
+                songList.getSongList().stream().sorted().map(o -> o.getId()).collect(Collectors.toSet());
+            } else return null;
+
+            for (Song s : songList.getSongList()) {
+                System.out.println("**********aaa");
+                System.out.println(s.getId() + " == ID");
+                System.out.println("**********aaa");
+            }
+            return songList;
         }
+        return null;
 
-        for(Song s : songList.getSongList()){
-            System.out.println("**********aaa");
-            System.out.println(s.getId() + " == ID");
-            System.out.println("**********aaa");
-        }
-
-        return songList;
     }
 
     @Override
@@ -76,11 +79,12 @@ public class DBSongListDAO implements ISongListDAO {
     @Override
     public void deleteSong(SongList songList) {
         EntityManager em = emf.createEntityManager();
-
-        SongList s = em.find(SongList.class, songList.getId());
-        em.getTransaction().begin();
-        em.remove(s);
-        em.getTransaction().commit();
-        em.close();
+        if (em.find(SongList.class, songList.getId()) != null) {
+            SongList s = em.find(SongList.class, songList.getId());
+            em.getTransaction().begin();
+            em.remove(s);
+            em.getTransaction().commit();
+            em.close();
+        }
     }
 }

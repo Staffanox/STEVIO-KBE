@@ -51,27 +51,29 @@ public class SongListController {
 
         if (user != null) {
 
-            SongList songs = songListDAO.getSongList(id);
+            if (songListDAO.getSongList(id) != null) {
+                SongList songs = songListDAO.getSongList(id);
+                if (songs != null) {
 
-            if (songs != null) {
+                    sortSongList(songs);
 
-                sortSongList(songs);
-
-                if (songs.getOwnerId().equals(user.getUserId()))
-                    return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
-                else {
-                    if (songs.getisPrivate())
-                        return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
-                    else
+                    if (songs.getOwnerId().equals(user.getUserId()))
                         return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
+                    else {
+                        if (songs.getisPrivate())
+                            return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
+                        else
+                            return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
+                    }
                 }
+            } else {
+                return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+
             }
         }
         return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);
     }
 
-    // todo right path
-    //songLists?userId=xyz
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<SongList>> getAll(@RequestParam(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
 
@@ -80,13 +82,14 @@ public class SongListController {
 
             List<SongList> songs = songListDAO.getSongList(userId);
 
-            if(songs != null){
-                for(SongList sl : songs){
+            if (songs != null) {
+                for (SongList sl : songs) {
                     sortSongList(sl);
                 }
             }
 
-            if(songs.size() == 0){
+            assert songs != null;
+            if (songs.size() == 0) {
                 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
             }
 
@@ -153,15 +156,19 @@ public class SongListController {
         if (user == null) {
             return new ResponseEntity<>("Invalid user", HttpStatus.BAD_REQUEST);
         }
+        if (songListDAO.getSongList(id) != null) {
 
-        SongList songList = songListDAO.getSongList(id);
-        if (songList != null) {
-            if (user.getUserId().equals(songList.getOwnerId())) {
-                songListDAO.deleteSong(songList);
-                return new ResponseEntity<>("Song with ID '" + id + "' was deleted.", HttpStatus.NO_CONTENT);
+            SongList songList = songListDAO.getSongList(id);
+            if (songList != null) {
+                if (user.getUserId().equals(songList.getOwnerId())) {
+                    songListDAO.deleteSong(songList);
+                    return new ResponseEntity<>("Song with ID '" + id + "' was deleted.", HttpStatus.NO_CONTENT);
+                }
             }
+            return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
         }
-        return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
+                    return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+
     }
 
     private User getUserByToken(String token) {
