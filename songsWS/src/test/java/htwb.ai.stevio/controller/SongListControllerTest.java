@@ -95,12 +95,44 @@ public class SongListControllerTest {
     }
 
     @Test
+    public void GETxml() throws Exception {
+        String ownerElena = "eschuler";
+        String listNameElena = "ElenasPrivate";
+        boolean privElena = true;
+
+        this.uploadSonglist(this.createSongList(ownerElena, listNameElena, privElena), eschulerToken);
+
+        System.out.println(eschulerToken + " schulerToken");
+        mockMvcSongListController.perform(get("/songLists/1")
+                .header(HttpHeaders.AUTHORIZATION, eschulerToken)
+                .accept(MediaType.APPLICATION_XML_VALUE))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML_VALUE));
+    }
+
+    @Test
+    public void GETjson() throws Exception {
+        String ownerElena = "eschuler";
+        String listNameElena = "ElenasPrivate";
+        boolean privElena = true;
+
+        this.uploadSonglist(this.createSongList(ownerElena, listNameElena, privElena), eschulerToken);
+
+        System.out.println(eschulerToken + " schulerToken");
+        mockMvcSongListController.perform(get("/songLists/1")
+                .header(HttpHeaders.AUTHORIZATION, eschulerToken)
+                .accept(MediaType.APPLICATION_JSON_VALUE))
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE));
+    }
+
+    @Test
     public void GETunknownUser_shouldReturnNotFound() throws Exception {
         mockMvcSongListController.perform(get("/songLists?userId=unkownUser")
                 .header(HttpHeaders.AUTHORIZATION, eschulerToken))
                 .andDo(print())
                 .andExpect(status().is(HttpStatus.NOT_FOUND.value()));
     }
+
+
 
     // /songLists/{id}  (songlist-id)
     @Test
@@ -116,6 +148,7 @@ public class SongListControllerTest {
                 .header(HttpHeaders.AUTHORIZATION, eschulerToken))
                 .andExpect(status().is(HttpStatus.ACCEPTED.value()))
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
+                .andDo(print())
                 .andExpect(jsonPath("$.id").value(1))
                 .andExpect(jsonPath("$.ownerId").value("eschuler"))
                 .andExpect(jsonPath("$.name").value("ElenasPrivate"))

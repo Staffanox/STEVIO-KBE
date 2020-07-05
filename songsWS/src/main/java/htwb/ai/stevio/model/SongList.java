@@ -1,6 +1,7 @@
 package htwb.ai.stevio.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
