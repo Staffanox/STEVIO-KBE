@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "song", schema = "public")
-public class Song implements Serializable {
+public class Song implements Serializable, Comparable<Song> {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -100,6 +100,18 @@ public class Song implements Serializable {
 
     public static Builder builder(){
         return new Builder();
+    }
+
+    @Override
+    public int compareTo(Song o) {
+
+        if(this.getId() > o.getId()){
+            return 1;
+        }else if(this.getId() == o.getId()){
+            return 0;
+        }else{
+            return -1;
+        }
     }
 
     public static final class Builder{

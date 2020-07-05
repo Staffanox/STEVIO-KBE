@@ -1,9 +1,11 @@
 package htwb.ai.stevio.dao;
 
+import htwb.ai.stevio.model.Song;
 import htwb.ai.stevio.model.SongList;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DBSongListDAO implements ISongListDAO {
 
@@ -22,13 +24,28 @@ public class DBSongListDAO implements ISongListDAO {
         EntityManager em = emf.createEntityManager();
         Query q = em.createQuery("SELECT s FROM SongList s WHERE s.ownerId= :ownerId")
                 .setParameter("ownerId", ownerId);
+
         return q.getResultList();
     }
+
 
     @Override
     public SongList getSongList(int id) {
         EntityManager em = emf.createEntityManager();
-        return em.find(SongList.class, id);
+
+        SongList songList = em.find(SongList.class, id);
+
+        if(songList != null){
+            songList.getSongList().stream().sorted().map(o -> o.getId()).collect(Collectors.toSet());
+        }
+
+        for(Song s : songList.getSongList()){
+            System.out.println("**********aaa");
+            System.out.println(s.getId() + " == ID");
+            System.out.println("**********aaa");
+        }
+
+        return songList;
     }
 
     @Override
@@ -58,7 +75,6 @@ public class DBSongListDAO implements ISongListDAO {
 
     @Override
     public void deleteSong(SongList songList) {
-        //TODO deleteSonglist()
         EntityManager em = emf.createEntityManager();
 
         SongList s = em.find(SongList.class, songList.getId());

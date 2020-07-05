@@ -148,7 +148,6 @@ public class SongListControllerTest {
                 .header(HttpHeaders.AUTHORIZATION, eschulerToken))
                 .andExpect(status().is(HttpStatus.ACCEPTED.value()))
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE))
-                .andDo(print())
                 .andExpect(jsonPath("$.id").value(1))
                 .andExpect(jsonPath("$.ownerId").value("eschuler"))
                 .andExpect(jsonPath("$.name").value("ElenasPrivate"))
@@ -166,6 +165,11 @@ public class SongListControllerTest {
     }
 
     // /songLists/{ownerId}
+
+    /**
+     * Songs sind JEDES mal in anderer Reihenfolge.. race condition?
+     * @throws Exception
+     */
     @Test
     public void GETByOwnerId_shouldGet2Lists_privateAndPublic() throws Exception {
         String ownerElena = "eschuler";

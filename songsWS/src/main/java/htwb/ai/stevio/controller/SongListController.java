@@ -3,7 +3,6 @@ package htwb.ai.stevio.controller;
 import htwb.ai.stevio.dao.IAuthenticator;
 import htwb.ai.stevio.dao.ISongListDAO;
 import htwb.ai.stevio.dao.ISongsDAO;
-import htwb.ai.stevio.dao.IUsersDAO;
 import htwb.ai.stevio.model.Song;
 import htwb.ai.stevio.model.SongList;
 import htwb.ai.stevio.model.User;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "songLists")
@@ -36,6 +36,11 @@ public class SongListController {
         this.songListDAO = slDAO;
     }
 
+    private void sortSongList(SongList songs) {
+        List<Song> songliste = songs.getSongList().stream().collect(Collectors.toList());
+        Collections.sort(songliste);
+    }
+
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<SongList> getId(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
         if (id < 0) {
@@ -49,6 +54,9 @@ public class SongListController {
             SongList songs = songListDAO.getSongList(id);
 
             if (songs != null) {
+
+                sortSongList(songs);
+
                 if (songs.getOwnerId().equals(user.getUserId()))
                     return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
                 else {
@@ -71,6 +79,12 @@ public class SongListController {
         if (user != null) {
 
             List<SongList> songs = songListDAO.getSongList(userId);
+
+            if(songs != null){
+                for(SongList sl : songs){
+                    sortSongList(sl);
+                }
+            }
 
             if(songs.size() == 0){
                 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);

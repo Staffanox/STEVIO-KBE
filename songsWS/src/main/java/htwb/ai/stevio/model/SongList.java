@@ -10,6 +10,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 @Entity
 @Table(name = "songlist", schema = "public")
@@ -40,7 +41,7 @@ public class SongList implements Serializable {
             joinColumns = {@JoinColumn(name = "list_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "song_id", referencedColumnName = "id")})
     @JsonProperty("songList")
-    private Set<Song> songList = new HashSet<Song>();
+    private Set<Song> songList = new TreeSet<>();
 
 
     public Integer getId() {
@@ -72,6 +73,10 @@ public class SongList implements Serializable {
         return songList;
     }
 
+    public void setSongList(Set<Song> list){
+        this.songList = list;
+    }
+
     public void addSong(Song song) {
         this.songList.add(song);
     }
@@ -82,5 +87,16 @@ public class SongList implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        String content = "";
+
+        for(Song s : songList){
+            content += "[ID=" + s.getId() + "][TITLE=" + s.getTitle() + "][ARTIST=" + s.getArtist() + "][LABEL=" + s.getLabel() + "][RELEASED=" + s.getReleased() + "]\n";
+        }
+
+    return content;
     }
 }
