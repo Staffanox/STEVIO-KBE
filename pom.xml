@@ -17,6 +17,7 @@
         <module>runmerunner</module>
         <module>songsservlet</module>
         <module>songsWS</module>
+        <module>songMS</module>
     </modules>
 
     <!-- deps, die alle sub modules brauchen -->
