@@ -31,7 +31,14 @@ zuul:
       path: /songList
       serviceId: songlist-service
     songlist-services:
-        sensitiveHeaders: Cookie,Set-Cookie
-        path: /songList/**
-        serviceId: songlist-service
-        stripPrefix: false
+      sensitiveHeaders: Cookie,Set-Cookie
+      path: /songList/**
+      serviceId: songlist-service
+      stripPrefix: false
+    lyrics-service:
+      path: /lyrics
+      serviceId: lyrics-service
+    lyrics-services:
+      path: /lyrics/**
+      serviceId: lyrics-service
+      stripPrefix: false
