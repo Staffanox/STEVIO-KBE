@@ -35,4 +35,3 @@ zuul:
         path: /songList/**
         serviceId: songlist-service
         stripPrefix: false
-

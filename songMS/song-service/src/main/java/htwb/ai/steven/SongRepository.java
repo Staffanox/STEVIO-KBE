@@ -1,4 +1,4 @@
-package htwb.ai.steven.main.controller;
+package htwb.ai.steven;
 
 import org.springframework.data.repository.CrudRepository;
 
