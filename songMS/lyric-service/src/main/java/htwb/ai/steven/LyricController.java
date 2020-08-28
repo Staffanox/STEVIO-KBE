@@ -7,8 +7,6 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
-
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,8 +20,8 @@ public class LyricController {
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Lyrics>> getAll() {
-        List<Lyrics> lyrics = this.lyricsRepository.findAll();
-        return new ResponseEntity<>(lyrics, HttpStatus.OK);
+       List<Lyrics> lyrics = this.lyricsRepository.findAll();
+       return new ResponseEntity<>(lyrics,HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
@@ -52,13 +50,10 @@ public class LyricController {
 
 
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<String> postLyrics(@RequestBody Lyrics lyrics, HttpServletRequest request) {
+    public ResponseEntity<String> postLyrics(@RequestBody Lyrics lyrics) {
 
         try {
-            Lyrics songLyrics = lyrics;
-            System.out.println(songLyrics.getId());
-            System.out.println(songLyrics.getLyrics());
-            this.lyricsRepository.save(songLyrics);
+            this.lyricsRepository.save(lyrics);
             return new ResponseEntity<>("Lyric to song created", HttpStatus.CREATED);
 
         } catch (

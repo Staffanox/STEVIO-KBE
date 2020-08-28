@@ -23,12 +23,8 @@ public class SongController {
     @Autowired
     private SongRepository songRepository;
 
-
-    private RestTemplate restTemplate;
-
-
     public SongController() {
-        this.restTemplate = new RestTemplate();
+
     }
 
 
@@ -36,30 +32,26 @@ public class SongController {
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Song>> getAll() {
         Iterable<Song> songs = songRepository.findAll();
-
-        if (songs != null) {
             List<Song> songsAsList = new ArrayList<>();
             songs.forEach(songsAsList::add);
             return new ResponseEntity<>(songsAsList, HttpStatus.OK);
-        }
-
-        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 
 
     //GET by id   ../songs/1
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) {
-
         Optional<Song> song = songRepository.findById(id);
-
-        //String lyrics = restTemplate.getForObject("http://localhost:8097/lyrics/" + id, String.class);
         return song.map(value -> new ResponseEntity<>(value, HttpStatus.OK)).orElseGet(() -> new ResponseEntity<>(null, HttpStatus.NOT_FOUND));
 
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request) {
+        if (song.getReleased() < 0) {
+            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+
+        }
         songRepository.save(song);
         URI location = URI.create(request.getRequestURI() + "/" + song.getId());
         return ResponseEntity.created(location).body(null);
@@ -71,11 +63,10 @@ public class SongController {
 
         Optional<Song> song = songRepository.findById(id);
 
-        if (song.isPresent()) {
-            songRepository.deleteById(id);
-            return new ResponseEntity<>("Song successfully deleted", HttpStatus.NO_CONTENT);
-        } else
-            return new ResponseEntity<>("Song is not available in db", HttpStatus.NOT_FOUND);
+
+        songRepository.deleteById(id);
+        return new ResponseEntity<>("Song successfully deleted", HttpStatus.NO_CONTENT);
+
     }
 
 
@@ -84,9 +75,6 @@ public class SongController {
 
         if (id != song.getId()) {
             return new ResponseEntity<>("URL ID doesnt match payload ID.", HttpStatus.BAD_REQUEST);
-        }
-        if (song.getTitle().equals("") || song.getTitle() == null) {
-            return new ResponseEntity<>("Wrong body: title is null or has no declaration.", HttpStatus.BAD_REQUEST);
         }
         songRepository.save(song);
 

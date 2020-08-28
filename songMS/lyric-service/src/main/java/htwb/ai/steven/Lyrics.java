@@ -1,10 +1,12 @@
 package htwb.ai.steven;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sun.istack.NotNull;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAttribute;
 
 
 @Document(collection = "Lyrics")
@@ -12,12 +14,19 @@ public class Lyrics {
 
     @Id
     @NotNull
+    @JsonProperty("id")
+    @XmlAttribute(name = "id")
     private String id;
 
-
+    @NotNull
+    @JsonProperty("lyrics")
+    @XmlAttribute(name = "lyrics")
     private String lyrics;
 
 
+    public Lyrics(){
+
+    }
 
     public Lyrics(String id, String lyrics){
         this.id = id;
@@ -38,5 +47,10 @@ public class Lyrics {
 
     public void setLyrics(String lyrics) {
         this.lyrics = lyrics;
+    }
+
+    @Override
+    public String toString() {
+        return this.getId()+" "+ this.getLyrics();
     }
 }
