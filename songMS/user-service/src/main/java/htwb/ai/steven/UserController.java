@@ -28,11 +28,6 @@ public class UserController {
         if (searchedUser.isPresent()) {
             User u = searchedUser.get();
 
-            //UserId stimmt nicht mit der userId des Postbefehls überein
-            if (!u.getUserId().equals(user.getUserId())) {
-                return new ResponseEntity<>("Username or password wrong", HttpStatus.UNAUTHORIZED);
-            }
-
             //PW stimmt nicht mit dem PW des Postbefehls überein
             if (!u.getPassword().equals(user.getPassword())) {
                 return new ResponseEntity<>("Username or password wrong", HttpStatus.UNAUTHORIZED);

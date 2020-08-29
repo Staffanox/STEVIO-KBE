@@ -48,7 +48,7 @@ public class SongController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request) {
-        if (song.getReleased() < 0) {
+        if (song.getReleased() < 0 || song.getTitle().equals("")) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
 
         }

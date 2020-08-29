@@ -46,57 +46,127 @@ public class SongControllerTest {
 
 
     @Test
-    public void postValidSong() throws Exception {
-        Song song = new Song(3, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
+    public void getSecondSongShouldReturn200() throws Exception {
+        mockMvc.perform(get("/songs/2"))
+                .andExpect(status().is(200))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON));
 
-        mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
+    }
+
+       @Test
+    public void getMissingSongShouldReturn404() throws Exception {
+        mockMvc.perform(get("/songs/1005000"))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+    public void postValidSong() throws Exception {
+        Song song = new Song(0, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
+
+        MvcResult response = mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
                 .andExpect(status().is(201))
                 .andReturn();
+        String header = response.getResponse().getHeader("location");
+
+        assert header != null;
+        MvcResult getterResponse = mockMvc.perform(get(header))
+                .andExpect(status().is(200))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+        Song songInDB = asSong(getterResponse.getResponse().getContentAsString());
+
+        Assert.assertEquals(song.getReleased(), songInDB.getReleased());
+        Assert.assertEquals(song.getLabel(), songInDB.getLabel());
+        Assert.assertEquals(song.getArtist(), songInDB.getArtist());
+        Assert.assertEquals(song.getTitle(), songInDB.getTitle());
+
 
     }
 
     @Test
     public void postValidSongWithBuilder() throws Exception {
-        Song song = Song.builder().withId(4).withArtist("Starship").withLabel("Grunt/RCA").withReleased(1985).withTitle("We Built This City").build();
-        mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
+        Song song = Song.builder().withArtist("Starship").withLabel("Grunt/RCA").withReleased(1985).withTitle("We Built This City").build();
+        MvcResult response = mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
                 .andExpect(status().is(201))
                 .andReturn();
+        String header = response.getResponse().getHeader("location");
+
+        assert header != null;
+        MvcResult getterResponse = mockMvc.perform(get(header))
+                .andExpect(status().is(200))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+        Song songInDB = asSong(getterResponse.getResponse().getContentAsString());
+
+        Assert.assertEquals(song.getReleased(), songInDB.getReleased());
+        Assert.assertEquals(song.getLabel(), songInDB.getLabel());
+        Assert.assertEquals(song.getArtist(), songInDB.getArtist());
+        Assert.assertEquals(song.getTitle(), songInDB.getTitle());
     }
 
 
     @Test
     public void postSongWithoutTitle() throws Exception {
-        Song song = new Song(1, "", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
+        Song song = new Song(0, "", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
 
-        mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
-                .andExpect(status().is(404))
+        mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
+                .andExpect(status().is(400))
                 .andReturn();
 
     }
 
     @Test
     public void postSongWithoutArtist() throws Exception {
-        Song song = new Song(1, "7 years", "", "Lukas Graham (Blue Album)", 2015);
+        Song song = new Song(0, "7 years", "", "Lukas Graham (Blue Album)", 2015);
 
-        mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
-                .andExpect(status().is(404))
+        MvcResult response = mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
+                .andExpect(status().is(201))
                 .andReturn();
+
+        String header = response.getResponse().getHeader("location");
+
+        assert header != null;
+        MvcResult getterResponse = mockMvc.perform(get(header))
+                .andExpect(status().is(200))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+        Song songInDB = asSong(getterResponse.getResponse().getContentAsString());
+
+        Assert.assertEquals(song.getReleased(), songInDB.getReleased());
+        Assert.assertEquals(song.getLabel(), songInDB.getLabel());
+        Assert.assertEquals(song.getArtist(), songInDB.getArtist());
+        Assert.assertEquals(song.getTitle(), songInDB.getTitle());
 
     }
 
     @Test
     public void postSongWithoutLabel() throws Exception {
-        Song song = new Song(1, "7 years", "Lukas Graham", "", 2015);
+        Song song = new Song(0, "7 years", "Lukas Graham", "", 2015);
 
-        mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
-                .andExpect(status().is(404))
+        MvcResult response = mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
+                .andExpect(status().is(201))
                 .andReturn();
+
+        String header = response.getResponse().getHeader("location");
+
+        assert header != null;
+        MvcResult getterResponse = mockMvc.perform(get(header))
+                .andExpect(status().is(200))
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andReturn();
+        Song songInDB = asSong(getterResponse.getResponse().getContentAsString());
+
+        Assert.assertEquals(song.getReleased(), songInDB.getReleased());
+        Assert.assertEquals(song.getLabel(), songInDB.getLabel());
+        Assert.assertEquals(song.getArtist(), songInDB.getArtist());
+        Assert.assertEquals(song.getTitle(), songInDB.getTitle());
 
     }
 
     @Test
     public void postSongWithInvalidReleased() throws Exception {
-        Song song = new Song(1, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", -1);
+        Song song = new Song(0, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", -1);
 
         mockMvc.perform(post("/songs").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
                 .andExpect(status().is(400))
@@ -107,7 +177,7 @@ public class SongControllerTest {
 
     @Test
     public void postWrongUrl() throws Exception {
-        Song song = new Song(1, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
+        Song song = new Song(0, "7 years", "Lukas Graham", "Lukas Graham (Blue Album)", 2015);
 
         mockMvc.perform(post("/song").contentType(MediaType.APPLICATION_JSON).content(asJsonString(song)))
                 .andExpect(status().is(404))
@@ -130,6 +200,15 @@ public class SongControllerTest {
     @Test
     public void deleteInvalidEntry() throws Exception {
         mockMvc.perform(delete("/song/10000"))
+                .andExpect(status().is(404));
+
+    }
+
+    @Test
+    public void deleteWrongUrl() throws Exception {
+
+        //delete entry
+        mockMvc.perform(delete("/song/1"))
                 .andExpect(status().is(404));
 
     }
