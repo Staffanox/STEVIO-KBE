@@ -48,8 +48,5 @@ public class Lyrics {
         this.lyrics = lyrics;
     }
 
-    @Override
-    public String toString() {
-        return this.getId() + " " + this.getLyrics();
-    }
+
 }

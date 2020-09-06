@@ -3,7 +3,7 @@ package htwb.ai.steven;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
+/*
 @Component
 public class DbSeeder implements CommandLineRunner {
     @Autowired
@@ -91,3 +91,4 @@ public class DbSeeder implements CommandLineRunner {
        //this.lyricsRepository.save(macarthus_park);
     }
 }
+*/
