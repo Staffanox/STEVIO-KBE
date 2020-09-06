@@ -16,7 +16,6 @@ import org.springframework.test.web.servlet.MvcResult;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
@@ -78,7 +77,7 @@ public class UserControllerTest {
 
     @Test
     public void getUserNameWithWrongToken() throws Exception {
-        MvcResult result = mockMvc.perform(get("/auth/" + "lul")
+        mockMvc.perform(get("/auth/" + "lul")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(404))
                 .andReturn();

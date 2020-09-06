@@ -23,12 +23,11 @@ public class Lyrics {
     @XmlAttribute(name = "lyrics")
     private String lyrics;
 
-
-    public Lyrics(){
-
+    // default constructor for Jackson
+    public Lyrics() {
     }
 
-    public Lyrics(String id, String lyrics){
+    public Lyrics(String id, String lyrics) {
         this.id = id;
         this.lyrics = lyrics;
     }
@@ -51,6 +50,6 @@ public class Lyrics {
 
     @Override
     public String toString() {
-        return this.getId()+" "+ this.getLyrics();
+        return this.getId() + " " + this.getLyrics();
     }
 }

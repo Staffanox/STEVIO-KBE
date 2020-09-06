@@ -31,7 +31,6 @@
         <module>song-service</module>
         <module>gateway-service</module>
         <module>user-service</module>
-        <module>songList-service</module>
         <module>configserver-service</module>
         <module>lyric-service</module>
     </modules>

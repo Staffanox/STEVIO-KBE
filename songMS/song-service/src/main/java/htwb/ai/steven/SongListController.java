@@ -25,6 +25,9 @@ public class SongListController {
     @Autowired
     private SongListRepository songListRepository;
 
+    @Autowired
+    private SongRepository songRepository;
+
     public SongListController() {
         this.restTemplate = new RestTemplate();
     }
@@ -100,12 +103,11 @@ public class SongListController {
             if (user != null) {
                 Set<Song> songsFromPayload = songList.getSongList();
                 for (Song song : songsFromPayload) {
-                    Song temp = restTemplate.getForObject("http://localhost:8082/songs/" + song.getId(), Song.class);
-                    if (temp == null) {
-                        return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);
-                    }
-                    if (!song.getTitle().equals(temp.getTitle()) || !song.getArtist().equals(temp.getArtist()) || !song.getLabel().equals(temp.getLabel()) || song.getId() != temp.getId() || song.getReleased() != temp.getReleased()) {
-                        return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);
+                    if (songRepository.findById(song.getId()).isPresent()) {
+                        Song temp = songRepository.findById(song.getId()).get();
+                        if (!song.getTitle().equals(temp.getTitle()) || !song.getArtist().equals(temp.getArtist()) || !song.getLabel().equals(temp.getLabel()) || song.getId() != temp.getId() || song.getReleased() != temp.getReleased()) {
+                            return new ResponseEntity<>("Song not in DB", HttpStatus.BAD_REQUEST);
+                        }
                     }
                 }
                 songList.setUser(user);

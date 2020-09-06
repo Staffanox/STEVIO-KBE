@@ -7,6 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -20,15 +21,12 @@ public class LyricController {
 
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Lyrics>> getAll() {
-       List<Lyrics> lyrics = this.lyricsRepository.findAll();
-       return new ResponseEntity<>(lyrics,HttpStatus.OK);
+        List<Lyrics> lyrics = this.lyricsRepository.findAll();
+        return new ResponseEntity<>(lyrics, HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Lyrics> getLyricsToSong(@PathVariable(value = "id") String id) {
-
-        if (id.equals("") || id == null)
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
 
         try {
             Optional<Lyrics> optLyrics = lyricsRepository.findById(id);
@@ -53,8 +51,10 @@ public class LyricController {
     public ResponseEntity<String> postLyrics(@RequestBody Lyrics lyrics) {
 
         try {
-            this.lyricsRepository.save(lyrics);
-            return new ResponseEntity<>("Lyric to song created", HttpStatus.CREATED);
+            if (lyrics.getLyrics() != null && lyrics.getId() != null) {
+                this.lyricsRepository.save(lyrics);
+                return new ResponseEntity<>("Lyric to song created", HttpStatus.CREATED);
+            } else return new ResponseEntity<>("Invalid lyrics", HttpStatus.BAD_REQUEST);
 
         } catch (
                 HttpStatusCodeException ex) {

@@ -28,14 +28,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="Tests for Song-service">
-      <change afterPath="$PROJECT_DIR$/songMS/user-service/src/test/java/htwb/ai/steven/UserControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songMS/user-service/src/test/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/songMS/user-service/src/test/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/songMS/lyric-service/src/test/java/htwb/ai/steven/LyricControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/main/java/htwb/ai/steven/LyricController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/src/main/java/htwb/ai/steven/LyricController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/main/java/htwb/ai/steven/Lyrics.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/src/main/java/htwb/ai/steven/Lyrics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/test/java/integration/LyricsControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/test/java/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/src/test/resources/application-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/lyric-service/src/test/java/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/lyric-service/src/test/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/songMS/song-service/src/test/java/htwb.ai.steven/SongControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/test/java/htwb.ai.steven/SongControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/java/htwb/ai/steven/Song.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/java/htwb/ai/steven/SongList.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/java/htwb/ai/steven/SongListApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/java/htwb/ai/steven/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/java/htwb/ai/steven/SongListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongListRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/test/java/htwb/ai/steven/SongListControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/songList-service/src/test/resources/application-test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/test/java/htwb/ai/steven/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/test/java/htwb/ai/steven/UserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +65,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="spring-beans.schema" />
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
@@ -56,6 +72,7 @@
         <option value="Kotlin File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -117,9 +134,9 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1593972536278" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/songMS/user-service/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -133,6 +150,7 @@
       <recent name="htwb.ai.stevio.controller" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="htwb.ai.steven" />
       <recent name="htwb.ai.stevio" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -146,6 +164,7 @@
       <recent name="htwb.ai" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven" />
       <recent name="$PROJECT_DIR$/songMS/user-service/src/test/resources" />
       <recent name="$PROJECT_DIR$/songMS/lyric-service/src/test/java/resources" />
       <recent name="$PROJECT_DIR$/songMS/song-service/src/test/resources" />
@@ -155,11 +174,11 @@
       <recent name="htwb.ai.steven" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/songMS/lyric-service/src/test" />
       <recent name="$PROJECT_DIR$/songMS/song-service/src/test/resources" />
       <recent name="$PROJECT_DIR$/songMS/song-service/src/test/resources/sql" />
       <recent name="$PROJECT_DIR$/songMS/song-service/src/test/resources/META-INF" />
       <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main\java" />
-      <recent name="C:\Users\Mario\Desktop\STEVIO-KBE\songsWS\src\main" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -176,7 +195,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest">
+  <component name="RunManager" selected="JUnit.htwb.ai.steven in song-service">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -190,8 +209,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
+    <configuration name="LyricControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lyric-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="htwb.ai.steven.*" />
@@ -199,14 +218,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai.steven" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.LyricControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.getUserNameWithWrongToken" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
+    <configuration name="LyricControllerTest.postExistingLyrics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lyric-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="htwb.ai.steven.*" />
@@ -214,15 +233,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai.steven" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.UserControllerTest" />
-      <option name="METHOD_NAME" value="getUserNameWithWrongToken" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.LyricControllerTest" />
+      <option name="METHOD_NAME" value="postExistingLyrics" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.successfullAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
+    <configuration name="LyricControllerTest.postInvalidLyrics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lyric-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="htwb.ai.steven.*" />
@@ -230,15 +249,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai.steven" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.UserControllerTest" />
-      <option name="METHOD_NAME" value="successfullAuth" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.LyricControllerTest" />
+      <option name="METHOD_NAME" value="postInvalidLyrics" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerTest.wrongUsernameAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
+    <configuration name="LyricControllerTest.postValidLyrics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lyric-service" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="htwb.ai.steven.*" />
@@ -246,8 +265,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="htwb.ai.steven" />
-      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.UserControllerTest" />
-      <option name="METHOD_NAME" value="wrongUsernameAuth" />
+      <option name="MAIN_CLASS_NAME" value="htwb.ai.steven.LyricControllerTest" />
+      <option name="METHOD_NAME" value="postValidLyrics" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -276,19 +295,19 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.RegistryServerApplication" />
+      <item itemvalue="JUnit.LyricControllerTest" />
+      <item itemvalue="JUnit.LyricControllerTest.postValidLyrics" />
+      <item itemvalue="JUnit.LyricControllerTest.postExistingLyrics" />
+      <item itemvalue="JUnit.LyricControllerTest.postInvalidLyrics" />
       <item itemvalue="JUnit.htwb.ai.steven in song-service" />
-      <item itemvalue="JUnit.UserControllerTest.successfullAuth" />
-      <item itemvalue="JUnit.UserControllerTest" />
-      <item itemvalue="JUnit.UserControllerTest.getUserNameWithWrongToken" />
-      <item itemvalue="JUnit.UserControllerTest.wrongUsernameAuth" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.UserControllerTest.getUserNameWithWrongToken" />
-        <item itemvalue="JUnit.UserControllerTest.wrongUsernameAuth" />
-        <item itemvalue="JUnit.UserControllerTest.successfullAuth" />
         <item itemvalue="JUnit.htwb.ai.steven in song-service" />
+        <item itemvalue="JUnit.LyricControllerTest" />
+        <item itemvalue="JUnit.LyricControllerTest.postInvalidLyrics" />
+        <item itemvalue="JUnit.LyricControllerTest.postExistingLyrics" />
+        <item itemvalue="JUnit.LyricControllerTest.postValidLyrics" />
       </list>
     </recent_temporary>
   </component>
@@ -386,6 +405,12 @@
       <workItem from="1598655207796" duration="1421000" />
       <workItem from="1598657221770" duration="384000" />
       <workItem from="1598659344438" duration="2987000" />
+      <workItem from="1598983320368" duration="2428000" />
+      <workItem from="1599079291194" duration="4149000" />
+      <workItem from="1599083471546" duration="232000" />
+      <workItem from="1599083723225" duration="586000" />
+      <workItem from="1599305897631" duration="1645000" />
+      <workItem from="1599406086799" duration="5718000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -616,10 +641,11 @@
     <state x="866" y="390" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734616" />
     <state x="552" y="160" key="#Plugins" timestamp="1597331734616" />
     <state x="552" y="160" key="#Plugins/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734616" />
-    <state x="684" y="188" width="1024" height="843" key="#Project_Structure" timestamp="1597341108452">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="2832" y="165" width="1365" height="865" key="#Project_Structure" timestamp="1599409237763">
+      <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state x="684" y="188" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734616" />
+    <state x="2832" y="165" width="1365" height="865" key="#Project_Structure/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599409237763" />
     <state x="684" y="188" width="1024" height="843" key="#Project_Structure/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1597341108452" />
     <state x="184" y="363" width="1328" height="306" key="#SQL_Dialects" timestamp="1597341323407">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -701,82 +727,106 @@
     <state x="2466" y="379" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598650308189" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="1817" height="405" key="GridCell.Tab.0.bottom" timestamp="1598662268249">
+    <state width="1509" height="433" key="GridCell.Tab.0.bottom" timestamp="1599411503018">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1257" height="401" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542508" />
+    <state width="1509" height="433" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599411503018" />
     <state width="2034" height="233" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.bottom/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="1817" height="405" key="GridCell.Tab.0.center" timestamp="1598662268249">
+    <state width="1509" height="433" key="GridCell.Tab.0.center" timestamp="1599411503018">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.0.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1257" height="401" key="GridCell.Tab.0.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
+    <state width="1509" height="433" key="GridCell.Tab.0.center/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599411503018" />
     <state width="2034" height="233" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.center/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="1817" height="405" key="GridCell.Tab.0.left" timestamp="1598662268249">
+    <state width="1509" height="433" key="GridCell.Tab.0.left" timestamp="1599411503017">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.0.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1257" height="401" key="GridCell.Tab.0.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
+    <state width="1509" height="433" key="GridCell.Tab.0.left/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599411503017" />
     <state width="2034" height="233" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.left/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="1817" height="405" key="GridCell.Tab.0.right" timestamp="1598662268249">
+    <state width="1509" height="433" key="GridCell.Tab.0.right" timestamp="1599411503018">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.0.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1257" height="401" key="GridCell.Tab.0.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
+    <state width="1509" height="433" key="GridCell.Tab.0.right/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599411503018" />
     <state width="2034" height="233" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.right/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="1739" height="324" key="GridCell.Tab.1.bottom" timestamp="1598659648590">
+    <state width="1477" height="404" key="GridCell.Tab.1.bottom" timestamp="1599410762791">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298523" />
+    <state width="1488" height="404" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308753" />
+    <state width="1477" height="404" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599410762791" />
     <state width="2138" height="323" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
     <state width="1739" height="508" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="1739" height="324" key="GridCell.Tab.1.center" timestamp="1598659648590">
+    <state width="1477" height="404" key="GridCell.Tab.1.center" timestamp="1599410762791">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.1.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1488" height="404" key="GridCell.Tab.1.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308752" />
+    <state width="1477" height="404" key="GridCell.Tab.1.center/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599410762791" />
     <state width="2138" height="323" key="GridCell.Tab.1.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
     <state width="1739" height="508" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="1739" height="324" key="GridCell.Tab.1.left" timestamp="1598659648589">
+    <state width="1477" height="404" key="GridCell.Tab.1.left" timestamp="1599410762791">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.1.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1488" height="404" key="GridCell.Tab.1.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308752" />
+    <state width="1477" height="404" key="GridCell.Tab.1.left/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599410762791" />
     <state width="2138" height="323" key="GridCell.Tab.1.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648589" />
     <state width="1739" height="508" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="1739" height="324" key="GridCell.Tab.1.right" timestamp="1598659648590">
+    <state width="1477" height="404" key="GridCell.Tab.1.right" timestamp="1599410762791">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state width="1860" height="233" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
+    <state width="846" height="384" key="GridCell.Tab.1.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@0.27.1920.1053" timestamp="1599082298522" />
+    <state width="1488" height="404" key="GridCell.Tab.1.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308753" />
+    <state width="1477" height="404" key="GridCell.Tab.1.right/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599410762791" />
     <state width="2138" height="323" key="GridCell.Tab.1.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="696" height="324" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
@@ -811,7 +861,10 @@
     <state width="1739" height="508" key="GridCell.Tab.2.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1597331734617" />
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
-    <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1597331734617" />
+    <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog" timestamp="1599306304613">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2733" y="321" key="Maven.ArtifactSearchDialog/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599306304613" />
     <state x="2733" y="321" width="924" height="682" key="Maven.ArtifactSearchDialog/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
     <state x="3083" y="420" width="465" height="285" key="MultipleFileMergeDialog" timestamp="1597331734617" />
     <state x="3083" y="420" width="465" height="285" key="MultipleFileMergeDialog/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
@@ -840,7 +893,10 @@
     <state x="513" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597331734617" />
     <state x="513" y="283" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
     <state x="769" y="433" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
-    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1597331734617" />
+    <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1599406561515">
+      <screen x="1920" y="0" width="2560" height="1080" />
+    </state>
+    <state x="2974" y="342" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599406561515" />
     <state x="2974" y="342" width="442" height="421" key="com.intellij.testIntegration.createTest.CreateTestDialog/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state x="2933" y="261" width="524" height="583" key="extract.method.dialog" timestamp="1597331734617" />
     <state x="2933" y="261" width="524" height="583" key="extract.method.dialog/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1597331734617" />
@@ -866,15 +922,38 @@
     <state x="854" y="346" key="spring file set editor" timestamp="1597331734617" />
     <state x="854" y="346" key="spring file set editor/0.0.1920.1040@0.0.1920.1040" timestamp="1597331734617" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/UserController.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/STEVIO_KBE$UserControllerTest.ic" NAME="UserControllerTest Coverage Results" MODIFIED="1598661933070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.steven.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$ClassWithAnnonsTest.ic" NAME="ClassWithAnnonsTest Coverage Results" MODIFIED="1587414715163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_user_service.ic" NAME="All in user-service Coverage Results" MODIFIED="1599407315209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$Whole_project.ic" NAME="Whole project Coverage Results" MODIFIED="1599407491681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$LyricControllerTest_getInvalidLyrics.ic" NAME="LyricControllerTest.getInvalidLyrics Coverage Results" MODIFIED="1599410532611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.steven.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$SongControllerTest.ic" NAME="SongControllerTest Coverage Results" MODIFIED="1598660627302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.steven.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_song_service__2_.ic" NAME="All in song-service (2) Coverage Results" MODIFIED="1598656104934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$LyricControllerTest.ic" NAME="LyricControllerTest Coverage Results" MODIFIED="1599410783729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>htwb.ai.steven.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_runmerunner.ic" NAME="All in runmerunner Coverage Results" MODIFIED="1587413648260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$AppTest.ic" NAME="AppTest Coverage Results" MODIFIED="1587413157382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_steven_in_song_service.ic" NAME="htwb.ai.steven in song-service Coverage Results" MODIFIED="1598660805171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -887,16 +966,14 @@
     <SUITE FILE_PATH="coverage/STEVIO_KBE$App.ic" NAME="App Coverage Results" MODIFIED="1587411875902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.stevio.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$SongControllerTest.ic" NAME="SongControllerTest Coverage Results" MODIFIED="1598660627302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>htwb.ai.steven.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_song_service__2_.ic" NAME="All in song-service (2) Coverage Results" MODIFIED="1598656104934" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/STEVIO_KBE$InspectorTest.ic" NAME="InspectorTest Coverage Results" MODIFIED="1587412482671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_user_service__2_.ic" NAME="All in user-service (2) Coverage Results" MODIFIED="1599407422477" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/STEVIO_KBE$htwb_ai_in_runmerunner.ic" NAME="htwb.ai in runmerunner Coverage Results" MODIFIED="1587678257298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>htwb.ai.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/STEVIO_KBE$All_in_songsMS_microservices.ic" NAME="All in songsMS-microservices Coverage Results" MODIFIED="1599407454492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
