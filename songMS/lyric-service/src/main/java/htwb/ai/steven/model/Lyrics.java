@@ -1,4 +1,4 @@
-package htwb.ai.steven;
+package htwb.ai.steven.model;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

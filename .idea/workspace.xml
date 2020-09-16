@@ -27,19 +27,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="fixed song-service  tests">
+    <list default="true" id="9ef066db-ddb3-4552-a330-521b13f9d38e" name="Default Changelist" comment="orga">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Controller/SongController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongList.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Model/SongList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Controller/SongListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Repository/SongListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/test/java/htwb.ai.steven/SongControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/test/java/htwb.ai.steven/SongControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/songMS/user-service/src/test/java/htwb/ai/steven/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/user-service/src/test/java/htwb/ai/steven/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Controller/SongListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Controller/SongListController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,27 +172,40 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
-    <configuration name="All in lyric-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.SongServiceApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.steven.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="htwb.ai.steven.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LyricsService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="lyric-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in song-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="song-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in user-service" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="user-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.steven.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="htwb.ai.steven.LyricsService" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -227,6 +230,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringCloudConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="configserver-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="htwb.ai.steven.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="htwb.ai.steven.SpringCloudConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
@@ -241,20 +257,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in user-service" />
-      <item itemvalue="JUnit.All in song-service" />
-      <item itemvalue="JUnit.All in lyric-service" />
       <item itemvalue="Spring Boot.RegistryServerApplication" />
       <item itemvalue="Spring Boot.SongServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.SpringCloudConfigServerApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.LyricsService" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.SongServiceApplication" />
-        <item itemvalue="JUnit.All in lyric-service" />
-        <item itemvalue="JUnit.All in song-service" />
-        <item itemvalue="JUnit.All in user-service" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
+        <item itemvalue="Spring Boot.LyricsService" />
+        <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="Spring Boot.SpringCloudConfigServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -358,6 +374,7 @@
       <workItem from="1599083723225" duration="586000" />
       <workItem from="1599305897631" duration="1645000" />
       <workItem from="1599406086799" duration="6900000" />
+      <workItem from="1600294394704" duration="1232000" />
     </task>
     <task id="LOCAL-00001" summary="- init project template">
       <created>1586176653894</created>
@@ -548,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599412508331</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="orga">
+      <created>1600294481940</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1600294481940</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +591,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="- buy-in task" />
     <MESSAGE value="RunMe Annotation (Aufg 1)" />
     <MESSAGE value="bugfixes&#10;- &quot;mvn clean package&quot; always wants to run a method called &quot;$jacocoInit&quot;. This class is not included in our AnnotationsTestClass. Made a workaround, which tests if a methods name is &quot;$jacocoInit&quot;. If so, the loop continues with the next method.&#10;&#10;- changed what happens when method is not invoceable" />
     <MESSAGE value="hibernate implementation" />
@@ -592,7 +615,8 @@
     <MESSAGE value="Tests for Song-service" />
     <MESSAGE value="Tests for lyrics-service" />
     <MESSAGE value="fixed song-service  tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed song-service  tests" />
+    <MESSAGE value="orga" />
+    <option name="LAST_COMMIT_MESSAGE" value="orga" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3103" y="395" width="183" height="315" key="#Assign_Data_Sources" timestamp="1597331734615" />
@@ -689,7 +713,7 @@
     <state x="2466" y="379" width="424" height="482" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598650308189" />
     <state x="2736" y="304" width="424" height="512" key="FileChooserDialogImpl/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state x="2645" y="450" key="FileChooserDialogImpl/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.0.bottom" timestamp="1599412989133">
+    <state width="1474" height="571" key="GridCell.Tab.0.bottom" timestamp="1600295610804">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -698,12 +722,13 @@
     <state width="1257" height="401" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542508" />
     <state width="2140" height="560" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2034" height="233" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="571" key="GridCell.Tab.0.bottom/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295610804" />
     <state width="696" height="324" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.bottom/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.0.center" timestamp="1599412989133">
+    <state width="1474" height="571" key="GridCell.Tab.0.center" timestamp="1600295610804">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -712,12 +737,13 @@
     <state width="1257" height="401" key="GridCell.Tab.0.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
     <state width="2140" height="560" key="GridCell.Tab.0.center/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2034" height="233" key="GridCell.Tab.0.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="571" key="GridCell.Tab.0.center/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295610804" />
     <state width="696" height="324" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.center/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.0.left" timestamp="1599412989132">
+    <state width="1474" height="571" key="GridCell.Tab.0.left" timestamp="1600295610804">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -726,12 +752,13 @@
     <state width="1257" height="401" key="GridCell.Tab.0.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
     <state width="2140" height="560" key="GridCell.Tab.0.left/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989132" />
     <state width="2034" height="233" key="GridCell.Tab.0.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="571" key="GridCell.Tab.0.left/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295610804" />
     <state width="696" height="324" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.left/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.0.right" timestamp="1599412989133">
+    <state width="1474" height="571" key="GridCell.Tab.0.right" timestamp="1600295610804">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="165" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -740,12 +767,13 @@
     <state width="1257" height="401" key="GridCell.Tab.0.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599307542507" />
     <state width="2140" height="560" key="GridCell.Tab.0.right/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2034" height="233" key="GridCell.Tab.0.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="571" key="GridCell.Tab.0.right/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295610804" />
     <state width="696" height="324" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1817" height="405" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598662268249" />
     <state width="1874" height="652" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@0.28.1920.1052" timestamp="1597331734617" />
     <state width="2514" height="291" key="GridCell.Tab.0.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
     <state width="1940" height="291" key="GridCell.Tab.0.right/1920.109.2560.1080/4480.0.1920.1080/0.137.1920.1052@1920.109.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.1.bottom" timestamp="1599412989133">
+    <state width="1474" height="218" key="GridCell.Tab.1.bottom" timestamp="1600295544209">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -754,10 +782,11 @@
     <state width="1488" height="404" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308753" />
     <state width="2140" height="560" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2138" height="323" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="218" key="GridCell.Tab.1.bottom/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295544209" />
     <state width="696" height="324" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
     <state width="1739" height="508" key="GridCell.Tab.1.bottom/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.1.center" timestamp="1599412989133">
+    <state width="1474" height="218" key="GridCell.Tab.1.center" timestamp="1600295544209">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -766,10 +795,11 @@
     <state width="1488" height="404" key="GridCell.Tab.1.center/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308752" />
     <state width="2140" height="560" key="GridCell.Tab.1.center/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2138" height="323" key="GridCell.Tab.1.center/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="218" key="GridCell.Tab.1.center/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295544209" />
     <state width="696" height="324" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
     <state width="1739" height="508" key="GridCell.Tab.1.center/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.1.left" timestamp="1599412989133">
+    <state width="1474" height="218" key="GridCell.Tab.1.left" timestamp="1600295544208">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -778,10 +808,11 @@
     <state width="1488" height="404" key="GridCell.Tab.1.left/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308752" />
     <state width="2140" height="560" key="GridCell.Tab.1.left/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2138" height="323" key="GridCell.Tab.1.left/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="218" key="GridCell.Tab.1.left/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295544208" />
     <state width="696" height="324" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648589" />
     <state width="1739" height="508" key="GridCell.Tab.1.left/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
-    <state width="2140" height="560" key="GridCell.Tab.1.right" timestamp="1599412989133">
+    <state width="1474" height="218" key="GridCell.Tab.1.right" timestamp="1600295544209">
       <screen x="1920" y="0" width="2560" height="1080" />
     </state>
     <state width="1237" height="198" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1597331734617" />
@@ -790,6 +821,7 @@
     <state width="1488" height="404" key="GridCell.Tab.1.right/1920.0.2560.1080/0.27.1920.1053/4480.0.1920.1080@1920.0.2560.1080" timestamp="1599084308753" />
     <state width="2140" height="560" key="GridCell.Tab.1.right/1920.0.2560.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1599412989133" />
     <state width="2138" height="323" key="GridCell.Tab.1.right/1920.0.2560.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
+    <state width="1474" height="218" key="GridCell.Tab.1.right/1920.0.2560.1080/0.30.1920.1050@1920.0.2560.1080" timestamp="1600295544209" />
     <state width="696" height="324" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1598657297981" />
     <state width="1739" height="324" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.27.1920.1053@1920.0.2560.1080" timestamp="1598659648590" />
     <state width="1739" height="508" key="GridCell.Tab.1.right/1920.0.2560.1080/4480.0.1920.1080/0.28.1920.1052@1920.0.2560.1080" timestamp="1597331734617" />
@@ -891,6 +923,11 @@
           <url>file://$PROJECT_DIR$/songMS/user-service/src/main/java/htwb/ai/steven/Controller/UserController.java</url>
           <line>39</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/songMS/song-service/src/main/java/htwb/ai/steven/Controller/SongListController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

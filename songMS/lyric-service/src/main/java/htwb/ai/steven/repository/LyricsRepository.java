@@ -1,5 +1,6 @@
-package htwb.ai.steven;
+package htwb.ai.steven.repository;
 
+import htwb.ai.steven.model.Lyrics;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
