@@ -28,12 +28,12 @@ zuul:
       stripPrefix: false
     songlist-service:
       sensitiveHeaders: Cookie,Set-Cookie
-      path: /songList
-      serviceId: songlist-service
+      path: /songlist
+      serviceId: song-service
     songlist-services:
       sensitiveHeaders: Cookie,Set-Cookie
-      path: /songList/**
-      serviceId: songlist-service
+      path: /songlist/**
+      serviceId: song-service
       stripPrefix: false
     lyrics-service:
       path: /lyrics

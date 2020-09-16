@@ -21,7 +21,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/songList")
+@RequestMapping("/songlist")
 public class SongListController {
 
     private RestTemplate restTemplate;
