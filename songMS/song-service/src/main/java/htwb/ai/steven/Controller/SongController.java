@@ -1,13 +1,13 @@
-package htwb.ai.steven;
+package htwb.ai.steven.Controller;
 
 
+import htwb.ai.steven.Repository.SongRepository;
+import htwb.ai.steven.Model.Song;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestOperations;
-import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;

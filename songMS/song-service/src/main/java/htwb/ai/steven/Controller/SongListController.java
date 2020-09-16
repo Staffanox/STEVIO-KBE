@@ -1,6 +1,10 @@
-package htwb.ai.steven;
+package htwb.ai.steven.Controller;
 
 
+import htwb.ai.steven.Repository.SongListRepository;
+import htwb.ai.steven.Repository.SongRepository;
+import htwb.ai.steven.Model.Song;
+import htwb.ai.steven.Model.SongList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

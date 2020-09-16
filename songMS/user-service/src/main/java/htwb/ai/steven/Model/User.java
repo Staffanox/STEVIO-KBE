@@ -1,4 +1,4 @@
-package htwb.ai.steven;
+package htwb.ai.steven.Model;
 
 
 import com.sun.istack.NotNull;

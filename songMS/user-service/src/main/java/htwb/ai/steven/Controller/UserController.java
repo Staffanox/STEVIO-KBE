@@ -1,6 +1,8 @@
-package htwb.ai.steven;
+package htwb.ai.steven.Controller;
 
 
+import htwb.ai.steven.Model.User;
+import htwb.ai.steven.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

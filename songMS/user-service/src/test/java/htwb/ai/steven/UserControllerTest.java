@@ -2,6 +2,7 @@ package htwb.ai.steven;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import htwb.ai.steven.Model.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
