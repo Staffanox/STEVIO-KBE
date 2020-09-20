@@ -8,11 +8,17 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 
+/**
+ * Song Entity which will is a reference for the song table in db
+ */
 @Entity
 @Table(name = "song")
 public class Song implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * serial id in db
+     */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -20,15 +26,27 @@ public class Song implements Serializable {
     @Column(name = "id", nullable = false)
     private int id;
 
+    /**
+     * title of song
+     */
     @Column(name = "title", nullable = false)
     private String title;
 
+    /**
+     * artist performing the song
+     */
     @Column(name = "artist")
     private String artist;
 
+    /**
+     * label which released the song
+     */
     @Column(name = "label")
     private String label;
 
+    /**
+     * year the song was released to public
+     */
     @Column(name = "released")
     private int released;
 

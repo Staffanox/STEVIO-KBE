@@ -13,6 +13,9 @@ import org.springframework.web.client.HttpStatusCodeException;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * RestController which implements REST methods for lyrics-service
+ */
 @RestController
 @RequestMapping("/lyrics")
 public class LyricController {
@@ -21,12 +24,19 @@ public class LyricController {
     private LyricsRepository lyricsRepository;
 
 
+    /**
+     * @return all currently available lyrics in MongoDB
+     */
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Lyrics>> getAll() {
         List<Lyrics> lyrics = this.lyricsRepository.findAll();
         return new ResponseEntity<>(lyrics, HttpStatus.OK);
     }
 
+    /**
+     * @param id name of a song which is saved in Mongo
+     * @return songId (Title) and associated lyrics
+     */
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Lyrics> getLyricsToSong(@PathVariable(value = "id") String id) {
 
@@ -49,6 +59,10 @@ public class LyricController {
     }
 
 
+    /**
+     * @param lyrics consists of Id (title) and String (lyrics)
+     * @return 201 if correct, 400 if not
+     */
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<String> postLyrics(@RequestBody Lyrics lyrics) {
 
@@ -67,6 +81,10 @@ public class LyricController {
     }
 
 
+    /**
+     * @param id LyricsId (title)
+     * @return 204 if deleted, 404 if not found
+     */
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteLyrics(@PathVariable(value = "id") String id) {
 
@@ -80,6 +98,11 @@ public class LyricController {
     }
 
 
+    /**
+     * @param id Id of lyrics in DB that will be changed
+     * @param lyrics new lyrics consisting of id and possibly changed lyrics
+     * @return 204 if successful, 400 if not
+     */
     @PutMapping(value = "/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<String> putLyrics(@PathVariable(value = "id") String id, @RequestBody Lyrics lyrics) {
 

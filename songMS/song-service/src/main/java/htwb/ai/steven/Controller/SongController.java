@@ -16,6 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * RestController which implements REST methods for song-service
+ */
 @RestController
 @RequestMapping("/songs")
 public class SongController {
@@ -29,9 +32,13 @@ public class SongController {
     }
 
 
-    //GET all   ../songs
+    /**
+     * Endpoint /songs
+     *
+     * @return all songs currently located in DB
+     */
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<List<Song>> getAll() {
+    public ResponseEntity<List<Song>> getAllSongs() {
         Iterable<Song> songs = songRepository.findAll();
         List<Song> songsAsList = new ArrayList<>();
         songs.forEach(songsAsList::add);
@@ -39,6 +46,12 @@ public class SongController {
     }
 
 
+    /**
+     * Method to find and return a specific single song in db
+     *
+     * @param id serial id associated with song
+     * @return 200 if song is in db, 404 if not
+     */
     //GET by id   ../songs/1
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<Song> getSong(@PathVariable(value = "id") Integer id) {
@@ -47,6 +60,13 @@ public class SongController {
 
     }
 
+    /**
+     * Method to add a song to db if valid
+     *
+     * @param song    a hopefully valid song according to model
+     * @param request for URI location in header
+     * @return 400 if song is invalid (no title, release year not AD), 200 and location to song if successful
+     */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postSong(@RequestBody Song song, HttpServletRequest request) {
         if (song.getReleased() < 0 || song.getTitle().equals("")) {
@@ -59,6 +79,12 @@ public class SongController {
     }
 
 
+    /**
+     * Deletes a song from db
+     *
+     * @param id serial id of song in db
+     * @return 404 if song not in db, 204 if successful
+     */
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer id) {
         Optional<Song> searchedSong = songRepository.findById(id);
@@ -70,6 +96,13 @@ public class SongController {
     }
 
 
+    /**
+     * Changes a given song in db
+     *
+     * @param id   serial id of song in db
+     * @param song new song which replaces old song in db
+     * @return 400 if id in url != id in body, 204 if successful
+     */
     @PutMapping(value = "/{id}", produces = "application/json", consumes = "application/json")
     public ResponseEntity<String> putSong(@PathVariable(value = "id") Integer id, @RequestBody Song song) {
 

@@ -20,6 +20,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * RestController which implements REST methods for songlist-service
+ */
 @RestController
 @RequestMapping("/songlist")
 public class SongListController {
@@ -36,11 +39,16 @@ public class SongListController {
         this.restTemplate = new RestTemplate();
     }
 
-    //private static Logger log = LoggerFactory.getLogger(SongListController.class);
 
+    /**
+     * Gets a songList by a given ID, provided request is authorized
+     *
+     * @param id            serial ID in DB
+     * @param authorization random token associated with user account
+     * @return 200 if successful, 403 if access is forbidden (private songList and no Access), 404 if ID is not in DB
+     */
     @GetMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<SongList> getId(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
-        // log.info("Entered GET /songList" + id);
+    public ResponseEntity<SongList> getSongListByID(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
         if (id < 0) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }
@@ -56,13 +64,11 @@ public class SongListController {
                 if (songList.getisPrivate())
                     return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
                 else {
-                    //  log.info("GET songList/" + id + " found and returned");
                     return new ResponseEntity<>(songList, HttpStatus.ACCEPTED);
 
                 }
             }
         } else {
-            // log.info("GET /songList/" + id + " not found");
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 
         }
@@ -70,15 +76,20 @@ public class SongListController {
     }
 
 
+    /**
+     * Gets all songLists from a user which are viewable (all public and private from self, only public from another)
+     *
+     * @param userId        ownerId of users, basically username like "mmuster"
+     * @param authorization token of enquirer
+     * @return All songLists from a user viewable to enquirer
+     */
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public ResponseEntity<List<SongList>> getAll(@RequestParam(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
-        // log.info("GET /songList/" + userId + " entered");
+    public ResponseEntity<List<SongList>> getAllUserSongLists(@RequestParam(value = "userId") String userId, @RequestHeader("Authorization") String authorization) {
         String user = restTemplate.getForObject("http://localhost:8087/auth/" + authorization, String.class);
         if (user != null) {
             List<SongList> songs = songListRepository.findAllByOwnerId(userId);
             if (songs != null) {
                 if (user.equals(userId)) {
-                    //log.info("GET /songList/" + userId + " successfully");
                     return new ResponseEntity<>(songs, HttpStatus.ACCEPTED);
                 } else {
                     List<SongList> returnList = new LinkedList<>();
@@ -86,21 +97,26 @@ public class SongListController {
                         if (!songList.getisPrivate())
                             returnList.add(songList);
                     }
-                    //log.info("GET /songList/" + userId + " successfully");
                     return new ResponseEntity<>(returnList, HttpStatus.ACCEPTED);
                 }
 
             }
         }
-        // log.info("GET /songList/" + userId + " not found");
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
 
+    /**
+     * Posts a songList for a user in db
+     *
+     * @param songList      a hopefully valid songList according to model
+     * @param request       for URI to be returned in header
+     * @param authorization token of enquirer
+     * @return 400 if song or user is invalid, URI to newly posted SongList in header if correct
+     */
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> postSong(@RequestBody SongList songList, HttpServletRequest
+    public ResponseEntity<String> postSongList(@RequestBody SongList songList, HttpServletRequest
             request, @RequestHeader("Authorization") String authorization) {
-        //log.info("POST /songList");
 
         try {
             String user = restTemplate.getForObject("http://localhost:8087/auth/" + authorization, String.class);
@@ -117,11 +133,9 @@ public class SongListController {
                 songList.setUser(user);
                 songListRepository.save(songList);
                 URI location = URI.create(request.getRequestURI() + "/" + songList.getId());
-                // log.info("POST /songList created with" + songList.getId());
                 return ResponseEntity.created(location).body(null);
 
             }
-            // log.info("POST /songList exited, invalid user");
             return new ResponseEntity<>("Can't find user", HttpStatus.BAD_REQUEST);
 
 
@@ -131,9 +145,15 @@ public class SongListController {
     }
 
 
+    /**
+     * Deletes a songList if it's yours and is existing
+     *
+     * @param id            serial ID of SongList in DB
+     * @param authorization token of enquirer
+     * @return 400 if id invalid, 403 if userId of enquirer != userId of owner, 204 if successful
+     */
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteSong(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization) {
-        //log.info("DELETE /songList/" + id);
 
 
         if (id < 0) {
@@ -149,20 +169,25 @@ public class SongListController {
             SongList songList = tempSongList.get();
             if (songList.getOwnerId().equals(user)) {
                 songListRepository.delete(songList);
-                //   log.info("DELETE /songList/" + id + "successfully exited");
                 return new ResponseEntity<>("Songlist was deleted.", HttpStatus.NO_CONTENT);
             }
 
         }
-        //log.info("DELETE /songList/" + id + "forbidden");
         return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
 
     }
 
 
+    /**
+     * Changes a songLists properties if the enquirer is the owner of given songList
+     *
+     * @param id            serial id of songList to be changed
+     * @param authorization token for authorization  of user
+     * @param songList      to be changed
+     * @return 400 if id invalid, 404 if user or songList not found, 403 if enquirerId != ownerId, 200 if successful
+     */
     @PutMapping(value = "/{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<String> putSongList(@PathVariable(value = "id") int id, @RequestHeader("Authorization") String authorization, @RequestBody SongList songList) {
-        // log.info("PUT /songList/" + id);
         try {
             if (id < 0) {
                 return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
@@ -190,7 +215,6 @@ public class SongListController {
                         }
                     }
                     songListRepository.save(songList);
-                    // log.info("PUT /songList/" + id + "successfully exited");
                     return new ResponseEntity<>("Songlist upated", HttpStatus.OK);
                 }
 

@@ -10,29 +10,47 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.UUID;
 
+/**
+ * User entity as reference for user entries
+ */
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    /**
+     * A nickname a user chooses
+     */
     @Id
     @Basic(optional = false)
     @NotNull
     @Column(name = "userid", nullable = false)
     private String userId;
 
+    /**
+     * A password the user chooses
+     */
     @NotNull
     @Column(name = "password", nullable = false)
     private String password;
 
+    /**
+     * First Name of the user
+     */
     @NotNull
     @Column(name = "firstname", nullable = false)
     private String firstName;
 
+    /**
+     * Surname of the user
+     */
     @NotNull
     @Column(name = "lastname", nullable = false)
     private String lastName;
 
+    /**
+     * Authorization token for the user
+     */
     @Column(name = "token")
     private String token;
 

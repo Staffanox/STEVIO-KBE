@@ -9,15 +9,24 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlAttribute;
 
 
+/**
+ * Lyric Document as reference for MongoDB entries
+ */
 @Document(collection = "Lyrics")
 public class Lyrics {
 
+    /**
+     * ID, in this case name of a song in song table
+     */
     @Id
     @NotNull
     @JsonProperty("id")
     @XmlAttribute(name = "id")
     private String id;
 
+    /**
+     * Lyrics associated with song in song table
+     */
     @NotNull
     @JsonProperty("lyrics")
     @XmlAttribute(name = "lyrics")
