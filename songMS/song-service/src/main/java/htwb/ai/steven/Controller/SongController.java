@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpStatusCodeException;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
@@ -32,9 +33,9 @@ public class SongController {
     @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<Song>> getAll() {
         Iterable<Song> songs = songRepository.findAll();
-            List<Song> songsAsList = new ArrayList<>();
-            songs.forEach(songsAsList::add);
-            return new ResponseEntity<>(songsAsList, HttpStatus.OK);
+        List<Song> songsAsList = new ArrayList<>();
+        songs.forEach(songsAsList::add);
+        return new ResponseEntity<>(songsAsList, HttpStatus.OK);
     }
 
 
@@ -60,13 +61,12 @@ public class SongController {
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<String> deleteSong(@PathVariable(value = "id") Integer id) {
-
-        Optional<Song> song = songRepository.findById(id);
-
+        Optional<Song> searchedSong = songRepository.findById(id);
+        if (!searchedSong.isPresent())
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 
         songRepository.deleteById(id);
         return new ResponseEntity<>("Song successfully deleted", HttpStatus.NO_CONTENT);
-
     }
 
 
