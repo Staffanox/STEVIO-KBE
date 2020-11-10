@@ -9,14 +9,19 @@ import java.util.List;
  * @author Mario Teklic
  */public class DBSongsDAO implements ISongsDAO{
 
-     private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("STEVIO-KBE");
+     private EntityManagerFactory emf;
 
      public DBSongsDAO() {
+         emf = Persistence.createEntityManagerFactory("STEVIO-KBE");
+     }
+
+     public DBSongsDAO(String PU){
+         emf = Persistence.createEntityManagerFactory(PU);
      }
 
     @Override
     public List<Song> getAllSongs() {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityManager em = emf.createEntityManager();
 
         Query q = em.createQuery("SELECT s FROM Song s ORDER BY s.id ASC");
         return q.getResultList();
@@ -24,15 +29,13 @@ import java.util.List;
 
     @Override
     public Song getSongById(int id) {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityManager em = emf.createEntityManager();
         return em.find(Song.class, id);
     }
 
     @Override
     public Integer addSong(Song song) {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-        //Song s = em.find(Song.class, song);
-
+        EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(song);
         em.getTransaction().commit();
@@ -42,8 +45,7 @@ import java.util.List;
 
     @Override
     public void updateSong(Song song) {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
-
+        EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.merge(song);
         em.getTransaction().commit();
@@ -52,7 +54,7 @@ import java.util.List;
 
     @Override
     public void deleteSong(Song song) {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityManager em = emf.createEntityManager();
 
         Song s = em.find(Song.class, song.getId());
         em.getTransaction().begin();

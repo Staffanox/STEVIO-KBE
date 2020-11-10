@@ -9,8 +9,8 @@ import java.io.Serializable;
  * @author Mario Teklic
  */
 @Entity
-@Table(name = "song")
-public class Song implements Serializable {
+@Table(name = "song", schema = "public")
+public class Song implements Serializable, Comparable<Song> {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -86,8 +86,32 @@ public class Song implements Serializable {
         this.released = released;
     }
 
+    @Override
+    public boolean equals(Object song){
+        Song s = (Song) song;
+        if(this.getTitle() == s.getTitle()
+                && this.getArtist() == s.getArtist()
+                && this.getLabel() == s.getLabel()
+                && this.getReleased() == s.getReleased()){
+            return true;
+        }
+        return false;
+    }
+
     public static Builder builder(){
         return new Builder();
+    }
+
+    @Override
+    public int compareTo(Song o) {
+
+        if(this.getId() > o.getId()){
+            return 1;
+        }else if(this.getId() == o.getId()){
+            return 0;
+        }else{
+            return -1;
+        }
     }
 
     public static final class Builder{

@@ -12,11 +12,20 @@ import javax.persistence.Persistence;
 
 public class DBUsersDAO implements IUsersDAO {
 
-    private static final EntityManagerFactory ENTITY_MANAGER_FACTORY = Persistence.createEntityManagerFactory("STEVIO-KBE-USER");
+    private EntityManagerFactory emf;
+
+    public DBUsersDAO(String PU){
+        emf = Persistence.createEntityManagerFactory(PU);
+    }
+
+    public DBUsersDAO(){
+        emf = Persistence.createEntityManagerFactory("STEVIO-KBE");
+    }
 
     @Override
     public User getUser(User user) {
-        EntityManager em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        EntityManager em = emf.createEntityManager();
         return em.find(User.class, user.getUserId());
     }
+    
 }

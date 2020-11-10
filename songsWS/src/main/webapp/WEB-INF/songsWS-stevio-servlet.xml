@@ -16,10 +16,27 @@
 
     <bean id="songsDAO" class="htwb.ai.stevio.dao.DBSongsDAO"/>
     <bean id="usersDAO" class="htwb.ai.stevio.dao.DBUsersDAO"/>
+    <bean id="authenticator" class="htwb.ai.stevio.dao.AuthenticatorDAO"/>
+    <bean id="songListDAO" class="htwb.ai.stevio.dao.DBSongListDAO"/>
 
-    <!-- Wir nutzen Jackson: -->
+    <!-- Configure to plugin JSON as request and response in method handler -->
+    <bean
+            class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jsonMessageConverter" />
+                <ref bean="xmlMessageConverter" />
+            </list>
+        </property>
+    </bean>
+
     <bean id="jsonMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+
+    <bean id="xmlMessageConverter"
+          class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
 
 </beans>
 

@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: gatewayserver-service
+
+server:
+  port: 8762
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+zuul:
+  routes:
+    song-service:
+      path: /songs
+      serviceId: song-service
+    song-services:
+      path: /songs/**
+      serviceId: song-service
+      stripPrefix: false
+    user-service:
+      path: /auth
+      serviceId: user-service
+      stripPrefix: false
+    user-services:
+      path: /auth/**
+      serviceId: user-service
+      stripPrefix: false
+    songlist-service:
+      sensitiveHeaders: Cookie,Set-Cookie
+      path: /songlist
+      serviceId: song-service
+    songlist-services:
+      sensitiveHeaders: Cookie,Set-Cookie
+      path: /songlist/**
+      serviceId: song-service
+      stripPrefix: false
+    lyrics-service:
+      path: /lyrics
+      serviceId: lyrics-service
+    lyrics-services:
+      path: /lyrics/**
+      serviceId: lyrics-service
+      stripPrefix: false

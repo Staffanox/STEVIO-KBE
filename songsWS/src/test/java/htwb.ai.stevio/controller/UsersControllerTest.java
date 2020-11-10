@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import htwb.ai.stevio.dao.AuthenticatorDAO;
 import htwb.ai.stevio.dao.TestUserDAO;
 import htwb.ai.stevio.model.User;
 import org.junit.Assert;
@@ -21,21 +22,24 @@ class UsersControllerTest {
     @BeforeEach
     public void setup() {
         mockMvc = MockMvcBuilders.standaloneSetup(
-                new UsersController(new TestUserDAO())).build();
+                new UsersController(new TestUserDAO(),new AuthenticatorDAO())).build();
     }
 
     @Test
         //POST auth
     void postUserShouldReturnOkForExistingUser() throws Exception {
 
-        MvcResult result = mockMvc.perform(post("/auth").contentType(MediaType.APPLICATION_JSON).content(asJsonString(new User("1", "Z", "Alphonso", "kek"))
-        ))
+        MvcResult result = mockMvc.perform(post("/auth")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(asJsonString(new User("1", "Z", "Alphonso", "kek"))))
                 .andExpect(status().isOk())
                 .andReturn();
 
         //Tests if token is valid
         String content = result.getResponse().getContentAsString();
         Assert.assertTrue(content.length() <= 17);
+
+        System.out.println(content + " <--");
     }
 
 

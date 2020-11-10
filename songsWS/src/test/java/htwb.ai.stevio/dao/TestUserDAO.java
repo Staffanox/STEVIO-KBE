@@ -1,10 +1,8 @@
 package htwb.ai.stevio.dao;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import htwb.ai.stevio.dao.IUsersDAO;
 import htwb.ai.stevio.model.User;
 
 public class TestUserDAO implements IUsersDAO {
